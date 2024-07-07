@@ -36,7 +36,6 @@ public class LivroDAO implements GenericDAO<Livro, String> {
 	@Override
 	public void remover(String isbn) {
 		livros.remove(isbn);
-		
 	}
 
 	@Override

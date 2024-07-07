@@ -31,9 +31,22 @@ public class Livro {
 
 	@Override
 	public String toString() {
-		return "Livro [isbn=" + isbn + ", titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + "]";
+	    StringBuilder sb = new StringBuilder();
+	    sb.append("Livro [");
+	    if (isbn != null) {
+	        sb.append("isbn=").append(isbn).append(", ");
+	    }
+	    if (titulo != null) {
+	        sb.append("titulo=").append(titulo).append(", ");
+	    }
+	    if (autor != null) {
+	        sb.append("autor=").append(autor).append(", ");
+	    }
+	    sb.append("ano=").append(ano);
+	    sb.append("]");
+	    return sb.toString();
 	}
-
+	
 }
 
 
