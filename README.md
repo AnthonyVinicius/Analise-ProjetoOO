@@ -4,8 +4,8 @@
 
 <h3>Padrões Ultilizados</h3>
 <ol>
-<il>Builder</il>
-<il>AbstractFactory</il>
-<il>Singleton</il>
-<il>DAO</il> 
+<li>Builder</li>
+<li>AbstractFactory</li>
+<li>Singleton</li>
+<li>DAO</li> 
 </ol>
