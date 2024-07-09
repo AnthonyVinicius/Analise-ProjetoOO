@@ -2,7 +2,7 @@ package br.com.ifpe.entities;
 
 public class RyzenCpuBuilder {
 	
-	private RyzenCpuBuilder() {
+	public RyzenCpuBuilder() {
 		// TODO Auto-generated constructor stub
 	}
 	

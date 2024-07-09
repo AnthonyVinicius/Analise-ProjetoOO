@@ -13,6 +13,14 @@ public class RyzenCpu extends CpuAbstract{
 		super(modelo, socket, nucleos, threads, hrz);
 		// TODO Auto-generated constructor stub
 	}
-	
 
+
+	@Override
+	public String toString() {
+		return "RyzenCpu [getModelo()=" + getModelo() + ", getSocket()=" + getSocket() + ", getNucleos()="
+				+ getNucleos() + ", getThreads()=" + getThreads() + ", getHrz()=" + getHrz() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
+	
 }	
