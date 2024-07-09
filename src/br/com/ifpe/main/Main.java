@@ -3,7 +3,7 @@ import br.com.ifpe.entities.*;
 
 public class Main {
 	public static void main(String[] args) {
-		Manga manga = MangaBuilder.creatMangaBuilder()
+		AsusGpu asusGpu = AsusGpuBuilder.creatMangaBuilder()
 				.titulo("Jujutsu Kaisen")
 				.ano(2024)
 				.autor("Ge")
