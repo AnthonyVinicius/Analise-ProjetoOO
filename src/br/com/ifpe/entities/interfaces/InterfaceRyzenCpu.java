@@ -1,6 +1,6 @@
 package br.com.ifpe.entities.interfaces;
 
-public interface InterfaceAsusGpu {
+public interface InterfaceRyzenCpu {
 	String getNome();
 	String getAutor();
 	int ano();

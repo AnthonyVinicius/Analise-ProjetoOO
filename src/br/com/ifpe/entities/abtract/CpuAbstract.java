@@ -1,17 +1,17 @@
 package br.com.ifpe.entities.abtract;
 
-public abstract class GpuAbstract {
+public abstract class CpuAbstract {
 	private String isbn;
 	private String titulo;
 	private String autor;
 	private int ano;
 	
-	public GpuAbstract() {
+	public CpuAbstract() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public GpuAbstract(String isbn, String titulo, String autor, int ano) {
+	public CpuAbstract(String isbn, String titulo, String autor, int ano) {
 		super();
 		this.isbn = isbn;
 		this.titulo = titulo;

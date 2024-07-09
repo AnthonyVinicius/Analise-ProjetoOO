@@ -1,16 +1,16 @@
 package br.com.ifpe.entities;
 
-import br.com.ifpe.entities.abtract.GpuAbstract;
+import br.com.ifpe.entities.abtract.CpuAbstract;
 
-public class AsusGpu extends GpuAbstract{
+public class RyzenCpu extends CpuAbstract{
 	
 	private int quantidadeCapitulos;
 	
-	public AsusGpu() {
+	public RyzenCpu() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AsusGpu(String titulo, String autor, int ano,  int quantidadeCapitulos,String isbn) {
+	public RyzenCpu(String titulo, String autor, int ano,  int quantidadeCapitulos,String isbn) {
 		super(isbn, titulo, autor, ano);
 		this.quantidadeCapitulos = quantidadeCapitulos;
 		// TODO Auto-generated constructor stub

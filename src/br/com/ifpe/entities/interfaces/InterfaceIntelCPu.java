@@ -1,6 +1,6 @@
 package br.com.ifpe.entities.interfaces;
 
-public interface InterfaceMsiGpu{
+public interface InterfaceIntelCPu{
 	String getNome();
 	String getAutor();
 	String getIsbn();
