@@ -6,36 +6,36 @@ public class RyzenCpuBuilder {
 		// TODO Auto-generated constructor stub
 	}
 	
-	private int quantidadeCapitulos;
-	private String isbn;
-	private String titulo;
-	private String autor;
-	private int ano;
+	private String modelo;
+	private String socket;
+	private int nucleos;
+	private int threads;
+	private float hrz;
 	
-	public RyzenCpuBuilder quantidadeCapitulo(int quantidadeCapitulos) {
-		this.quantidadeCapitulos = quantidadeCapitulos;
+	public RyzenCpuBuilder modelo(String modelo) {
+		this.modelo = modelo;
 		return this;
 	}
 	
-	public RyzenCpuBuilder isbn(String isbn) {
-		this.isbn = isbn;
+	public RyzenCpuBuilder socket(String socket) {
+		this.socket = socket;
 		return this;
 	}
-	public RyzenCpuBuilder titulo(String titulo) {
-		this.titulo = titulo;
+	public RyzenCpuBuilder nucleos(int nucleos) {
+		this.nucleos = nucleos;
 		return this;
 	}
-	public RyzenCpuBuilder autor(String autor) {
-		this.autor = autor;
+	public RyzenCpuBuilder threads(int threads) {
+		this.threads = threads;
 		return this;
 	}
-	public RyzenCpuBuilder ano(int ano) {
-		this.ano = ano;
+	public RyzenCpuBuilder hrz(float hrz) {
+		this.hrz = hrz;
 		return this;
 	}
 	
 	public RyzenCpu build() {
-		return new RyzenCpu(titulo, autor, ano, quantidadeCapitulos, isbn);
+		return new RyzenCpu(modelo, socket, nucleos, threads, hrz);
 	}
 	
 	public static RyzenCpuBuilder creatMangaBuilder(){

@@ -1,47 +1,67 @@
 package br.com.ifpe.entities.abtract;
 
 public abstract class CpuAbstract {
-	private String isbn;
-	private String titulo;
-	private String autor;
-	private int ano;
+	private String modelo;
+	private String socket;
+	private int nucleos;
+	private int threads;
+	private float hrz;
 	
 	public CpuAbstract() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public CpuAbstract(String isbn, String titulo, String autor, int ano) {
+
+	public CpuAbstract(String modelo, String socket, int nucleos, int threads, float hrz) {
 		super();
-		this.isbn = isbn;
-		this.titulo = titulo;
-		this.autor = autor;
-		this.ano = ano;
+		this.modelo = modelo;
+		this.socket = socket;
+		this.nucleos = nucleos;
+		this.threads = threads;
+		this.hrz = hrz;
 	}
 
-	public String getIsbn() {
-		return isbn;
+
+
+	public String getModelo() {
+		return modelo;
 	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
-	public String getTitulo() {
-		return titulo;
+
+	public String getSocket() {
+		return socket;
 	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+
+	public void setSocket(String socket) {
+		this.socket = socket;
 	}
-	public String getAutor() {
-		return autor;
+
+	public int getNucleos() {
+		return nucleos;
 	}
-	public void setAutor(String autor) {
-		this.autor = autor;
+
+	public void setNucleos(int nucleos) {
+		this.nucleos = nucleos;
 	}
-	public int getAno() {
-		return ano;
+
+	public int getThreads() {
+		return threads;
 	}
-	public void setAno(int ano) {
-		this.ano = ano;
+
+	public void setThreads(int threads) {
+		this.threads = threads;
+	}
+
+	public float getHrz() {
+		return hrz;
+	}
+
+	public void setHrz(float hrz) {
+		this.hrz = hrz;
 	}
 	
 	
