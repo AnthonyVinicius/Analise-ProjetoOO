@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CpuDAO<T> implements IGenericDAO<T> {
+import br.com.ifpe.entities.abtract.CpuAbstract;
+
+public class CpuDAO<T extends CpuAbstract> implements IGenericDAO<T> {
     
     private List<T> dataStore;  
 
@@ -28,8 +30,8 @@ public class CpuDAO<T> implements IGenericDAO<T> {
     }
 
     @Override
-    public void delete(T chave) {
-        dataStore.remove(chave);
+    public void delete(String chave) {
+    dataStore.removeIf(model -> model.getModelo().equalsIgnoreCase(model.getModelo()));
     }
 
     @Override
