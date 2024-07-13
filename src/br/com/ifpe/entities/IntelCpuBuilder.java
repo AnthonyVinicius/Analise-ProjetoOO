@@ -6,14 +6,14 @@ public class IntelCpuBuilder {
 		// TODO Auto-generated constructor stub
 	}
 	
-	private String modelo;
+	private String model;
     private String socket;
-    private int nucleos;
+    private int core;
     private int threads;
-    private float hrz;
+    private double hrz;
 
-    public IntelCpuBuilder modelo(String modelo) {
-        this.modelo = modelo;
+    public IntelCpuBuilder model(String model) {
+        this.model = model;
         return this;
     }
 
@@ -22,8 +22,8 @@ public class IntelCpuBuilder {
         return this;
     }
 
-    public IntelCpuBuilder nucleos(int nucleos) {
-        this.nucleos = nucleos;
+    public IntelCpuBuilder core(int core) {
+        this.core = core;
         return this;
     }
 
@@ -32,13 +32,13 @@ public class IntelCpuBuilder {
         return this;
     }
 
-    public IntelCpuBuilder hrz(float hrz) {
+    public IntelCpuBuilder hrz(double hrz) {
         this.hrz = hrz;
         return this;
     }
 
 
     public IntelCpu build() {
-        return new IntelCpu(modelo, socket, nucleos, threads, hrz);
+        return new IntelCpu(model, socket, core, threads, hrz);
     }
 }

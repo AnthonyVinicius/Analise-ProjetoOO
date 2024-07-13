@@ -6,14 +6,14 @@ public class RyzenCpuBuilder {
 		// TODO Auto-generated constructor stub
 	}
 	
-	private String modelo;
+	private String model;
 	private String socket;
-	private int nucleos;
+	private int core;
 	private int threads;
-	private float hrz;
+	private double hrz;
 	
-	public RyzenCpuBuilder modelo(String modelo) {
-		this.modelo = modelo;
+	public RyzenCpuBuilder model(String model) {
+		this.model = model;
 		return this;
 	}
 	
@@ -21,21 +21,21 @@ public class RyzenCpuBuilder {
 		this.socket = socket;
 		return this;
 	}
-	public RyzenCpuBuilder nucleos(int nucleos) {
-		this.nucleos = nucleos;
+	public RyzenCpuBuilder core(int core) {
+		this.core = core;
 		return this;
 	}
 	public RyzenCpuBuilder threads(int threads) {
 		this.threads = threads;
 		return this;
 	}
-	public RyzenCpuBuilder hrz(float hrz) {
+	public RyzenCpuBuilder hrz(double hrz) {
 		this.hrz = hrz;
 		return this;
 	}
 	
 	public RyzenCpu build() {
-		return new RyzenCpu(modelo, socket, nucleos, threads, hrz);
+		return new RyzenCpu(model, socket, core, threads, hrz);
 	}
 	
 	public static RyzenCpuBuilder creatMangaBuilder(){

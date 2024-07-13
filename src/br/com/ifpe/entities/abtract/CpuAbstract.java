@@ -5,7 +5,7 @@ public abstract class CpuAbstract {
 	private String socket;
 	private int nucleos;
 	private int threads;
-	private float hrz;
+	private double hrz;
 	
 	public CpuAbstract() {
 		// TODO Auto-generated constructor stub
@@ -13,7 +13,7 @@ public abstract class CpuAbstract {
 	
 	
 
-	public CpuAbstract(String modelo, String socket, int nucleos, int threads, float hrz) {
+	public CpuAbstract(String modelo, String socket, int nucleos, int threads, double hrz) {
 		super();
 		this.modelo = modelo;
 		this.socket = socket;
@@ -56,11 +56,11 @@ public abstract class CpuAbstract {
 		this.threads = threads;
 	}
 
-	public float getHrz() {
+	public double getHrz() {
 		return hrz;
 	}
 
-	public void setHrz(float hrz) {
+	public void setHrz(double hrz) {
 		this.hrz = hrz;
 	}
 	

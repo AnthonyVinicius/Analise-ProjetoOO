@@ -8,7 +8,7 @@ public class IntelCpu extends CpuAbstract{
 		// TODO Auto-generated constructor stub
 	}
 
-	public IntelCpu(String modelo, String socket, int nucleos, int threads, float hrz) {
+	public IntelCpu(String modelo, String socket, int nucleos, int threads, double hrz) {
 		super(modelo, socket, nucleos, threads, hrz);
 		// TODO Auto-generated constructor stub
 	}

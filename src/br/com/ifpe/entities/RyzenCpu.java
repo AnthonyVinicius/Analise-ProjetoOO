@@ -9,7 +9,7 @@ public class RyzenCpu extends CpuAbstract{
 	}
 
 
-	public RyzenCpu(String modelo, String socket, int nucleos, int threads, float hrz) {
+	public RyzenCpu(String modelo, String socket, int nucleos, int threads, double hrz) {
 		super(modelo, socket, nucleos, threads, hrz);
 		// TODO Auto-generated constructor stub
 	}

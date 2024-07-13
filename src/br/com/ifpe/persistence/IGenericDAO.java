@@ -3,8 +3,8 @@ package br.com.ifpe.persistence;
 import java.util.List;
 
 public interface IGenericDAO<T> {
-	    void salvar(T objeto);
-	    T buscar(T chave);
-	    void remover(T chave);
-	    List<T> listarTodos();
+	    void register(T objeto);
+	    T search(T chave);
+	    void delete(T chave);
+	    List<T> listAll();
 	}
