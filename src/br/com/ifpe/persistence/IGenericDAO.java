@@ -2,9 +2,9 @@ package br.com.ifpe.persistence;
 
 import java.util.List;
 
-public interface GenericDAO<T, K> {
+public interface IGenericDAO<T> {
 	    void salvar(T objeto);
-	    T buscar(K chave);
-	    void remover(K chave);
+	    T buscar(T chave);
+	    void remover(T chave);
 	    List<T> listarTodos();
 	}

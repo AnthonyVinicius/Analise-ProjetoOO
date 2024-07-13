@@ -1,45 +1,38 @@
 package br.com.ifpe.persistence;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import br.com.ifpe.entities.abtract.CpuAbstract;
+public class CpuDAO<T> implements IGenericDAO<T> {
+    
+    private List<T> dataStore;  
 
-public class CpuDAO implements GenericDAO<CpuAbstract, String> {
-    private static CpuDAO instancia;
-    private Map<String, CpuAbstract> cpus;
-
-    private CpuDAO() {
-        cpus = new HashMap<>();
+    public CpuDAO() {
+        this.dataStore = new ArrayList<>();
     }
 
-    public static synchronized CpuDAO getInstance() {
-        if (instancia == null) {
-            instancia = new CpuDAO();
+    @Override
+    public void salvar(T objeto) {
+        dataStore.add(objeto);
+    }
+
+    @Override
+    public T buscar(T chave) {
+        for (T objeto : dataStore) {
+            if (objeto.equals(chave)) {
+                return objeto;
+            }
         }
-        return instancia;
+        return null;  
     }
 
     @Override
-    public void salvar(CpuAbstract cpu) {
-        cpus.put(cpu.getModelo(), cpu);
-        System.out.println("Salvando CPU: " + cpu.getModelo());
+    public void remover(T chave) {
+        dataStore.remove(chave);
     }
 
     @Override
-    public CpuAbstract buscar(String modelo) {
-        return cpus.get(modelo);
-    }
-
-    @Override
-    public void remover(String modelo) {
-        cpus.remove(modelo);
-    }
-
-    @Override
-    public List<CpuAbstract> listarTodos() {
-        return new ArrayList<>(cpus.values());
+    public List<T> listarTodos() {
+        return new ArrayList<>(dataStore);
     }
 }
