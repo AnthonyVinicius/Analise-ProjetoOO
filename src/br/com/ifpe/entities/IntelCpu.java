@@ -8,16 +8,18 @@ public class IntelCpu extends CpuAbstract{
 		// TODO Auto-generated constructor stub
 	}
 
-	public IntelCpu(String modelo, String socket, int nucleos, int threads, double hrz) {
-		super(modelo, socket, nucleos, threads, hrz);
+	public IntelCpu(String model, String socket, int core, int threads, double hrz, double price) {
+		super(model, socket, core, threads, hrz, price);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "IntelCpu [getModelo()=" + getModelo() + ", getSocket()=" + getSocket() + ", getNucleos()="
-				+ getNucleos() + ", getThreads()=" + getThreads() + ", getHrz()=" + getHrz() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "IntelCpu: \nModelo: " + getmodel() + "\nSocket: " + getSocket() + ",\nCore: "
+				+ getcore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
+				+ getPrice();
 	}
+
+
 	
 }

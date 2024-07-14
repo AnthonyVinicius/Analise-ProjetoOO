@@ -9,18 +9,19 @@ public class RyzenCpu extends CpuAbstract{
 	}
 
 
-	public RyzenCpu(String modelo, String socket, int nucleos, int threads, double hrz) {
-		super(modelo, socket, nucleos, threads, hrz);
+	public RyzenCpu(String model, String socket, int core, int threads, double hrz, double price) {
+		super(model, socket, core, threads, hrz, price);
 		// TODO Auto-generated constructor stub
 	}
 
 
 	@Override
 	public String toString() {
-		return "RyzenCpu [getModelo()=" + getModelo() + ", getSocket()=" + getSocket() + ", getNucleos()="
-				+ getNucleos() + ", getThreads()=" + getThreads() + ", getHrz()=" + getHrz() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "RyzenCpu: \nModelo: " + getmodel() + "\nSocket: " + getSocket() + ",\nCore: "
+				+ getcore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
+				+ getPrice();
 	}
+
 	
 	
 }	

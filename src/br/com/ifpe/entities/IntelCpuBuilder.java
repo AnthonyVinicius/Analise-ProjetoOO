@@ -11,6 +11,7 @@ public class IntelCpuBuilder {
     private int core;
     private int threads;
     private double hrz;
+    private double price;
 
     public IntelCpuBuilder model(String model) {
         this.model = model;
@@ -36,9 +37,14 @@ public class IntelCpuBuilder {
         this.hrz = hrz;
         return this;
     }
+    
+    public IntelCpuBuilder price(double price) {
+        this.price = price;
+        return this;
+    }
 
 
     public IntelCpu build() {
-        return new IntelCpu(model, socket, core, threads, hrz);
+        return new IntelCpu(model, socket, core, threads, hrz, price);
     }
 }

@@ -2,8 +2,6 @@ package br.com.ifpe.persistence;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
 import br.com.ifpe.entities.abtract.CpuAbstract;
 
 public class CpuDAO<T extends CpuAbstract> implements IGenericDAO<T> {
@@ -15,27 +13,25 @@ public class CpuDAO<T extends CpuAbstract> implements IGenericDAO<T> {
     }
 
     @Override
-    public void register(T objeto) {
-        dataStore.add(objeto);
+    public void register(T object) {
+        dataStore.add(object);
     }
 
-    @Override
-    public T search(T chave) {
-    	for (T objeto : dataStore) {
-    		if (objeto.equals(chave)) {
-                return objeto;
+    public T search(String model) {
+        for (T object : dataStore) {
+            if (object.getmodel().equalsIgnoreCase(model)) {
+                return object;
             }
         }
         return null;  
     }
 
-    @Override
-    public void delete(String chave) {
-    dataStore.removeIf(model -> model.getModelo().equalsIgnoreCase(model.getModelo()));
+    public void delete(String model) {
+        dataStore.removeIf(object -> object.getmodel().equalsIgnoreCase(model));
     }
 
     @Override
     public List<T> listAll() {
-        return dataStore.stream().collect(Collectors.toList());
+        return new ArrayList<>(dataStore);
     }
 }

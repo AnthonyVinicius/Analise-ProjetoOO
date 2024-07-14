@@ -11,6 +11,7 @@ public class RyzenCpuBuilder {
 	private int core;
 	private int threads;
 	private double hrz;
+	private double price;
 	
 	public RyzenCpuBuilder model(String model) {
 		this.model = model;
@@ -33,13 +34,13 @@ public class RyzenCpuBuilder {
 		this.hrz = hrz;
 		return this;
 	}
-	
-	public RyzenCpu build() {
-		return new RyzenCpu(model, socket, core, threads, hrz);
+	public RyzenCpuBuilder price(double price) {
+		this.price = price;
+		return this;
 	}
 	
-	public static RyzenCpuBuilder creatMangaBuilder(){
-		return new RyzenCpuBuilder();
+	public RyzenCpu build() {
+		return new RyzenCpu(model, socket, core, threads, hrz, price);
 	}
 	
 }

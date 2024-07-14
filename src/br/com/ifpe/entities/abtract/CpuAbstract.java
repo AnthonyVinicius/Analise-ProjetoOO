@@ -1,11 +1,12 @@
 package br.com.ifpe.entities.abtract;
 
 public abstract class CpuAbstract {
-	private String modelo;
+	private String model;
 	private String socket;
-	private int nucleos;
+	private int core;
 	private int threads;
 	private double hrz;
+	private double price;
 	
 	public CpuAbstract() {
 		// TODO Auto-generated constructor stub
@@ -13,23 +14,24 @@ public abstract class CpuAbstract {
 	
 	
 
-	public CpuAbstract(String modelo, String socket, int nucleos, int threads, double hrz) {
+	public CpuAbstract(String model, String socket, int core, int threads, double hrz, double price) {
 		super();
-		this.modelo = modelo;
+		this.model = model;
 		this.socket = socket;
-		this.nucleos = nucleos;
+		this.core = core;
 		this.threads = threads;
 		this.hrz = hrz;
+		this.price = price;
 	}
 
 
 
-	public String getModelo() {
-		return modelo;
+	public String getmodel() {
+		return model;
 	}
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+	public void setmodel(String model) {
+		this.model = model;
 	}
 
 	public String getSocket() {
@@ -40,12 +42,12 @@ public abstract class CpuAbstract {
 		this.socket = socket;
 	}
 
-	public int getNucleos() {
-		return nucleos;
+	public int getcore() {
+		return core;
 	}
 
-	public void setNucleos(int nucleos) {
-		this.nucleos = nucleos;
+	public void setcore(int core) {
+		this.core = core;
 	}
 
 	public int getThreads() {
@@ -63,6 +65,19 @@ public abstract class CpuAbstract {
 	public void setHrz(double hrz) {
 		this.hrz = hrz;
 	}
+
+
+
+	public double getPrice() {
+		return price;
+	}
+
+
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
 	
 	
 }
