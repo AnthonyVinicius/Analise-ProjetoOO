@@ -26,11 +26,11 @@ public abstract class CpuAbstract {
 
 
 
-	public String getmodel() {
+	public String getModel() {
 		return model;
 	}
 
-	public void setmodel(String model) {
+	public void setModel(String model) {
 		this.model = model;
 	}
 
@@ -42,11 +42,11 @@ public abstract class CpuAbstract {
 		this.socket = socket;
 	}
 
-	public int getcore() {
+	public int getCore() {
 		return core;
 	}
 
-	public void setcore(int core) {
+	public void setCore(int core) {
 		this.core = core;
 	}
 

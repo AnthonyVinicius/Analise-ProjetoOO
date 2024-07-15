@@ -6,6 +6,7 @@ import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.RyzenCpu;
 import br.com.ifpe.entities.RyzenCpuBuilder;
+import br.com.ifpe.entities.abtract.CpuAbstract;
 import br.com.ifpe.persistence.CpuDAO;
 
 public class CPUGui {
@@ -29,59 +30,65 @@ public class CPUGui {
                 switch (option) {
 
                     case "1": // Register
-                        System.out.print("Qual Modelo de CPU deseja Adicionar?: ");
+                    	System.out.print("Qual Modelo de CPU deseja Adicionar?: ");
 
-                        System.out.println("\nIntel [1]\nRyzen [2]");
-                        int model_choice = scanner.nextInt();
-                        scanner.nextLine();
+                    	System.out.println("\nIntel [1]\nRyzen [2]");
+                    	int model_choice = scanner.nextInt();
+                    	scanner.nextLine();
 
-                        System.out.println("Digite o Modelo:");
-                        model = scanner.nextLine().toLowerCase().replace(" ", "");
+                    	System.out.println("Digite o Modelo:");
+                    	model = scanner.nextLine().toLowerCase().replace(" ", "");
 
-                        System.out.println("Digite o Socket:");
-                        socket = scanner.nextLine();
+                    	if (cpuDAO.search(model) == null) {
+                    	    System.out.println("Digite o Socket:");
+                    	    socket = scanner.nextLine();
+                    	    
+                    	    System.out.println("Digite a quantidade de Core:");
+                    	    core = scanner.nextInt();
+                    	    scanner.nextLine();
+                    	    
+                    	    System.out.println("Digite o Threads:");
+                    	    threads = scanner.nextInt();
+                    	    scanner.nextLine();
+                    	    
+                    	    System.out.println("Digite a Frequência:");
+                    	    hrz = scanner.nextDouble();
+                    	    scanner.nextLine();
+                    	    
+                    	    System.out.println("Digite o Preço:");
+                    	    price = scanner.nextDouble();
+                    	    scanner.nextLine();
+                    	    
+                    	    if (model_choice == 1) {
+                    	        IntelCpu intelCpu = new IntelCpuBuilder()
+                    	            .model(model)
+                    	            .socket(socket)
+                    	            .core(core)
+                    	            .threads(threads)
+                    	            .hrz(hrz)
+                    	            .price(price)
+                    	            .build();
+                    	        cpuDAO.register(intelCpu);
+                    	        
+                    	    } else if (model_choice == 2) {
+                    	        RyzenCpu ryzenCpu = new RyzenCpuBuilder()
+                    	            .model(model)
+                    	            .socket(socket)
+                    	            .core(core)
+                    	            .threads(threads)
+                    	            .hrz(hrz)
+                    	            .price(price)
+                    	            .build();
+                    	        cpuDAO.register(ryzenCpu);
+                    	        
+                    	    } else {
+                    	        System.out.println("Modelo Não Presente no Sistema.");
+                    	    }
+                    	} else {
+                    	    System.out.println("Modelo já registrado no sistema");
+                    	}
+                    	break;
 
-                        System.out.println("Digite a quantidade de Core:");
-                        core = scanner.nextInt();
-                        scanner.nextLine();
-
-                        System.out.println("Digite o Threads:");
-                        threads = scanner.nextInt();
-                        scanner.nextLine();
-
-                        System.out.println("Digite a Frequência:");
-                        hrz = scanner.nextDouble();
-                        scanner.nextLine();
-
-                        System.out.println("Digite o Preço:");
-                        price = scanner.nextDouble();
-                        scanner.nextLine();
-
-                        if (model_choice == 1) {
-                            IntelCpu intelCpu = new IntelCpuBuilder()
-                                    .model(model)
-                                    .socket(socket)
-                                    .core(core)
-                                    .threads(threads)
-                                    .hrz(hrz)
-                                    .price(price)
-                                    .build();
-                            cpuDAO.register(intelCpu);
-                        } else if (model_choice == 2) {
-                            RyzenCpu ryzenCpu = new RyzenCpuBuilder()
-                                    .model(model)
-                                    .socket(socket)
-                                    .core(core)
-                                    .threads(threads)
-                                    .hrz(hrz)
-                                    .price(price)
-                                    .build();
-                            cpuDAO.register(ryzenCpu);
-                        } else {
-                            System.out.println("Modelo Não Presente no Sistema.");
-                            break;
-                        }
-                        break;
 
                     case "2": // Search
                         System.out.print("Digite o Modelo: ");

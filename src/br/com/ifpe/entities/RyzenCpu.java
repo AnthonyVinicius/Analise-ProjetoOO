@@ -17,8 +17,8 @@ public class RyzenCpu extends CpuAbstract{
 
 	@Override
 	public String toString() {
-		return "RyzenCpu: \nModelo: " + getmodel() + "\nSocket: " + getSocket() + ",\nCore: "
-				+ getcore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
+		return "RyzenCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
+				+ getCore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
 				+ getPrice();
 	}
 
