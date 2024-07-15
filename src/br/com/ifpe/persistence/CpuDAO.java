@@ -5,12 +5,21 @@ import br.com.ifpe.entities.abtract.CpuAbstract;
 
 public class CpuDAO<T extends CpuAbstract> implements IGenericDAO<T> {
     
+	public static CpuDAO<?> instance;
     private List<T> dataStore;  
 
     public CpuDAO() {
         this.dataStore = new ArrayList<>();
     }
-
+    
+    public static synchronized CpuDAO<?> getInstance() {
+    	if (instance == null) {
+    		instance = new CpuDAO<>();
+    	}
+    	
+    	return instance;
+    }
+    
     @Override
     public void register(T object) {
         dataStore.add(object);

@@ -20,7 +20,7 @@ public class CPUGui {
         double price;
 
         try (Scanner scanner = new Scanner(System.in)) {
-            CpuDAO cpuDAO = new CpuDAO();
+            CpuDAO cpuDAO = new CpuDAO().getInstance();
 
             while (true) {
 
