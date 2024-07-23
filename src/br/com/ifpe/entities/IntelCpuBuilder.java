@@ -43,7 +43,6 @@ public class IntelCpuBuilder {
         return this;
     }
 
-
     public IntelCpu build() {
         return new IntelCpu(model, socket, core, threads, hrz, price);
     }
