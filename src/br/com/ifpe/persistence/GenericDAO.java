@@ -7,12 +7,11 @@ import br.com.ifpe.entities.abtract.CpuAbstract;
 
 public class GenericDAO<T> implements IGenericDAO<T> {
 
-	private List<T> dataBase = new ArrayList<T>();  
+	private List<T> dataBase;
 
 	public GenericDAO() {
-		// TODO Auto-generated constructor stub
+		this.dataBase = new ArrayList<T>();
 	}
-
 
 	@Override
 	public void register(T object) {

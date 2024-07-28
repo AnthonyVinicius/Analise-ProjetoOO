@@ -4,6 +4,7 @@ import java.util.function.Predicate;
 
 import br.com.ifpe.entities.abtract.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
+import br.com.ifpe.services.DAOFactory;
 
 public class CpuControler {
 	
@@ -13,7 +14,7 @@ public class CpuControler {
 		// TODO Auto-generated constructor stub
 	}
 	
-	GenericDAO<CpuAbstract> cpuDAO = new GenericDAO<CpuAbstract>();
+	GenericDAO<CpuAbstract> cpuDAO = DAOFactory.createDAO();
 	
 	public CpuAbstract searchCPU(String model) {
 		Predicate<CpuAbstract> foundCpu = cpu -> cpu.getModel().equals(model);
