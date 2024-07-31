@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-import br.com.ifpe.entities.abtract.CpuAbstract;
+import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class GenericDAO<T> implements IGenericDAO<T> {
 
@@ -32,4 +32,5 @@ public class GenericDAO<T> implements IGenericDAO<T> {
 	public List<T> listAll() {
 		return dataBase;
 	}
+		
 }

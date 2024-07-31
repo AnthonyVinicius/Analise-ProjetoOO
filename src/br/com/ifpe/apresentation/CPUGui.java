@@ -7,7 +7,7 @@ import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.RyzenCpu;
 import br.com.ifpe.entities.RyzenCpuBuilder;
-import br.com.ifpe.entities.abtract.CpuAbstract;
+import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.controler.CpuControler;
 
 public class CPUGui {
@@ -117,11 +117,6 @@ public class CPUGui {
 	}
 
 	private void viewAllCPUs() {
-		List<CpuAbstract> allCpus = cpuControler.viewAllCPU();
-		if (allCpus.isEmpty()) {
-			System.out.println("Nenhuma CPU registrada.");
-		} else {
-			allCpus.forEach(System.out::println);
-		}
+	System.out.println(cpuControler.viewAllCPU().toString());
 	}
 }

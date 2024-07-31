@@ -1,4 +1,4 @@
-package br.com.ifpe.entities.abtract;
+package br.com.ifpe.entities.abstractclass;
 
 public abstract class CpuAbstract{
 	private String model;

@@ -1,6 +1,6 @@
 package br.com.ifpe.entities;
 
-import br.com.ifpe.entities.abtract.CpuAbstract;
+import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class RyzenCpu extends CpuAbstract{
 	
