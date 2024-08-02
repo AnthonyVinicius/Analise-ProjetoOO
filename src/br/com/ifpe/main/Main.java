@@ -1,32 +1,34 @@
 package br.com.ifpe.main;
-import br.com.ifpe.apresentation.CPUGui;
+import java.util.Scanner;
+
+import br.com.ifpe.apresentation.ClientGUI;
+import br.com.ifpe.apresentation.EmployeeGUI;
 
 public class Main {
 	public static void main(String[] args) {
-		CPUGui gui = new CPUGui();
-		gui.guiCPU();		
+		
 	}
-	public void guiCPU() {
-		while (true) {
-			System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs");
-			String option = scanner.nextLine();
+		EmployeeGUI Employee = new EmployeeGUI();
+		ClientGUI Client = new ClientGUI();
+		
+		public void guiCPU() {
+			while (true) {
+				Scanner scanner = new Scanner(System.in);
+				System.out.println("\n[1]-Client\n[2]-Employee CPU\n");
+				String option = scanner.nextLine();
 
-			switch (option) {
-			case "1":
-				register();
-				break;
-			case "2":
-				search();
-				break;
-			case "3":
-				delete();
-				break;
-			case "4":
-				viewAll();
-				break;
-			default:
-				System.out.println("O valor " + option + " é invalido");
-				break;
+				switch (option) {
+				case "1":
+					Client.gui();
+					break;
+				case "2":
+					Employee.gui();;		
+					break;
+				default:
+					System.out.println("O valor " + option + " é invalido");
+					break;
+				}
 			}
 		}
-}
+
+	}

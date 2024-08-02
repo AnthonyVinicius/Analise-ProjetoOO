@@ -1,7 +1,5 @@
 package br.com.ifpe.apresentation;
-
 import java.util.Scanner;
-
 import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.RyzenCpu;
@@ -9,11 +7,11 @@ import br.com.ifpe.entities.RyzenCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.controler.CpuControler;
 
-public class CPUGui {
+public class EmployeeGUI {
 	CpuControler cpuControler = new CpuControler();
 	Scanner scanner = new Scanner(System.in);
 
-	public void guiCPU() {
+	public void gui() {
 		while (true) {
 			System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs");
 			String option = scanner.nextLine();
@@ -116,6 +114,7 @@ public class CPUGui {
 	}
 
 	private void viewAll() {
-	System.out.println(cpuControler.viewAll().toString());
+		System.out.println(cpuControler.viewAll().toString());
 	}
+
 }

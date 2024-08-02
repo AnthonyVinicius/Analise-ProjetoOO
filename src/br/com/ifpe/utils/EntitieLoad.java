@@ -7,6 +7,7 @@ import br.com.ifpe.entities.RyzenCpu;
 import br.com.ifpe.entities.RyzenCpuBuilder;
 
 public class EntitieLoad {
+<<<<<<< HEAD
 	
 	public void entitieLoad() {		
 		CpuControler cpuControler = new CpuControler();
@@ -51,5 +52,28 @@ public class EntitieLoad {
 		cpuControler.register(i33710);
 		cpuControler.register(I53600);
 	}
+=======
+
+	IntelCpu i33710 = new IntelCpuBuilder()
+			.model("I3 3710")
+			.socket("LGA 775")
+			.core(6)
+			.threads(12)
+			.hrz(3.4)
+			.price(13.50)
+			.build();
+
+	RyzenCpu r55600 = new RyzenCpuBuilder()
+			.model("R5 5600")
+			.socket("AM4")
+			.core(6)
+			.threads(12)
+			.hrz(4.6)
+			.price(130)
+			.build();
+	
+	CpuControler cpuControler = new CpuControler();
+	
+>>>>>>> e4d7b788b069ecf220bdd4b7dfc36e23a36a0d98
 
 }
