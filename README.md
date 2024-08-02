@@ -8,4 +8,7 @@
 <li>AbstractFactory</li>
 <li>Singleton</li>
 <li>DAO</li> 
+<li>Adapter</li> 
+<li>Decorator</li> 
+<li>Facade</li> 
 </ul>
