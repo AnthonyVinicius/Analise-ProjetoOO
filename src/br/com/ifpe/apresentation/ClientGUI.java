@@ -7,7 +7,7 @@ public class ClientGUI {
 	public void gui() {
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
-			System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs");
+			System.out.println("\n[1]-Add\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs");
 			String option = scanner.nextLine();
 
 			switch (option) {

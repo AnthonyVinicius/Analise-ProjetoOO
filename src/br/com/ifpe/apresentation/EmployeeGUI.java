@@ -2,13 +2,13 @@ package br.com.ifpe.apresentation;
 import java.util.Scanner;
 import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
-import br.com.ifpe.entities.RyzenCpu;
-import br.com.ifpe.entities.RyzenCpuBuilder;
+import br.com.ifpe.entities.AmdCpu;
+import br.com.ifpe.entities.AmdCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
-import br.com.ifpe.controler.CpuControler;
+import br.com.ifpe.controler.EmployeeControler;
 
 public class EmployeeGUI {
-	CpuControler cpuControler = new CpuControler();
+	EmployeeControler employeeControler = new EmployeeControler();
 	Scanner scanner = new Scanner(System.in);
 
 	public void gui() {
@@ -80,9 +80,9 @@ public class EmployeeGUI {
 					.hrz(hrz)
 					.price(price)
 					.build();
-			cpuControler.register(intelCpu);
+			employeeControler.register(intelCpu);
 		}else if(modelChoice == 2 ) {
-			RyzenCpu ryzenCpu = new RyzenCpuBuilder()
+			AmdCpu amdCpu = new AmdCpuBuilder()
 					.model(model)
 					.socket(socket)
 					.core(core)
@@ -90,7 +90,7 @@ public class EmployeeGUI {
 					.hrz(hrz)
 					.price(price)
 					.build();
-			cpuControler.register(ryzenCpu);
+			employeeControler.register(amdCpu);
 		}else {
 			System.out.println("Modelo Indisponivel no Sistema");
 		}
@@ -99,7 +99,7 @@ public class EmployeeGUI {
 	private void search() {
 		System.out.println("Digite o Modelo:");
 		String model = scanner.nextLine().toLowerCase().replace(" ", "");
-		CpuAbstract cpu = cpuControler.search(model);
+		CpuAbstract cpu = employeeControler.search(model);
 		if (cpu != null) {
 			System.out.println(cpu);
 		} else {
@@ -110,11 +110,11 @@ public class EmployeeGUI {
 	private void delete() {
 		System.out.println("Digite o Modelo:");
 		String model = scanner.nextLine().toLowerCase().replace(" ", "");
-		cpuControler.delete(model);
+		employeeControler.delete(model);
 	}
 
 	private void viewAll() {
-		System.out.println(cpuControler.viewAll().toString());
+		System.out.println(employeeControler.viewAll().toString());
 	}
 
 }

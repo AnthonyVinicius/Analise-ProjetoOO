@@ -1,14 +1,14 @@
 package br.com.ifpe.utils;
 
-import br.com.ifpe.controler.CpuControler;
+import br.com.ifpe.controler.EmployeeControler;
 import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
-import br.com.ifpe.entities.RyzenCpu;
-import br.com.ifpe.entities.RyzenCpuBuilder;
+import br.com.ifpe.entities.AmdCpu;
+import br.com.ifpe.entities.AmdCpuBuilder;
 
 public class EntitieLoad {
 	public void entitieLoad() {		
-		CpuControler cpuControler = new CpuControler();
+		EmployeeControler employeeControler = new EmployeeControler();
 		IntelCpu i33710 = new IntelCpuBuilder()
 				.model("I3 3710")
 				.socket("LGA 775")
@@ -27,7 +27,7 @@ public class EntitieLoad {
 				.price(13.50)
 				.build();
 		
-		RyzenCpu r55600 = new RyzenCpuBuilder()
+		AmdCpu r55600 = new AmdCpuBuilder()
 				.model("R5 5600")
 				.socket("AM4")
 				.core(6)
@@ -37,7 +37,7 @@ public class EntitieLoad {
 				.build();
 		
 		
-		RyzenCpu r97600 = new RyzenCpuBuilder()
+		AmdCpu r97600 = new AmdCpuBuilder()
 				.model("R9 7600")
 				.socket("AM4")
 				.core(6)
@@ -45,9 +45,9 @@ public class EntitieLoad {
 				.hrz(4.6)
 				.price(130)
 				.build();
-		cpuControler.register(r55600);
-		cpuControler.register(r97600);
-		cpuControler.register(i33710);
-		cpuControler.register(I53600);
+		employeeControler.register(r55600);
+		employeeControler.register(r97600);
+		employeeControler.register(i33710);
+		employeeControler.register(I53600);
 	}
 }

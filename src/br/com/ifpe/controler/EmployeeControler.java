@@ -1,17 +1,13 @@
 package br.com.ifpe.controler;
-
 import java.util.List;
 import java.util.function.Predicate;
-
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
 
-public class CpuControler {
+public class EmployeeControler {
 
-
-
-	public CpuControler() {
+	public EmployeeControler() {
 		// TODO Auto-generated constructor stub
 	}
 

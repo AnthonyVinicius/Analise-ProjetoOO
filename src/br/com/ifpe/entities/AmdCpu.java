@@ -2,14 +2,14 @@ package br.com.ifpe.entities;
 
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
-public class RyzenCpu extends CpuAbstract{
+public class AmdCpu extends CpuAbstract{
 	
-	public RyzenCpu() {
+	public AmdCpu() {
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public RyzenCpu(String model, String socket, int core, int threads, double hrz, double price) {
+	public AmdCpu(String model, String socket, int core, int threads, double hrz, double price) {
 		super(model, socket, core, threads, hrz, price);
 		// TODO Auto-generated constructor stub
 	}
@@ -17,7 +17,7 @@ public class RyzenCpu extends CpuAbstract{
 
 	@Override
 	public String toString() {
-		return "RyzenCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
+		return "AmdCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
 				+ getCore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
 				+ getPrice();
 	}

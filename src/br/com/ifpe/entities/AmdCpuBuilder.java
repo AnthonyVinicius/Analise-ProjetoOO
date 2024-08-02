@@ -1,8 +1,8 @@
 package br.com.ifpe.entities;
 
-public class RyzenCpuBuilder {
+public class AmdCpuBuilder {
 	
-	public RyzenCpuBuilder() {
+	public AmdCpuBuilder() {
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -13,34 +13,34 @@ public class RyzenCpuBuilder {
 	private double hrz;
 	private double price;
 	
-	public RyzenCpuBuilder model(String model) {
+	public AmdCpuBuilder model(String model) {
 		this.model = model;
 		return this;
 	}
 	
-	public RyzenCpuBuilder socket(String socket) {
+	public AmdCpuBuilder socket(String socket) {
 		this.socket = socket;
 		return this;
 	}
-	public RyzenCpuBuilder core(int core) {
+	public AmdCpuBuilder core(int core) {
 		this.core = core;
 		return this;
 	}
-	public RyzenCpuBuilder threads(int threads) {
+	public AmdCpuBuilder threads(int threads) {
 		this.threads = threads;
 		return this;
 	}
-	public RyzenCpuBuilder hrz(double hrz) {
+	public AmdCpuBuilder hrz(double hrz) {
 		this.hrz = hrz;
 		return this;
 	}
-	public RyzenCpuBuilder price(double price) {
+	public AmdCpuBuilder price(double price) {
 		this.price = price;
 		return this;
 	}
 	
-	public RyzenCpu build() {
-		return new RyzenCpu(model, socket, core, threads, hrz, price);
+	public AmdCpu build() {
+		return new AmdCpu(model, socket, core, threads, hrz, price);
 	}
 	
 }
