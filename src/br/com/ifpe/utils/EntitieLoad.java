@@ -7,8 +7,8 @@ import br.com.ifpe.entities.AmdCpu;
 import br.com.ifpe.entities.AmdCpuBuilder;
 
 public class EntitieLoad {
-	public void entitieLoad() {		
-		EmployeeController employeeController = new EmployeeController();
+	public void loadEntitie() {		
+		EmployeeController controller = new EmployeeController();
 		IntelCpu i33710 = new IntelCpuBuilder()
 				.model("I3 3710")
 				.socket("LGA 775")
@@ -17,8 +17,8 @@ public class EntitieLoad {
 				.hrz(3.4)
 				.price(13.50)
 				.build();
-		
-		IntelCpu I53600 = new IntelCpuBuilder()
+
+		IntelCpu i53600 = new IntelCpuBuilder()
 				.model("I5 3600")
 				.socket("LGA 775")
 				.core(6)
@@ -26,7 +26,7 @@ public class EntitieLoad {
 				.hrz(3.4)
 				.price(13.50)
 				.build();
-		
+
 		AmdCpu r55600 = new AmdCpuBuilder()
 				.model("R5 5600")
 				.socket("AM4")
@@ -35,8 +35,8 @@ public class EntitieLoad {
 				.hrz(4.6)
 				.price(130)
 				.build();
-		
-		
+
+
 		AmdCpu r97600 = new AmdCpuBuilder()
 				.model("R9 7600")
 				.socket("AM4")
@@ -45,9 +45,11 @@ public class EntitieLoad {
 				.hrz(4.6)
 				.price(130)
 				.build();
-		employeeController.register(r55600);
-		employeeController.register(r97600);
-		employeeController.register(i33710);
-		employeeController.register(I53600);
+		System.out.println("Iniciando o registro das CPUs...");
+		controller.register(i33710);
+		controller.register(i53600);
+		controller.register(r55600);
+		controller.register(r97600);
+		System.out.println("Registro das CPUs concluído.");
 	}
 }
