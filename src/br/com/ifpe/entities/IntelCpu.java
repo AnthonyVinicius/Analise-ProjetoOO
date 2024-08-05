@@ -16,9 +16,9 @@ public class IntelCpu extends CpuAbstract{
 
 	@Override
 	public String toString() {
-		return "IntelCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
+		return "\nIntelCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
 				+ getCore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
-				+ getPrice();
+				+ getPrice()+ "\n_______________";
 	}
 
 

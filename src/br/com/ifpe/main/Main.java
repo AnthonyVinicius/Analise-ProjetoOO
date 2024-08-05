@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		EntitieLoad load = new EntitieLoad();
-		load.loadEntitie();
+		load.loadEntities();
 
 		EmployeeGUI Employee = new EmployeeGUI();
 		ClientGUI Client = new ClientGUI();
