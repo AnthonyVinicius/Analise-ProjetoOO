@@ -5,7 +5,7 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
 
-public class ClientControler {
+public class ClientController{
 
 	GenericDAO<CpuAbstract> cpuDAO = DAOFactory.createDAO(CpuAbstract.class);//mudar depois 
 

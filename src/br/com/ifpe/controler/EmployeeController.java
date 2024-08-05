@@ -5,11 +5,11 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
 
-public class EmployeeControler {
+public class EmployeeController{
 
 	private final GenericDAO<CpuAbstract> cpuDAO;
 	
-	public EmployeeControler() {
+	public EmployeeController() {
 		this.cpuDAO = DAOFactory.createDAO(CpuAbstract.class);
 	}
 

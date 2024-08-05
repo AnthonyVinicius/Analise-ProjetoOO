@@ -1,6 +1,6 @@
 package br.com.ifpe.utils;
 
-import br.com.ifpe.controler.EmployeeControler;
+import br.com.ifpe.controler.EmployeeController;
 import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.AmdCpu;
@@ -8,7 +8,7 @@ import br.com.ifpe.entities.AmdCpuBuilder;
 
 public class EntitieLoad {
 	public void entitieLoad() {		
-		EmployeeControler employeeControler = new EmployeeControler();
+		EmployeeController employeeController = new EmployeeController();
 		IntelCpu i33710 = new IntelCpuBuilder()
 				.model("I3 3710")
 				.socket("LGA 775")
@@ -45,9 +45,9 @@ public class EntitieLoad {
 				.hrz(4.6)
 				.price(130)
 				.build();
-		employeeControler.register(r55600);
-		employeeControler.register(r97600);
-		employeeControler.register(i33710);
-		employeeControler.register(I53600);
+		employeeController.register(r55600);
+		employeeController.register(r97600);
+		employeeController.register(i33710);
+		employeeController.register(I53600);
 	}
 }
