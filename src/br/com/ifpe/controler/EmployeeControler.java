@@ -7,11 +7,11 @@ import br.com.ifpe.services.DAOFactory;
 
 public class EmployeeControler {
 
+	private final GenericDAO<CpuAbstract> cpuDAO;
+	
 	public EmployeeControler() {
-		// TODO Auto-generated constructor stub
+		this.cpuDAO = DAOFactory.createDAO(CpuAbstract.class);
 	}
-
-	GenericDAO<CpuAbstract> cpuDAO = DAOFactory.createDAO();
 
 	public CpuAbstract search(String model) {
 		Predicate<CpuAbstract> foundCpu = cpu -> cpu.getModel().equals(model);

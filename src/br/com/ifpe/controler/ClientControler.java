@@ -7,7 +7,7 @@ import br.com.ifpe.services.DAOFactory;
 
 public class ClientControler {
 
-	GenericDAO<CpuAbstract> cpuDAO = DAOFactory.createDAO();
+	GenericDAO<CpuAbstract> cpuDAO = DAOFactory.createDAO(CpuAbstract.class);//mudar depois 
 
 	public CpuAbstract search(String model) {
 		Predicate<CpuAbstract> foundCpu = cpu -> cpu.getModel().equals(model);
