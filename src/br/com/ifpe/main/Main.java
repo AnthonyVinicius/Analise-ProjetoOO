@@ -13,7 +13,7 @@ public class Main {
 
 		while (true) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("\n[1]-Client\n[2]-Employee CPU\n");
+			System.out.print("\n[1]-Client\n[2]-Employee CPU\n");
 			String option = scanner.nextLine();
 
 			switch (option) {

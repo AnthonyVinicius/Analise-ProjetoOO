@@ -5,10 +5,10 @@ import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.AmdCpu;
 import br.com.ifpe.entities.AmdCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
-import br.com.ifpe.controler.EmployeeController;
+import br.com.ifpe.apresentation.EmployeeFacade;
 
 public class EmployeeGUI {
-	EmployeeController employeeController = new EmployeeController();
+	EmployeeFacade facade = new EmployeeFacade();
 	Scanner scanner = new Scanner(System.in);
 
 	public void gui() {
@@ -84,7 +84,7 @@ public class EmployeeGUI {
 						.hrz(hrz)
 						.price(price)
 						.build();
-				employeeController.register(intelCpu);
+				facade.register(intelCpu);
 			}else if(modelChoice == 2 ) {
 				AmdCpu amdCpu = new AmdCpuBuilder()
 						.model(model)
@@ -94,7 +94,7 @@ public class EmployeeGUI {
 						.hrz(hrz)
 						.price(price)
 						.build();
-				employeeController.register(amdCpu);
+				facade.register(amdCpu);
 			}else {
 				System.out.println("Modelo Indisponivel no Sistema");
 			}
@@ -106,7 +106,7 @@ public class EmployeeGUI {
 	private void search() {
 		System.out.println("Digite o Modelo:");
 		String model = scanner.nextLine().toLowerCase().replace(" ", "");
-		CpuAbstract cpu = employeeController.search(model);
+		CpuAbstract cpu = facade.search(model);
 		if (cpu != null) {
 			System.out.println(cpu);
 		} else {
@@ -117,11 +117,11 @@ public class EmployeeGUI {
 	private void delete() {
 		System.out.println("Digite o Modelo:");
 		String model = scanner.nextLine().toLowerCase().replace(" ", "");
-		employeeController.delete(model);
+		facade.delete(model);
 	}
 
 	private void viewAll() {
-		System.out.println(employeeController.viewAll().toString());
+		System.out.println(facade.viewAll().toString());
 	}
 
 }
