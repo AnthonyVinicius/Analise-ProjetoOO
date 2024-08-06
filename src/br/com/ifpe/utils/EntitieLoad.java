@@ -11,7 +11,7 @@ public class EntitieLoad {
         EmployeeController employeeController = EmployeeController.getInstance();
 
         IntelCpu i33710 = new IntelCpuBuilder()
-                .model("I3 3710")
+                .model("i33710")
                 .socket("LGA 775")
                 .core(6)
                 .threads(12)
@@ -20,7 +20,7 @@ public class EntitieLoad {
                 .build();
 
         IntelCpu i53600 = new IntelCpuBuilder()
-                .model("I5 3600")
+                .model("i53600")
                 .socket("LGA 775")
                 .core(6)
                 .threads(12)
@@ -29,7 +29,7 @@ public class EntitieLoad {
                 .build();
 
         AmdCpu r55600 = new AmdCpuBuilder()
-                .model("R5 5600")
+                .model("r55600")
                 .socket("AM4")
                 .core(6)
                 .threads(12)
@@ -38,7 +38,7 @@ public class EntitieLoad {
                 .build();
 
         AmdCpu r97600 = new AmdCpuBuilder()
-                .model("R9 7600")
+                .model("r97600")
                 .socket("AM4")
                 .core(6)
                 .threads(12)

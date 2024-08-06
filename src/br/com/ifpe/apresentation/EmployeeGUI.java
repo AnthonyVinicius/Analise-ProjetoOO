@@ -46,71 +46,68 @@ public class EmployeeGUI {
 		int threads;
 		double hrz;
 		double price;
-		try{
 
-			System.out.print("Qual Modelo de CPU deseja Adicionar?: ");
-			System.out.println("\nIntel [1]\nRyzen [2]");
-			int modelChoice = scanner.nextInt();
-			scanner.nextLine();
+		System.out.print("Qual Modelo de CPU deseja Adicionar?: ");
+		System.out.println("\nIntel [1]\nRyzen [2]");
+		int modelChoice = scanner.nextInt();
+		scanner.nextLine();
 
-			System.out.println("Digite o Modelo:");
-			model = scanner.nextLine().toLowerCase().replace(" ", "");
+		System.out.println("Digite o Modelo:");
+		model = scanner.nextLine().toLowerCase().replace(" ", "");
 
-			System.out.println("Digite o Socket:");
-			socket = scanner.nextLine();
+		System.out.println("Digite o Socket:");
+		socket = scanner.nextLine();
 
-			System.out.println("Digite a quantidade de Core:");
-			core = scanner.nextInt();
-			scanner.nextLine();
+		System.out.println("Digite a quantidade de Core:");
+		core = scanner.nextInt();
+		scanner.nextLine();
 
-			System.out.println("Digite o Threads:");
-			threads = scanner.nextInt();
-			scanner.nextLine();
+		System.out.println("Digite o Threads:");
+		threads = scanner.nextInt();
+		scanner.nextLine();
 
-			System.out.println("Digite a Frequência:");
-			hrz = scanner.nextDouble();
-			scanner.nextLine();
+		System.out.println("Digite a Frequência:");
+		hrz = scanner.nextDouble();
+		scanner.nextLine();
 
-			System.out.println("Digite o Preço:");
-			price = scanner.nextDouble();
-			scanner.nextLine();
-			if(modelChoice == 1 ) {
+		System.out.println("Digite o Preço:");
+		price = scanner.nextDouble();
+		scanner.nextLine();
+		if(modelChoice == 1 ) {
 
-				IntelCpu intelCpu = new IntelCpuBuilder()
-						.model(model)
-						.socket(socket)
-						.core(core)
-						.threads(threads)
-						.hrz(hrz)
-						.price(price)
-						.build();
-				facade.register(intelCpu);
-			}else if(modelChoice == 2 ) {
-				AmdCpu amdCpu = new AmdCpuBuilder()
-						.model(model)
-						.socket(socket)
-						.core(core)
-						.threads(threads)
-						.hrz(hrz)
-						.price(price)
-						.build();
-				facade.register(amdCpu);
-			}else {
-				System.out.println("Modelo Indisponivel no Sistema");
-			}
-		}catch(Exception e) {
-			System.out.println("Valor Invalido");
+			IntelCpu intelCpu = new IntelCpuBuilder()
+					.model(model)
+					.socket(socket)
+					.core(core)
+					.threads(threads)
+					.hrz(hrz)
+					.price(price)
+					.build();
+			facade.register(intelCpu);
+		}else if(modelChoice == 2 ) {
+			AmdCpu amdCpu = new AmdCpuBuilder()
+					.model(model)
+					.socket(socket)
+					.core(core)
+					.threads(threads)
+					.hrz(hrz)
+					.price(price)
+					.build();
+			facade.register(amdCpu);
+		}else {
+			System.out.println("Modelo Indisponivel no Sistema");
 		}
+
 	}
+
 
 	private void search() {
 		System.out.println("Digite o Modelo:");
 		String model = scanner.nextLine().toLowerCase().replace(" ", "");
-		CpuAbstract cpu = facade.search(model);
-		if (cpu != null) {
-			System.out.println(cpu);
-		} else {
-			System.out.println("CPU não encontrada.");
+		if(facade.search(model)!=null) {
+			System.out.println(facade.search(model));
+		}else {
+			System.out.println("Objeto Não Encontrado no Sistema");
 		}
 	}
 
