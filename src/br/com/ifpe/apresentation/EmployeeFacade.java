@@ -19,6 +19,10 @@ public class EmployeeFacade {
         controller.delete(model);
     }
 
+    public boolean alreadyRegister(String model) {
+        return controller.alreadyRegister(model);
+    }
+
     public List<CpuAbstract> viewAll() {
         return controller.viewAll();
     }
