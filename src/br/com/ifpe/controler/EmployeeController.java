@@ -35,9 +35,9 @@ public class EmployeeController {
         CpuAbstract temp = search(model);
         if (temp != null && model.equalsIgnoreCase(temp.getModel())) {
             System.out.println("Modelo Já Cadastrado No Sistema");
-            return true;
-        } else {
             return false;
+        } else {
+            return true;
         }
     }
 

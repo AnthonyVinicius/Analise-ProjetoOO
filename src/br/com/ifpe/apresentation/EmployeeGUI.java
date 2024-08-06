@@ -54,48 +54,33 @@ public class EmployeeGUI {
 
         System.out.println("Digite o Modelo:");
         model = scanner.nextLine().toLowerCase().replace(" ", "");
-        System.out.println("Digite o Socket:");
-        socket = scanner.nextLine();
+        if (facade.alreadyRegister(model)) {
+            System.out.println("Digite o Socket:");
+            socket = scanner.nextLine();
 
-        System.out.println("Digite a quantidade de Core:");
-        core = scanner.nextInt();
-        scanner.nextLine();
+            System.out.println("Digite a quantidade de Core:");
+            core = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("Digite o Threads:");
-        threads = scanner.nextInt();
-        scanner.nextLine();
+            System.out.println("Digite o Threads:");
+            threads = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("Digite a Frequência:");
-        hrz = scanner.nextDouble();
-        scanner.nextLine();
+            System.out.println("Digite a Frequência:");
+            hrz = scanner.nextDouble();
+            scanner.nextLine();
 
-        System.out.println("Digite o Preço:");
-        price = scanner.nextDouble();
-        scanner.nextLine();
-        if (modelChoice == 1) {
-            IntelCpu intelCpu = new IntelCpuBuilder()
-                    .model(model)
-                    .socket(socket)
-                    .core(core)
-                    .threads(threads)
-                    .hrz(hrz)
-                    .price(price)
-                    .build();
-            facade.register(intelCpu);
-        } else if (modelChoice == 2) {
-            AmdCpu amdCpu = new AmdCpuBuilder()
-                    .model(model)
-                    .socket(socket)
-                    .core(core)
-                    .threads(threads)
-                    .hrz(hrz)
-                    .price(price)
-                    .build();
-            facade.register(amdCpu);
-        } else {
-            System.out.println("Modelo Indisponível no Sistema");
+            System.out.println("Digite o Preço:");
+            price = scanner.nextDouble();
+            scanner.nextLine();
+            if (modelChoice == 1) {
+               facade.register( creatIntel(model, socket, core, threads, hrz, price));
+            } else if (modelChoice == 2) {
+            facade.register( creatAMD(model, socket, core, threads, hrz, price));
+            } else {
+                System.out.println("Modelo Indisponível no Sistema");
+            }
         }
-
     }
 
     private void search() {
@@ -117,5 +102,26 @@ public class EmployeeGUI {
 
     private void viewAll() {
         System.out.println(facade.viewAll().toString());
+    }
+
+    private CpuAbstract creatIntel(String model, String socket, int core, int threads, double hrz, double price ){
+        return new IntelCpuBuilder()
+                .model(model)
+                .socket(socket)
+                .core(core)
+                .threads(threads)
+                .hrz(hrz)
+                .price(price)
+                .build();
+    }
+    private CpuAbstract creatAMD(String model, String socket, int core, int threads, double hrz, double price ){
+        return new AmdCpuBuilder()
+                .model(model)
+                .socket(socket)
+                .core(core)
+                .threads(threads)
+                .hrz(hrz)
+                .price(price)
+                .build();
     }
 }
