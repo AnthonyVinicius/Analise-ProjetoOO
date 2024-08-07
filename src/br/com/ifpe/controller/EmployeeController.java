@@ -31,7 +31,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         return dao.read(foundCpu);
     }
 
-    public boolean alreadyRegister(String model) {
+    private boolean alreadyRegister(String model) {
         CpuAbstract temp = search(model);
         if (temp != null && model.equalsIgnoreCase(temp.getModel())) {
             return false;

@@ -7,7 +7,7 @@ import br.com.ifpe.entities.AmdCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class EmployeeGUI {
-    EmployeeFacade facade = new EmployeeFacade();
+    Facade facade = new Facade();
     Scanner scanner = new Scanner(System.in);
 
     public void gui() {
@@ -73,10 +73,10 @@ public class EmployeeGUI {
         price = scanner.nextDouble();
         scanner.nextLine();
         if (modelChoice == 1) {
-            facade.register(createIntel(model, socket, core, threads, hrz, price));
+            facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
             System.out.println("Model successfully registered.");
         } else if (modelChoice == 2) {
-            facade.register(createAMD(model, socket, core, threads, hrz, price));
+            facade.employeeRegister(createAMD(model, socket, core, threads, hrz, price));
             System.out.println("Model successfully registered.");
         } else {
             System.out.println("Model not available in the system");
@@ -87,18 +87,18 @@ public class EmployeeGUI {
     private void read() {
         System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
-        CpuAbstract result = facade.read(model);
+        CpuAbstract result = facade.employeeRead(model);
     }
 
     private void delete() {
         System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
-        facade.delete(model);
+        facade.employeeDelete(model);
         System.out.println("CPU successfully deleted.");
     }
 
     private void viewAll() {
-        System.out.println(facade.viewAll().toString());
+        System.out.println(facade.employeeViewAll().toString());
     }
 
     private CpuAbstract createIntel(String model, String socket, int core, int threads, double hrz, double price) {

@@ -1,12 +1,13 @@
 package br.com.ifpe.presentation;
 
+import br.com.ifpe.entities.abstractclass.CpuAbstract;
+
 import java.util.Scanner;
 
 public class ClientGUI {
 
     public void gui() {
         Scanner scanner = new Scanner(System.in);
-        ClientFacade facade = new ClientFacade();
         boolean running = true;
         while (running) {
             try {
@@ -19,7 +20,7 @@ public class ClientGUI {
                         add();
                         break;
                     case "2":
-                        search();
+                        total();
                         break;
                     case "3":
                         delete();
@@ -35,20 +36,22 @@ public class ClientGUI {
             }
         }
     }
-
+    Facade facade = new Facade();
     public void add() {
-//	facade.add();
+        CpuAbstract cpu = null; //Mudar
+	facade.clientAdd(cpu);
     }
 
-    public void search() {
-//	facade.search();
+    public void total() {
+	facade.clientTotal();
     }
 
     public void delete() {
-//	facade.delete
+        String model = null; //Mudar
+	facade.clientDelete(model);
     }
 
     public void viewAll() {
-//	facade.viewAll
+	facade.clientViewAll();
     }
 }
