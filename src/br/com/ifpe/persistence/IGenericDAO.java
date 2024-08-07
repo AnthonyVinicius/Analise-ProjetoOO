@@ -7,5 +7,5 @@ public interface IGenericDAO<T> {
 	    void register(T object);
 	    boolean delete(T object);
 	    List<T> listAll();
-		T search(Predicate<T> filter);
+		T read(Predicate<T> filter);
 	}

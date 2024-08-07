@@ -11,8 +11,8 @@ public class EmployeeFacade {
         controller.register(cpu);
     }
 
-    public CpuAbstract search(String model) {
-        return controller.search(model);
+    public CpuAbstract read(String model) {
+        return controller.read(model);
     }
 
     public void delete(String model) {

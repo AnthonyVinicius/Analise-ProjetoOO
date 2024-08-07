@@ -14,7 +14,7 @@ public class EmployeeGUI {
         boolean running = true;
         while (running) {
             try {
-                System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs\n[5]-Back");
+                System.out.println("\n[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-View all CPUs\n[5]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -22,7 +22,7 @@ public class EmployeeGUI {
                         register();
                         break;
                     case "2":
-                        search();
+                        read();
                         break;
                     case "3":
                         delete();
@@ -32,7 +32,6 @@ public class EmployeeGUI {
                         break;
                     case "5":
                         running = false;
-                        back();
                 }
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());
@@ -55,50 +54,47 @@ public class EmployeeGUI {
 
         System.out.println("Enter the model:");
         model = scanner.nextLine().toLowerCase().replace(" ", "");
-        if (facade.alreadyRegister(model)) {
-            System.out.println("Enter the socket:");
-            socket = scanner.nextLine();
+        System.out.println("Enter the socket:");
+        socket = scanner.nextLine();
 
-            System.out.println("Enter the number of cores:");
-            core = scanner.nextInt();
-            scanner.nextLine();
+        System.out.println("Enter the number of cores:");
+        core = scanner.nextInt();
+        scanner.nextLine();
 
-            System.out.println("Enter the number of threads:");
-            threads = scanner.nextInt();
-            scanner.nextLine();
+        System.out.println("Enter the number of threads:");
+        threads = scanner.nextInt();
+        scanner.nextLine();
 
-            System.out.println("Enter the frequency:");
-            hrz = scanner.nextDouble();
-            scanner.nextLine();
+        System.out.println("Enter the frequency:");
+        hrz = scanner.nextDouble();
+        scanner.nextLine();
 
-            System.out.println("Enter the price:");
-            price = scanner.nextDouble();
-            scanner.nextLine();
-            if (modelChoice == 1) {
-                facade.register(createIntel(model, socket, core, threads, hrz, price));
-            } else if (modelChoice == 2) {
-                facade.register(createAMD(model, socket, core, threads, hrz, price));
-            } else {
-                System.out.println("Model not available in the system");
-            }
+        System.out.println("Enter the price:");
+        price = scanner.nextDouble();
+        scanner.nextLine();
+        if (modelChoice == 1) {
+            facade.register(createIntel(model, socket, core, threads, hrz, price));
+            System.out.println("Model successfully registered.");
+        } else if (modelChoice == 2) {
+            facade.register(createAMD(model, socket, core, threads, hrz, price));
+            System.out.println("Model successfully registered.");
+        } else {
+            System.out.println("Model not available in the system");
         }
     }
 
-    private void search() {
+
+    private void read() {
         System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
-        CpuAbstract result = facade.search(model);
-        if (result != null) {
-            System.out.println(result);
-        } else {
-            System.out.println("Object not found in the system");
-        }
+        CpuAbstract result = facade.read(model);
     }
 
     private void delete() {
         System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
         facade.delete(model);
+        System.out.println("CPU successfully deleted.");
     }
 
     private void viewAll() {
@@ -125,10 +121,5 @@ public class EmployeeGUI {
                 .hrz(hrz)
                 .price(price)
                 .build();
-    }
-
-    public void back() {
-        Menu menu = new Menu();
-        menu.menu();
     }
 }

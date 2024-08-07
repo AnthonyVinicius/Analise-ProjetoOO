@@ -19,7 +19,7 @@ public class GenericDAO<T> implements IGenericDAO<T> {
 	}
 
 	@Override
-	public T search(Predicate<T> filter) {
+	public T read(Predicate<T> filter) {
 		return dataBase.stream().filter(filter).findFirst().orElse(null);    			
 	}
 

@@ -3,28 +3,34 @@ package br.com.ifpe.controller;
 import java.util.List;
 import java.util.function.Predicate;
 
+import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
-import br.com.ifpe.services.DAOFactory;
 
-public class GenericController<T>{
+public abstract class GenericController<T> {
 
-	private final GenericDAO<T> dao;
+    protected GenericDAO<T> dao;
 
-	public GenericController(Class<T> type) {
-		this.dao = DAOFactory.createDAO(type);
-	}
+    public GenericController(GenericDAO<T> dao) {
+        this.dao = dao;
+    }
 
-	public T search(Predicate<T> predicate) {
-		return dao.search(predicate);
-	}
+    public T genericRead(T object) {
+        if (object != null) {
+            return object;
+        } else {
+            throw new RuntimeException("Object not found in the system");
+        }
+    }
 
-	public void register(T entity) { dao.register(entity);}
+    public void genericRegister(T entity) {
+        dao.register(entity);
+    }
 
-	public void delete(T entity) {
-		dao.delete(entity);
-	}
+    public void genericDelete(T entity) {
+        dao.delete(entity);
+    }
 
-	public List<T> listAll(){
-		return dao.listAll();
-	}
+    public List<T> generciListAll() {
+        return dao.listAll();
+    }
 }

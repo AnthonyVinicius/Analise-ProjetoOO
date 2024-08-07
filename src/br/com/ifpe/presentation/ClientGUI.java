@@ -6,7 +6,7 @@ public class ClientGUI {
 
     public void gui() {
         Scanner scanner = new Scanner(System.in);
-		ClientFacade facade = new ClientFacade();
+        ClientFacade facade = new ClientFacade();
         boolean running = true;
         while (running) {
             try {
@@ -29,7 +29,6 @@ public class ClientGUI {
                         break;
                     case "5":
                         running = false;
-                        back();
                 }
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());
@@ -52,10 +51,4 @@ public class ClientGUI {
     public void viewAll() {
 //	facade.viewAll
     }
-
-    public void back() {
-        Menu menu = new Menu();
-        menu.menu();
-    }
-
 }
