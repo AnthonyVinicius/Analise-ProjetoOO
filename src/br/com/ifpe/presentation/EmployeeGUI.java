@@ -11,7 +11,7 @@ public class EmployeeGUI {
     Scanner scanner = new Scanner(System.in);
 
     public void gui() {
-    boolean running = true;
+        boolean running = true;
         while (running) {
             try {
                 System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs\n[5]-Back");

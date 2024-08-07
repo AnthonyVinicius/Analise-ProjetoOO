@@ -6,6 +6,7 @@ public class ClientGUI {
 
     public void gui() {
         Scanner scanner = new Scanner(System.in);
+		ClientFacade facade = new ClientFacade();
         boolean running = true;
         while (running) {
             try {
@@ -37,19 +38,19 @@ public class ClientGUI {
     }
 
     public void add() {
-
+//	facade.add();
     }
 
     public void search() {
-
+//	facade.search();
     }
 
     public void delete() {
-
+//	facade.delete
     }
 
     public void viewAll() {
-
+//	facade.viewAll
     }
 
     public void back() {

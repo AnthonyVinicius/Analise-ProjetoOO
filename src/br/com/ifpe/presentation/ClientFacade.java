@@ -14,9 +14,9 @@ public class ClientFacade {
 //    public void delete(String model) {
 //        controller.delete(model);
 //    }
-    public void discont(){
-
-    }
+//    public void discont(){
+//
+//    }
 //
 //    public List<CpuAbstract> viewAll() {
 //        return controller.viewAll();

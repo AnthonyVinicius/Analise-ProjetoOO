@@ -7,6 +7,7 @@ import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
 
 public class GenericController<T>{
+
 	private final GenericDAO<T> dao;
 
 	public GenericController(Class<T> type) {
