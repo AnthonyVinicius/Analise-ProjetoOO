@@ -1,10 +1,4 @@
-package br.com.ifpe.apresentation;
-
-import br.com.ifpe.controler.ClientController;
-import br.com.ifpe.controler.EmployeeController;
-import br.com.ifpe.entities.abstractclass.CpuAbstract;
-
-import java.util.List;
+package br.com.ifpe.presentation;
 
 public class ClientFacade {
 //    private final ClientController controller = ClientController.getInstance();
@@ -20,6 +14,9 @@ public class ClientFacade {
 //    public void delete(String model) {
 //        controller.delete(model);
 //    }
+    public void discont(){
+
+    }
 //
 //    public List<CpuAbstract> viewAll() {
 //        return controller.viewAll();

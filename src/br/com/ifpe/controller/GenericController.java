@@ -1,4 +1,4 @@
-package br.com.ifpe.controler;
+package br.com.ifpe.controller;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -12,18 +12,15 @@ public class GenericController<T>{
 	public GenericController(Class<T> type) {
 		this.dao = DAOFactory.createDAO(type);
 	}
-	
 
 	public T search(Predicate<T> predicate) {
 		return dao.search(predicate);
 	}
 
-	public void register(T entity) {
-		dao.register(entity);
-	}
+	public void register(T entity) { dao.register(entity);}
 
-	public void delete() {
-		//fazer
+	public void delete(T entity) {
+		dao.delete(entity);
 	}
 
 	public List<T> listAll(){

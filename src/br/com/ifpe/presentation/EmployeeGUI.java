@@ -1,22 +1,20 @@
-package br.com.ifpe.apresentation;
+package br.com.ifpe.presentation;
 
 import java.util.Scanner;
 
-import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
-import br.com.ifpe.entities.AmdCpu;
 import br.com.ifpe.entities.AmdCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
-import br.com.ifpe.apresentation.EmployeeFacade;
 
 public class EmployeeGUI {
     EmployeeFacade facade = new EmployeeFacade();
     Scanner scanner = new Scanner(System.in);
 
     public void gui() {
-        while (true) {
+    boolean running = true;
+        while (running) {
             try {
-                System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs");
+                System.out.println("\n[1]-Register CPU\n[2]-Search CPU\n[3]-Delete CPU\n[4]-View all CPUs\n[5]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -32,9 +30,12 @@ public class EmployeeGUI {
                     case "4":
                         viewAll();
                         break;
+                    case "5":
+                        running = false;
+                        back();
                 }
             } catch (Exception e) {
-                System.out.println("Código Inválido: " + e.getMessage());
+                System.out.println("Invalid Code: " + e.getMessage());
             }
         }
     }
@@ -47,55 +48,55 @@ public class EmployeeGUI {
         double hrz;
         double price;
 
-        System.out.print("Qual Modelo de CPU deseja Adicionar?: ");
+        System.out.print("Which CPU model do you want to add?: ");
         System.out.println("\nIntel [1]\nRyzen [2]");
         int modelChoice = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Digite o Modelo:");
+        System.out.println("Enter the model:");
         model = scanner.nextLine().toLowerCase().replace(" ", "");
         if (facade.alreadyRegister(model)) {
-            System.out.println("Digite o Socket:");
+            System.out.println("Enter the socket:");
             socket = scanner.nextLine();
 
-            System.out.println("Digite a quantidade de Core:");
+            System.out.println("Enter the number of cores:");
             core = scanner.nextInt();
             scanner.nextLine();
 
-            System.out.println("Digite o Threads:");
+            System.out.println("Enter the number of threads:");
             threads = scanner.nextInt();
             scanner.nextLine();
 
-            System.out.println("Digite a Frequência:");
+            System.out.println("Enter the frequency:");
             hrz = scanner.nextDouble();
             scanner.nextLine();
 
-            System.out.println("Digite o Preço:");
+            System.out.println("Enter the price:");
             price = scanner.nextDouble();
             scanner.nextLine();
             if (modelChoice == 1) {
-               facade.register( creatIntel(model, socket, core, threads, hrz, price));
+                facade.register(createIntel(model, socket, core, threads, hrz, price));
             } else if (modelChoice == 2) {
-            facade.register( creatAMD(model, socket, core, threads, hrz, price));
+                facade.register(createAMD(model, socket, core, threads, hrz, price));
             } else {
-                System.out.println("Modelo Indisponível no Sistema");
+                System.out.println("Model not available in the system");
             }
         }
     }
 
     private void search() {
-        System.out.println("Digite o Modelo:");
+        System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
         CpuAbstract result = facade.search(model);
         if (result != null) {
             System.out.println(result);
         } else {
-            System.out.println("Objeto Não Encontrado no Sistema");
+            System.out.println("Object not found in the system");
         }
     }
 
     private void delete() {
-        System.out.println("Digite o Modelo:");
+        System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
         facade.delete(model);
     }
@@ -104,7 +105,7 @@ public class EmployeeGUI {
         System.out.println(facade.viewAll().toString());
     }
 
-    private CpuAbstract creatIntel(String model, String socket, int core, int threads, double hrz, double price ){
+    private CpuAbstract createIntel(String model, String socket, int core, int threads, double hrz, double price) {
         return new IntelCpuBuilder()
                 .model(model)
                 .socket(socket)
@@ -114,7 +115,8 @@ public class EmployeeGUI {
                 .price(price)
                 .build();
     }
-    private CpuAbstract creatAMD(String model, String socket, int core, int threads, double hrz, double price ){
+
+    private CpuAbstract createAMD(String model, String socket, int core, int threads, double hrz, double price) {
         return new AmdCpuBuilder()
                 .model(model)
                 .socket(socket)
@@ -123,5 +125,10 @@ public class EmployeeGUI {
                 .hrz(hrz)
                 .price(price)
                 .build();
+    }
+
+    public void back() {
+        Menu menu = new Menu();
+        menu.menu();
     }
 }

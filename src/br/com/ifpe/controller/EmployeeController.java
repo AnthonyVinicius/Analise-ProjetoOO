@@ -1,4 +1,4 @@
-package br.com.ifpe.controler;
+package br.com.ifpe.controller;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -34,7 +34,7 @@ public class EmployeeController {
     public boolean alreadyRegister(String model) {
         CpuAbstract temp = search(model);
         if (temp != null && model.equalsIgnoreCase(temp.getModel())) {
-            System.out.println("Modelo Já Cadastrado No Sistema");
+            System.out.println("Model already registered in the system");
             return false;
         } else {
             return true;
@@ -42,24 +42,23 @@ public class EmployeeController {
     }
 
     public void register(CpuAbstract cpu) {
-            cpuDAO.register(cpu);
-            System.out.println("Modelo registrado com sucesso.");
-        }
-
+        cpuDAO.register(cpu);
+        System.out.println("Model successfully registered.");
+    }
 
     public void delete(String model) {
         CpuAbstract cpu = search(model);
         if (cpu != null) {
             cpuDAO.delete(cpu);
-            System.out.println("CPU deletada com sucesso.");
+            System.out.println("CPU successfully deleted.");
         } else {
-            System.out.println("CPU não encontrada.");
+            System.out.println("CPU not found.");
         }
     }
 
     public List<CpuAbstract> viewAll() {
         List<CpuAbstract> cpus = cpuDAO.listAll();
-        System.out.println("Listando todas as CPUs:");
+        System.out.println("Listing all CPUs:");
         return cpus;
     }
 }

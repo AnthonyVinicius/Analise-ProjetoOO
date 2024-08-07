@@ -1,7 +1,7 @@
-package br.com.ifpe.apresentation;
+package br.com.ifpe.presentation;
 
 import java.util.List;
-import br.com.ifpe.controler.EmployeeController;
+import br.com.ifpe.controller.EmployeeController;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class EmployeeFacade {

@@ -1,6 +1,6 @@
 package br.com.ifpe.utils;
 
-import br.com.ifpe.controler.EmployeeController;
+import br.com.ifpe.controller.EmployeeController;
 import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.AmdCpu;
