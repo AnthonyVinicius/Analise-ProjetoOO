@@ -14,19 +14,12 @@ public class ClientController{
 		return cpuDAO.search(foundCpu);
 	}
 
-	public void register(CpuAbstract cpu) {
-		cpuDAO.register(cpu);
+	public void add(CpuAbstract cpu) {
 
 	}
 
 	public void delete(String model) {
-		CpuAbstract cpu = search(model);
-		if (cpu != null) {
-			cpuDAO.delete(cpu);
-			System.out.println("CPU deletada com sucesso.");
-		} else {
-			System.out.println("CPU não encontrada.");
-		}
+
 	}
 
 	public List<CpuAbstract> viewAll() {

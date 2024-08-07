@@ -12,7 +12,7 @@ public class ClientGUI {
 
 			switch (option) {
 			case "1":
-//				register();
+//				add();
 				break;
 			case "2":
 //				search();
