@@ -14,7 +14,7 @@ public class ClientGUI {
         while (running) {
             try {
 
-                System.out.println("\n[1]-Add\n[2]-Search\n[3]-Delete\n[4]-View all CPUS\n[5]-View all Items Cart\n[6]-Back");
+                System.out.println("\n[1]-Add\n[2]-Total Price\n[3]-Delete\n[4]-View all CPUS\n[5]-View all Items Cart\n[6]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -22,7 +22,7 @@ public class ClientGUI {
                         add();
                         break;
                     case "2":
-                        total();
+                        totalPrice();
                         break;
                     case "3":
                         delete();
@@ -50,8 +50,8 @@ public class ClientGUI {
         facade.clientAdd(model);
     }
 
-    public void total() {
-        facade.clientTotal();
+    public void totalPrice() {
+        System.out.println("R$"+facade.clientTotalPrice());
     }
 
     public void delete() {
