@@ -60,4 +60,13 @@ public class EmployeeController extends GenericController<CpuAbstract> {
     public List<CpuAbstract> viewAll() {
        return generciListAll();
     }
+
+    public void update(String model, CpuAbstract newCpu) {
+        CpuAbstract oldCpu = search(model);
+        if (oldCpu != null) {
+            genericUpdate(oldCpu, newCpu);
+        } else {
+            throw new RuntimeException("CPU to update not found.");
+        }
+    }
 }

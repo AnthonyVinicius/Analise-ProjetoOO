@@ -8,4 +8,5 @@ public interface IGenericDAO<T> {
 	    boolean delete(T object);
 	    List<T> listAll();
 		T read(Predicate<T> filter);
+		boolean update(T oldObject, T newObject);
 	}

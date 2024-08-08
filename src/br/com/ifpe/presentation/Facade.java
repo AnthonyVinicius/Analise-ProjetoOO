@@ -15,6 +15,10 @@ public class Facade {
 
     public void employeeDelete(String model) {employeeController.delete(model);}
 
+    public void employeeUpdate(String oldModel, CpuAbstract updatedCpu){
+        employeeController.update(oldModel, updatedCpu);
+    }
+
     public List<CpuAbstract> employeeViewAll() {return employeeController.viewAll();}
 
     public void clientAdd(CpuAbstract cpu) {clientController.add(cpu);}

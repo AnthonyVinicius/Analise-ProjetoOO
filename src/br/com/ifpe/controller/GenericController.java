@@ -33,4 +33,10 @@ public abstract class GenericController<T> {
     public List<T> generciListAll() {
         return dao.listAll();
     }
+
+    public void genericUpdate(T oldObject, T newObject) {
+        if (!dao.update(oldObject, newObject)) {
+            throw new RuntimeException("Object to be updated not found.");
+        }
+    }
 }
