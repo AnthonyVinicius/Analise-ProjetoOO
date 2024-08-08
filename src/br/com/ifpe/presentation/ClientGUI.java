@@ -1,9 +1,4 @@
 package br.com.ifpe.presentation;
-
-import br.com.ifpe.entities.Cart;
-import br.com.ifpe.entities.abstractclass.CpuAbstract;
-
-import java.util.List;
 import java.util.Scanner;
 
 public class ClientGUI {

@@ -1,27 +1,20 @@
 package br.com.ifpe.controller;
-
-import java.util.Collections;
 import java.util.List;
-import java.util.function.Predicate;
-
 import br.com.ifpe.entities.Cart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
-import br.com.ifpe.persistence.GenericDAO;
-import br.com.ifpe.services.DAOFactory;
 
-public class ClientController extends GenericController{
+public class ClientController{
     private static ClientController instance;
     private EmployeeController employeeController = EmployeeController.getInstance();
     private Cart cart;
 
-    private ClientController(GenericDAO<CpuAbstract> dao) {
-        super(dao);
+    private ClientController() {
         this.cart = new Cart();
     }
 
     public static ClientController getInstance() {
         if (instance == null) {
-            instance = new ClientController((DAOFactory.createDAO(CpuAbstract.class)));
+            instance = new ClientController();
         }
         return instance;
     }
