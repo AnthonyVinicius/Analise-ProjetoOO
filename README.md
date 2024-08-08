@@ -11,4 +11,5 @@
 <li>Adapter</li> 
 <li>Decorator</li> 
 <li>Facade</li> 
+<li>Template</li> 
 </ul>
