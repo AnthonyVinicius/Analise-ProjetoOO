@@ -26,7 +26,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         return genericRead(search(model));
     }
 
-    private CpuAbstract search(String model) {
+    public CpuAbstract search(String model) {
         Predicate<CpuAbstract> foundCpu = cpu -> cpu.getModel().equalsIgnoreCase(model);
         return dao.read(foundCpu);
     }

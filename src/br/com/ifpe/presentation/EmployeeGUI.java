@@ -97,51 +97,51 @@ public class EmployeeGUI {
         System.out.println("CPU successfully deleted.");
     }
 
-    private void update() {
-        System.out.println("Enter the model of the CPU to update:");
-        String oldModel = scanner.nextLine().toLowerCase().replace(" ", "");
-
-        CpuAbstract existingCpu = facade.read(oldModel);
-
-        if (existingCpu == null) {
-            System.out.println("CPU with the given model not found.");
-            return;
-        }
-
-        System.out.println("Enter the new model name:");
-        String newModel = scanner.nextLine().toLowerCase().replace(" ", "");
-        System.out.println("Enter the new socket:");
-        String newSocket = scanner.nextLine();
-
-        System.out.println("Enter the new number of cores:");
-        int newCore = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Enter the new number of threads:");
-        int newThreads = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Enter the new frequency:");
-        double newHrz = scanner.nextDouble();
-        scanner.nextLine();
-
-        System.out.println("Enter the new price:");
-        double newPrice = scanner.nextDouble();
-        scanner.nextLine();
-
-        CpuAbstract updatedCpu;
-        if (existingCpu instanceof IntelCpuBuilder) {
-            updatedCpu = createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
-        } else if (existingCpu instanceof AmdCpuBuilder) {
-            updatedCpu = createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
-        } else {
-            System.out.println("Error: Unknown CPU type.");
-            return;
-        }
-
-        facade.employeeUpdate(oldModel, updatedCpu);
-        System.out.println("CPU successfully updated.");
-    }
+//    private void update() {
+//        System.out.println("Enter the model of the CPU to update:");
+//        String oldModel = scanner.nextLine().toLowerCase().replace(" ", "");
+//
+//        CpuAbstract existingCpu = facade.read(oldModel);
+//
+//        if (existingCpu == null) {
+//            System.out.println("CPU with the given model not found.");
+//            return;
+//        }
+//
+//        System.out.println("Enter the new model name:");
+//        String newModel = scanner.nextLine().toLowerCase().replace(" ", "");
+//        System.out.println("Enter the new socket:");
+//        String newSocket = scanner.nextLine();
+//
+//        System.out.println("Enter the new number of cores:");
+//        int newCore = scanner.nextInt();
+//        scanner.nextLine();
+//
+//        System.out.println("Enter the new number of threads:");
+//        int newThreads = scanner.nextInt();
+//        scanner.nextLine();
+//
+//        System.out.println("Enter the new frequency:");
+//        double newHrz = scanner.nextDouble();
+//        scanner.nextLine();
+//
+//        System.out.println("Enter the new price:");
+//        double newPrice = scanner.nextDouble();
+//        scanner.nextLine();
+//
+//        CpuAbstract updatedCpu;
+//        if (existingCpu instanceof IntelCpuBuilder) {
+//            updatedCpu = createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+//        } else if (existingCpu instanceof AmdCpuBuilder) {
+//            updatedCpu = createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+//        } else {
+//            System.out.println("Error: Unknown CPU type.");
+//            return;
+//        }
+//
+//        facade.employeeUpdate(oldModel, updatedCpu);
+//        System.out.println("CPU successfully updated.");
+//    }
 
     private void viewAll() {
         System.out.println(facade.employeeViewAll().toString());

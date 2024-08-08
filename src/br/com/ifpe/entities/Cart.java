@@ -32,8 +32,4 @@ public class Cart {
     public List<CpuAbstract> getItems() {
         return items;
     }
-
-    public boolean containsModel(String model) {
-        return items.stream().anyMatch(cpu -> cpu.getModel().equalsIgnoreCase(model));
-    }
 }

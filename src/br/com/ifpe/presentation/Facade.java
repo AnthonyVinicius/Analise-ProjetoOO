@@ -21,12 +21,14 @@ public class Facade {
 
     public List<CpuAbstract> employeeViewAll() {return employeeController.viewAll();}
 
-    public void clientAdd(CpuAbstract cpu) {clientController.add(cpu);}
+    public void clientAdd(String model) {clientController.add(model);}
 
     public void clientDelete(String model){clientController.delete(model);}
 
     public void clientTotal(){clientController.getTotalValue();}
 
-    public List<CpuAbstract> clientViewAll() {return clientController.viewAll();}
+    public List<CpuAbstract> clientViewAllCpus() {return clientController.viewAllCpus();}
+
+    public List<CpuAbstract> clientviewAllItemsCart() {return clientController.viewAllItemsCart();}
 
 }
