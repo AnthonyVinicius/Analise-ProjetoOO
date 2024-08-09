@@ -12,7 +12,7 @@ public class Logger {
         try(FileWriter writer = new FileWriter(LOG_FILE, true)){
             writer.write(message);
         } catch (IOException e) {
-            throw new RuntimeException("Erro ao Loggar");
+            throw new RuntimeException("Registration error");
         }
     }
 

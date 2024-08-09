@@ -29,6 +29,6 @@ public class Facade {
 
     public List<CpuAbstract> clientViewAllCpus() {return clientController.viewAllCpus();}
 
-    public List<CpuAbstract> clientviewAllItemsCart() {return clientController.viewAllItemsCart();}
+    public List<CpuAbstract> clientViewAllItemsCart() {return clientController.viewAllItemsCart();}
 
 }

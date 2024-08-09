@@ -26,7 +26,7 @@ public abstract class GenericController<T> {
         dao.delete(entity);
     }
 
-    public List<T> generciListAll() {
+    public List<T> genericListAll() {
         return dao.listAll();
     }
 

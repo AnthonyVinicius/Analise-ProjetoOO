@@ -33,33 +33,23 @@ public abstract class CpuAbstract{
 	public String getSocket() {
 		return socket;
 	}
-	public void setSocket(String socket) {
-		this.socket = socket;
-	}
+
 	public int getCore() {
 		return core;
 	}
-	public void setCore(int core) {
-		this.core = core;
-	}
+
 	public int getThreads() {
 		return threads;
 	}
-	public void setThreads(int threads) {
-		this.threads = threads;
-	}
+
 	public double getHrz() {
 		return hrz;
 	}
-	public void setHrz(double hrz) {
-		this.hrz = hrz;
-	}
+
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
+
 	
 	
 }

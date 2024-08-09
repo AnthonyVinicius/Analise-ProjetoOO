@@ -3,10 +3,6 @@ package br.com.ifpe.entities;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class AmdCpu extends CpuAbstract{
-	
-	public AmdCpu() {
-		// TODO Auto-generated constructor stub
-	}
 
 
 	public AmdCpu(String model, String socket, int core, int threads, double hrz, double price) {

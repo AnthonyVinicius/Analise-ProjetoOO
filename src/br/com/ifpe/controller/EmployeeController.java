@@ -31,11 +31,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
 
     private boolean alreadyRegister(String model) {
         CpuAbstract temp = search(model);
-        if (temp != null && model.equalsIgnoreCase(temp.getModel())) {
-            return false;
-        } else {
-            return true;
-        }
+        return temp == null || !model.equalsIgnoreCase(temp.getModel());
     }
 
     public void register(CpuAbstract cpu) {
@@ -56,7 +52,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
     }
 
     public List<CpuAbstract> viewAll() {
-       return generciListAll();
+       return genericListAll();
     }
 
     public void update(String model, CpuAbstract newCpu) {

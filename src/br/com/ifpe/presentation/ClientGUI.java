@@ -60,6 +60,6 @@ public class ClientGUI {
     }
 
     public void viewAllItemsCart() {
-       System.out.println(facade.clientviewAllItemsCart().toString());
+       System.out.println(facade.clientViewAllItemsCart().toString());
     }
 }

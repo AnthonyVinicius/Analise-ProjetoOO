@@ -91,7 +91,7 @@ public class EmployeeGUI {
     private void read() {
         System.out.println("Enter the model:");
         String model = scanner.nextLine().toLowerCase().replace(" ", "");
-        CpuAbstract result = facade.employeeRead(model);
+        System.out.println(facade.employeeRead(model));
     }
 
     private void delete() {
@@ -106,11 +106,6 @@ public class EmployeeGUI {
         String oldModel = scanner.nextLine().toLowerCase().replace(" ", "");
 
         CpuAbstract existingCpu = facade.employeeRead(oldModel);
-
-        if (existingCpu == null) {
-            System.out.println("CPU with the given model not found.");
-            return;
-        }
 
         System.out.println("Enter the new model name:");
         String newModel = scanner.nextLine().toLowerCase().replace(" ", "");

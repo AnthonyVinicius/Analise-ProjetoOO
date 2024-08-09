@@ -22,8 +22,8 @@ public class GenericDAO<T> implements IGenericDAO<T> {
 	}
 
 	@Override
-	public boolean delete(T object) {
-		return dataBase.remove(object);
+	public void delete(T object) {
+		dataBase.remove(object);
 	}
 
 	@Override

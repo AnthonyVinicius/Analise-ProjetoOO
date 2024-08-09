@@ -5,8 +5,8 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class ClientController{
     private static ClientController instance;
-    private EmployeeController employeeController = EmployeeController.getInstance();
-    private Cart cart;
+    private final EmployeeController employeeController = EmployeeController.getInstance();
+    private final Cart cart;
 
     private ClientController() {
         this.cart = new Cart();
@@ -19,10 +19,9 @@ public class ClientController{
         return instance;
     }
 
-    public Cart add(String model) {
+    public void add(String model) {
     CpuAbstract cpu = employeeController.search(model);
         cart.add(cpu);
-        return cart;
     }
 
     public void delete(String model) {
