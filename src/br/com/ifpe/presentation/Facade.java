@@ -25,6 +25,8 @@ public class Facade {
 
     public void clientDelete(String model){clientController.delete(model);}
 
+    public void clientFinalizePurchase(String cpf){clientController.finalizePurchase(cpf);}
+
     public double clientTotalPrice(){return clientController.getTotalValue();}
 
     public List<CpuAbstract> clientViewAllCpus() {return clientController.viewAllCpus();}

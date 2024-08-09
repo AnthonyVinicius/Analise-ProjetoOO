@@ -9,7 +9,7 @@ public class ClientGUI {
         while (running) {
             try {
 
-                System.out.println("\n[1]-Add\n[2]-Total Price\n[3]-Delete\n[4]-View all CPUS\n[5]-View all Items Cart\n[6]-Back");
+                System.out.println("\n[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -17,16 +17,16 @@ public class ClientGUI {
                         add();
                         break;
                     case "2":
-                        totalPrice();
-                        break;
-                    case "3":
                         delete();
                         break;
-                    case "4":
+                    case "3":
                         viewAllCpus();
                         break;
-                    case "5":
+                    case "4":
                         viewAllItemsCart();
+                        break;
+                    case "5":
+                        finalizePurchase();
                         break;
                     case "6":
                         running = false;
@@ -40,17 +40,13 @@ public class ClientGUI {
     Facade facade = new Facade();
 
     public void add() {
-        System.out.println("Digite o modelo que deseja adicionar");
+        System.out.println("Enter the model you want to add");
         String model = scanner.nextLine();
         facade.clientAdd(model);
     }
 
-    public void totalPrice() {
-        System.out.println("R$"+facade.clientTotalPrice());
-    }
-
     public void delete() {
-        System.out.println("Digite o modelo que deseja adicionar");
+        System.out.println("Enter the model you want to delete");
         String model = scanner.nextLine();
         facade.clientDelete(model);
     }
@@ -61,5 +57,14 @@ public class ClientGUI {
 
     public void viewAllItemsCart() {
        System.out.println(facade.clientViewAllItemsCart().toString());
+        System.out.println("R$"+facade.clientTotalPrice());
     }
+    public void finalizePurchase(){
+        System.out.println("Enter your CPF");
+        String cpf = scanner.nextLine();
+
+
+        facade.clientFinalizePurchase(cpf);
+    }
+
 }

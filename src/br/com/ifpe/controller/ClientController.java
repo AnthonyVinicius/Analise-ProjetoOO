@@ -1,11 +1,14 @@
 package br.com.ifpe.controller;
 import java.util.List;
+
+import br.com.ifpe.adapter.CpfValidatorAdapter;
 import br.com.ifpe.entities.Cart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class ClientController{
     private static ClientController instance;
     private final EmployeeController employeeController = EmployeeController.getInstance();
+    CpfValidatorAdapter adapter = new CpfValidatorAdapter();
     private final Cart cart;
 
     private ClientController() {
@@ -18,6 +21,18 @@ public class ClientController{
         }
         return instance;
     }
+
+    public void finalizePurchase(String cpf) {
+    }
+
+    private void validateCPF(String cpf) {
+        adapter.validateCPF(cpf);
+    }
+
+    private double applyDiscount(double totalValue, double discountPercentage) {
+        return totalValue - (totalValue * discountPercentage / 100);
+    }
+
 
     public void add(String model) {
     CpuAbstract cpu = employeeController.search(model);
