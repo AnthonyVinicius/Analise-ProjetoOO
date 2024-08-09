@@ -4,6 +4,7 @@ import java.util.function.Predicate;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
+import br.com.ifpe.utils.Logger;
 
 public class EmployeeController extends GenericController<CpuAbstract> {
 
@@ -30,24 +31,41 @@ public class EmployeeController extends GenericController<CpuAbstract> {
     }
 
     private boolean alreadyRegister(String model) {
-        CpuAbstract temp = search(model);
-        return temp == null || !model.equalsIgnoreCase(temp.getModel());
+        try{
+            CpuAbstract temp = search(model);
+            return temp == null || !model.equalsIgnoreCase(temp.getModel());
+        } catch (Exception e) {
+            Logger.error("Error checking the cpu" + model + ". Exception: " + e.getMessage());
+            throw new RuntimeException("Error");
+        }
     }
 
     public void register(CpuAbstract cpu) {
-        if(alreadyRegister(cpu.getModel())){
-        genericRegister(cpu);
-        }else{
-            throw new RuntimeException("Model already registered in the system");
+        try {
+            if(alreadyRegister(cpu.getModel())){
+                genericRegister(cpu);
+                Logger.info("Cpu" + cpu.getModel() +" registered succesfully!");
+            }else{
+                throw new RuntimeException("Model already registered in the system");
+            }
+        } catch (Exception e) {
+            Logger.error("Error registering" + cpu.getModel() + ". Excetpion: " + e.getMessage());
+            throw new RuntimeException("Error");
         }
     }
 
     public void delete(String model) {
-        CpuAbstract cpu = search(model);
-        if (cpu != null) {
-            genericDelete(cpu);
-        } else {
-            throw new RuntimeException("CPU not found.");
+        try{
+            CpuAbstract cpu = search(model);
+            if (cpu != null) {
+                genericDelete(cpu);
+                Logger.info("Deleted the Cpu " + model +  "Succesfully");
+            } else {
+                throw new RuntimeException("CPU not found.");
+            }
+        } catch (Exception e) {
+            Logger.error("Error deleting the cpu: " + model + ". Exception: " + e.getMessage());
+            throw new RuntimeException("Error");
         }
     }
 
@@ -56,11 +74,17 @@ public class EmployeeController extends GenericController<CpuAbstract> {
     }
 
     public void update(String model, CpuAbstract newCpu) {
-        CpuAbstract oldCpu = search(model);
-        if (oldCpu != null) {
-            genericUpdate(oldCpu, newCpu);
-        } else {
-            throw new RuntimeException("CPU to update not found.");
+        try{
+            CpuAbstract oldCpu = search(model);
+            if (oldCpu != null) {
+                genericUpdate(oldCpu, newCpu);
+                Logger.info("Updated the CPU" + model + "succesfully");
+            } else {
+                throw new RuntimeException("CPU to update not found.");
+            }
+        } catch (Exception e) {
+            Logger.error("Error updating the CPU: " + model + ". Exception" + e.getMessage());
+            throw new RuntimeException("Error");
         }
     }
 }

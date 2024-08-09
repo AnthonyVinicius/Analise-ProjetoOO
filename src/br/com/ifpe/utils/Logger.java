@@ -9,7 +9,7 @@ public class Logger {
 
     public static void log(String message){
         File file = new File(LOG_FILE);
-        try(FileWriter writer = new FileWriter(LOG_FILE, true)){
+        try(FileWriter writer = new FileWriter(file, true)){
             writer.write(message);
         } catch (IOException e) {
             throw new RuntimeException("Registration error");
