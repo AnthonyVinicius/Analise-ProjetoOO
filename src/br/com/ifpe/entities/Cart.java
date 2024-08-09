@@ -5,7 +5,7 @@ import java.util.List;
 
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
-public class Cart {
+public class Cart{
     private List<CpuAbstract> items;
     private double totalValue;
 

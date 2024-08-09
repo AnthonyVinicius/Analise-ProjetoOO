@@ -55,33 +55,35 @@ public class EmployeeGUI {
         System.out.println("\nIntel [1]\nRyzen [2]");
         int modelChoice = scanner.nextInt();
         scanner.nextLine();
+        if (modelChoice == 1 || modelChoice == 2) {
 
-        System.out.println("Enter the model:");
-        model = scanner.nextLine().toLowerCase().replace(" ", "");
-        System.out.println("Enter the socket:");
-        socket = scanner.nextLine();
+            System.out.println("Enter the model:");
+            model = scanner.nextLine().toLowerCase().replace(" ", "");
+            System.out.println("Enter the socket:");
+            socket = scanner.nextLine();
 
-        System.out.println("Enter the number of cores:");
-        core = scanner.nextInt();
-        scanner.nextLine();
+            System.out.println("Enter the number of cores:");
+            core = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("Enter the number of threads:");
-        threads = scanner.nextInt();
-        scanner.nextLine();
+            System.out.println("Enter the number of threads:");
+            threads = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("Enter the frequency:");
-        hrz = scanner.nextDouble();
-        scanner.nextLine();
+            System.out.println("Enter the frequency:");
+            hrz = scanner.nextDouble();
+            scanner.nextLine();
 
-        System.out.println("Enter the price:");
-        price = scanner.nextDouble();
-        scanner.nextLine();
-        if (modelChoice == 1) {
-            facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
-            System.out.println("Model successfully registered.");
-        } else if (modelChoice == 2) {
-            facade.employeeRegister(createAMD(model, socket, core, threads, hrz, price));
-            System.out.println("Model successfully registered.");
+            System.out.println("Enter the price:");
+            price = scanner.nextDouble();
+            scanner.nextLine();
+            if (modelChoice == 1) {
+                facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
+                System.out.println("Model successfully registered.");
+            } else {
+                facade.employeeRegister(createAMD(model, socket, core, threads, hrz, price));
+                System.out.println("Model successfully registered.");
+            }
         } else {
             System.out.println("Model not available in the system");
         }

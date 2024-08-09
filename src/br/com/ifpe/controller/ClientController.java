@@ -21,13 +21,13 @@ public class ClientController{
         }
         return instance;
     }
-    public void addCoupon(String couponType) {
-        if (couponType.equals("client")) {
-            cupom = new CupomClientDecorator(cupom);
-        } else if (couponType.equals("employee")) {
-            cupom = new CupomEmployeeDecorator(cupom);
-        }
-    }
+//    public void addCoupon(String couponType) {
+//        if (couponType.equals("client")) {
+//            cupom = new CupomClientDecorator(cupom);
+//        } else if (couponType.equals("employee")) {
+//            cupom = new CupomEmployeeDecorator(cupom);
+//        }
+//    }
 
     public void finalizePurchase(String cpf) {
         adapter.validateCPF(cpf);
