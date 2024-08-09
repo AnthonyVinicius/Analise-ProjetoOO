@@ -1,14 +1,9 @@
 package br.com.ifpe.decorator;
 
-public class CupomClient {
+public class CupomClient implements Cupom {
 
-    protected CupomClient cupomClient;
-
-    public CupomClient(CupomClient cupomClient) {
-        this.cupomClient = cupomClient;
-    }
-
-    public double getPrice(){
-        return (this.getPrice() * 0.10) - this.getPrice();
+    @Override
+    public double getPrice(double originalPrice) {
+        return originalPrice - (originalPrice * 0.10);
     }
 }

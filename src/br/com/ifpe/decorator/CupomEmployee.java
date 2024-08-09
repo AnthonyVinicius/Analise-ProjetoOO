@@ -1,13 +1,9 @@
 package br.com.ifpe.decorator;
 
-public class CupomEmployee {
-    protected CupomEmployee cupomEmployee;
+public class CupomEmployee implements Cupom {
 
-    public CupomEmployee(CupomEmployee cupomEmployee) {
-        this.cupomEmployee = cupomEmployee;
-    }
-
-    public double getPrice(){
-        return (this.getPrice() * 0.25) - this.getPrice();
+    @Override
+    public double getPrice(double originalPrice) {
+        return originalPrice - (originalPrice * 0.25);
     }
 }
