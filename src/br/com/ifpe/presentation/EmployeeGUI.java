@@ -14,7 +14,7 @@ public class EmployeeGUI {
         boolean running = true;
         while (running) {
             try {
-                System.out.println("\n[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-View all CPUs\n[5]-Back");
+                System.out.println("\n[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-Update CPU\n[5]-View all CPUs\n[6]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -28,13 +28,17 @@ public class EmployeeGUI {
                         delete();
                         break;
                     case "4":
-                        viewAll();
+                        update();
                         break;
                     case "5":
+                        viewAll();
+                        break;
+                    case "6":
                         running = false;
                 }
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());
+                scanner.nextLine();
             }
         }
     }
@@ -97,51 +101,55 @@ public class EmployeeGUI {
         System.out.println("CPU successfully deleted.");
     }
 
-//    private void update() {
-//        System.out.println("Enter the model of the CPU to update:");
-//        String oldModel = scanner.nextLine().toLowerCase().replace(" ", "");
-//
-//        CpuAbstract existingCpu = facade.read(oldModel);
-//
-//        if (existingCpu == null) {
-//            System.out.println("CPU with the given model not found.");
-//            return;
-//        }
-//
-//        System.out.println("Enter the new model name:");
-//        String newModel = scanner.nextLine().toLowerCase().replace(" ", "");
-//        System.out.println("Enter the new socket:");
-//        String newSocket = scanner.nextLine();
-//
-//        System.out.println("Enter the new number of cores:");
-//        int newCore = scanner.nextInt();
-//        scanner.nextLine();
-//
-//        System.out.println("Enter the new number of threads:");
-//        int newThreads = scanner.nextInt();
-//        scanner.nextLine();
-//
-//        System.out.println("Enter the new frequency:");
-//        double newHrz = scanner.nextDouble();
-//        scanner.nextLine();
-//
-//        System.out.println("Enter the new price:");
-//        double newPrice = scanner.nextDouble();
-//        scanner.nextLine();
-//
-//        CpuAbstract updatedCpu;
-//        if (existingCpu instanceof IntelCpuBuilder) {
-//            updatedCpu = createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
-//        } else if (existingCpu instanceof AmdCpuBuilder) {
-//            updatedCpu = createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
-//        } else {
-//            System.out.println("Error: Unknown CPU type.");
-//            return;
-//        }
-//
-//        facade.employeeUpdate(oldModel, updatedCpu);
-//        System.out.println("CPU successfully updated.");
-//    }
+    private void update() {
+        System.out.println("Enter the model of the CPU to update:");
+        String oldModel = scanner.nextLine().toLowerCase().replace(" ", "");
+
+        CpuAbstract existingCpu = facade.employeeRead(oldModel);
+
+        if (existingCpu == null) {
+            System.out.println("CPU with the given model not found.");
+            return;
+        }
+
+        System.out.println("Enter the new model name:");
+        String newModel = scanner.nextLine().toLowerCase().replace(" ", "");
+        System.out.println("Enter the new socket:");
+        String newSocket = scanner.nextLine();
+
+        System.out.println("Enter the new number of cores:");
+        int newCore = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Enter the new number of threads:");
+        int newThreads = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Enter the new frequency:");
+        double newHrz = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("Enter the new price:");
+        double newPrice = scanner.nextDouble();
+        scanner.nextLine();
+
+        CpuAbstract updatedCpu;
+
+        String cpuType = existingCpu.getClass().getSimpleName();
+
+        if (cpuType.equals("IntelCpu")) {
+            updatedCpu = createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+        } else if (cpuType.equals("AmdCpu")) {
+            updatedCpu = createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+        } else {
+            System.out.println("Error: Unknown CPU type.");
+            System.out.println(cpuType);
+            return;
+        }
+
+        facade.employeeUpdate(oldModel, updatedCpu);
+        System.out.println("CPU successfully updated.");
+    }
 
     private void viewAll() {
         System.out.println(facade.employeeViewAll().toString());
