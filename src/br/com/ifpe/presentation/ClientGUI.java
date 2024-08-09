@@ -1,4 +1,5 @@
 package br.com.ifpe.presentation;
+
 import java.util.Scanner;
 
 public class ClientGUI {
@@ -56,14 +57,13 @@ public class ClientGUI {
     }
 
     public void viewAllItemsCart() {
-       System.out.println(facade.clientViewAllItemsCart().toString());
-        System.out.println("R$"+facade.clientTotalPrice());
+        System.out.println(facade.clientViewAllItemsCart().toString());
+        System.out.println("R$" + facade.clientTotalPrice());
     }
-    public void finalizePurchase(){
+
+    public void finalizePurchase() {
         System.out.println("Enter your CPF");
         String cpf = scanner.nextLine();
-
-
         facade.clientFinalizePurchase(cpf);
     }
 

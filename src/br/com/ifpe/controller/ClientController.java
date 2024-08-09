@@ -23,14 +23,12 @@ public class ClientController{
     }
 
     public void finalizePurchase(String cpf) {
-    }
-
-    private void validateCPF(String cpf) {
         adapter.validateCPF(cpf);
+        applyDiscount();
     }
 
-    private double applyDiscount(double totalValue, double discountPercentage) {
-        return totalValue - (totalValue * discountPercentage / 100);
+    private double applyDiscount() {
+        return getTotalValue();
     }
 
 

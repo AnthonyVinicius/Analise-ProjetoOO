@@ -1,4 +1,4 @@
-package br.com.ifpe.entities;
+package br.com.ifpe.decorator;
 
 public class CupomEmployee {
     protected CupomEmployee cupomEmployee;

@@ -17,8 +17,8 @@ public class CpfValidatorAdapter {
         CPFValidator cpfValidator = new CPFValidator();
         try {
            cpfValidator.assertValid(formaterCPF(cpf));
-        } catch (InvalidStateException e) { // exception lançada quando o documento é inválido
-            System.out.println(e.getInvalidMessages());
+        } catch (InvalidStateException e) {
+            System.out.println("CPF Invalid" + e.getInvalidMessages());
         }
     }
 }
