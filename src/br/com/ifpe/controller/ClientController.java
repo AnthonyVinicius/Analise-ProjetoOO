@@ -4,6 +4,7 @@ import java.util.List;
 import br.com.ifpe.adapter.CpfValidatorAdapter;
 import br.com.ifpe.entities.Cart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
+import br.com.ifpe.utils.Logger;
 
 public class ClientController{
     private static ClientController instance;
@@ -30,9 +31,15 @@ public class ClientController{
 //    }
 
     public void finalizePurchase(String cpf) {
-        adapter.validateCPF(cpf);
-        double totalValue = applyDiscount();
-        System.out.println("Total value after discount: " + totalValue);
+        try{
+            adapter.validateCPF(cpf);
+            double totalValue = applyDiscount();
+            Logger.info("Purchase finalized with the cpf: " + cpf + "Total Value: " + totalValue);
+            System.out.println("Total value after discount: " + totalValue);
+        } catch (Exception e) {
+            Logger.error("Error finalizing the purchase. Exception: " + e.getMessage());
+            throw new RuntimeException("Error");
+        }
     }
     private double applyDiscount() {
         return getTotalValue();
@@ -56,7 +63,9 @@ public class ClientController{
         if (toRemove != null) {
             cart.remove(toRemove);
             System.out.println("Model successfully removed from cart.");
+            Logger.info("Model " + model + "removed from the cart");
         } else {
+            Logger.error("Model" + model + "not found in cart");
             System.out.println("Model not found in cart.");
         }
     }
