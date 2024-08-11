@@ -14,7 +14,7 @@ public class EmployeeGUI {
         boolean running = true;
         while (running) {
             try {
-                System.out.println("\n[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-Update CPU\n[5]-View all CPUs\n[6]-Back");
+                System.out.println("[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-Update CPU\n[5]-View all CPUs\n[6]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -52,7 +52,7 @@ public class EmployeeGUI {
         double price;
 
         System.out.print("Which CPU model do you want to add?: ");
-        System.out.println("\nIntel [1]\nRyzen [2]");
+        System.out.println("Intel [1]\nRyzen [2]");
         int modelChoice = scanner.nextInt();
         scanner.nextLine();
         if (modelChoice == 1 || modelChoice == 2) {

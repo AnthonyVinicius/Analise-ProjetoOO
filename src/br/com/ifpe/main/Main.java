@@ -15,10 +15,10 @@ public class Main {
         EmployeeGUI Employee = new EmployeeGUI();
         ClientGUI Client = new ClientGUI();
         Scanner scanner = new Scanner(System.in);
-
-        while (true) {
+        boolean system = true;
+        while (system) {
             try {
-                System.out.print("\n[1]-Client\n[2]-Employee\n");
+                System.out.println("[1]-Client\n[2]-Employee\n[3]-Exit");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -27,11 +27,12 @@ public class Main {
                         break;
                     case "2":
                         Employee.gui();
+                    case "3":
+                        system = false;
                 }
 
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());
-                scanner.nextLine();
             }
         }
 

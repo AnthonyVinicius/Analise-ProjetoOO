@@ -10,7 +10,7 @@ public class ClientGUI {
         while (running) {
             try {
 
-                System.out.println("\n[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-Back");
+                System.out.println("[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-Back");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -50,6 +50,7 @@ public class ClientGUI {
         System.out.println("Enter the model you want to delete");
         String model = scanner.nextLine();
         facade.clientDelete(model);
+        System.out.println("Model successfully removed from cart.");
     }
 
     public void viewAllCpus() {
@@ -64,7 +65,9 @@ public class ClientGUI {
     public void finalizePurchase() {
         System.out.println("Enter your CPF");
         String cpf = scanner.nextLine();
-        facade.clientFinalizePurchase(cpf);
+        System.out.println("Choice Discount Cupom:\n[1]-10%\n[2]-25%");
+        int cupom = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(facade.clientFinalizePurchase(cpf,cupom));
     }
-
 }

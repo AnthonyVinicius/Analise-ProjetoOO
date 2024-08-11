@@ -5,13 +5,18 @@ import java.util.List;
 
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
-public class Cart{
-    private List<CpuAbstract> items;
+public class Cart implements ICart {
+    private final List<CpuAbstract> items;
     private double totalValue;
 
     public Cart() {
         this.items = new ArrayList<>();
         this.totalValue = 0.0;
+    }
+
+    @Override
+    public double getPrice() {
+        return totalValue;
     }
 
     public void add(CpuAbstract cpu) {
@@ -25,11 +30,12 @@ public class Cart{
         }
     }
 
-    public double getTotalValue() {
-        return totalValue;
-    }
+    //  public double getTotalValue() {
+    //    return totalValue;
+    //}
 
     public List<CpuAbstract> getItems() {
         return items;
     }
+
 }
