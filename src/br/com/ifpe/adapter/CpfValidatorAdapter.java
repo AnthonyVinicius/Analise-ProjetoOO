@@ -13,12 +13,14 @@ public class CpfValidatorAdapter {
         return formatter.format(cpf);
     }
 
-    public void validateCPF(String cpf) {
+    public boolean validateCPF(String cpf) {
         CPFValidator cpfValidator = new CPFValidator();
         try {
            cpfValidator.assertValid(formaterCPF(cpf));
+           return true;
         } catch (InvalidStateException e) {
             System.out.println("CPF Invalid" + e.getInvalidMessages());
+            return false;
         }
     }
 }

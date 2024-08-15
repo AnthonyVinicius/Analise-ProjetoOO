@@ -1,0 +1,109 @@
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: 11930272413Total Value: 361.2
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: 11930272413Total Value: 360.0
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: 12776503490Total Value: 185.0
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: 11930272413Total Value: 180.0
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: 11930271413Total Value: 180.0
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Error: Error finalizing the purchase. Exception: Cannot invoke "br.com.ifpe.entities.ICart.getPrice()" because "this.cart" is null
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Error: Error finalizing the purchase. Exception: Cannot invoke "br.com.ifpe.entities.ICart.getPrice()" because "this.cart" is null
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Error: Error finalizing the purchase. Exception: Cannot invoke "br.com.ifpe.entities.ICart.getPrice()" because "this.cart" is null
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Error: Error finalizing the purchase. Exception: Cannot invoke "br.com.ifpe.entities.ICart.getPrice()" because "this.cart" is null
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Error: Error finalizing the purchase. Exception: Cannot invoke "br.com.ifpe.entities.ICart.getPrice()" because "this.cart" is null
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: Total Value: 162.0
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: Total Value: 117.0
+Error: Error finalizing the purchase. Exception: Value is not properly formatted.
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!

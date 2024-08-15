@@ -4,11 +4,6 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class IntelCpu extends CpuAbstract{
 
-	public IntelCpu() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
 	public IntelCpu(String model, String socket, int core, int threads, double hrz, double price) {
 		super(model, socket, core, threads, hrz, price);
 		// TODO Auto-generated constructor stub
@@ -16,7 +11,7 @@ public class IntelCpu extends CpuAbstract{
 
 	@Override
 	public String toString() {
-		return "\nIntelCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
+		return "\nIntelCpu: \nModel: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
 				+ getCore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice: "
 				+ getPrice()+ "\n_______________";
 	}

@@ -1,8 +1,17 @@
-
 package br.com.ifpe.decorator;
 
-public abstract class CupomDecorator implements Cupom {
-    public CupomDecorator() {
+import br.com.ifpe.entities.ICart;
+
+public abstract class CupomDecorator implements ICart {
+    private final ICart cartDecorator;
+
+    public CupomDecorator(ICart cart) {
+       cartDecorator = cart;
+    }
+
+    @Override
+    public double getPrice() {
+        return this.cartDecorator.getPrice();
     }
 }
 

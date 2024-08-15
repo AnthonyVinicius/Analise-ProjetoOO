@@ -13,7 +13,7 @@ public class AmdCpu extends CpuAbstract{
 
 	@Override
 	public String toString() {
-		return  "\nAmdCpu: \nModelo: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
+		return  "\nAmdCpu: \nModel: " + getModel() + "\nSocket: " + getSocket() + ",\nCore: "
 				+ getCore() + ",\nThreads: " + getThreads() + ",\nHrz: " + getHrz() + ",\nPrice:"
 				+ getPrice()+"\n________________";
 	}
