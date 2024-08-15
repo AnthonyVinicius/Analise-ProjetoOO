@@ -46,7 +46,7 @@ public class ClientController {
             validateCPF(cpf);
         try {
             double totalValue = applyDiscount(cupom);
-            Logger.info("Purchase finalized with the cpf: Total Value: " + totalValue);
+            Logger.info("Purchase finalized with the cpf: Total Value: R$" + totalValue);
             return totalValue;
         } catch (Exception e) {
             Logger.error("Error finalizing the purchase. Exception: " + e.getMessage());
@@ -70,7 +70,7 @@ public class ClientController {
         if (cpu != null) {
             cart.add(cpu);
         } else {
-           throw new RuntimeException("Object not found");
+           throw new RuntimeException("Model not found");
         }
     }
 

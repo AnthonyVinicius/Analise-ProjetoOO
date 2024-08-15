@@ -12,10 +12,13 @@ public class MenuGUI {
         Scanner scanner = new Scanner(System.in);
 
         public void menu(){
-        boolean system = true;
         load.loadEntities();
+        boolean system = true;
+
         while (system) {
+            System.out.println("===========================================");
                 System.out.println("[1]-Client\n[2]-Employee\n[3]-Exit");
+            System.out.println("===========================================");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -24,6 +27,7 @@ public class MenuGUI {
                         break;
                     case "2":
                         Employee.gui();
+                        break;
                     case "3":
                         system = false;
                     default:

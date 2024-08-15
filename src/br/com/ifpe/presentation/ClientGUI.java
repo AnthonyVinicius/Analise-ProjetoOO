@@ -9,8 +9,9 @@ public class ClientGUI {
         boolean running = true;
         while (running) {
             try {
-
+                System.out.println("===========================================");
                 System.out.println("[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-Back");
+                System.out.println("===========================================");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -44,6 +45,7 @@ public class ClientGUI {
         System.out.println("Enter the model you want to add");
         String model = scanner.nextLine();
         facade.clientAdd(model);
+        System.out.println("CPU added to cart");
     }
 
     public void delete() {
@@ -68,6 +70,6 @@ public class ClientGUI {
         System.out.println("Choice Discount Cupom:\n[1]-10%\n[2]-25%");
         int cupom = scanner.nextInt();
         scanner.nextLine();
-        System.out.println(facade.clientFinalizePurchase(cpf,cupom));
+        System.out.println("R$" + facade.clientFinalizePurchase(cpf,cupom));
     }
 }

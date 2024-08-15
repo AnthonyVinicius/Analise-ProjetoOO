@@ -14,7 +14,9 @@ public class EmployeeGUI {
         boolean running = true;
         while (running) {
             try {
+                System.out.println("===========================================");
                 System.out.println("[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-Update CPU\n[5]-View all CPUs\n[6]-Back");
+                System.out.println("===========================================");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -52,7 +54,7 @@ public class EmployeeGUI {
         double price;
 
         System.out.print("Which CPU model do you want to add?: ");
-        System.out.println("Intel [1]\nRyzen [2]");
+        System.out.println("\nIntel [1]\nRyzen [2]");
         int modelChoice = scanner.nextInt();
         scanner.nextLine();
         if (modelChoice == 1 || modelChoice == 2) {
@@ -71,12 +73,10 @@ public class EmployeeGUI {
             scanner.nextLine();
 
             System.out.println("Enter the frequency:");
-            hrz = scanner.nextDouble();
-            scanner.nextLine();
+            hrz = Double.parseDouble(scanner.nextLine());
 
             System.out.println("Enter the price:");
-            price = scanner.nextDouble();
-            scanner.nextLine();
+            price = Double.parseDouble(scanner.nextLine());
             if (modelChoice == 1) {
                 facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
                 System.out.println("Model successfully registered.");
@@ -123,12 +123,10 @@ public class EmployeeGUI {
         scanner.nextLine();
 
         System.out.println("Enter the new frequency:");
-        double newHrz = scanner.nextDouble();
-        scanner.nextLine();
+        double newHrz = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Enter the new price:");
-        double newPrice = scanner.nextDouble();
-        scanner.nextLine();
+        double newPrice = Double.parseDouble(scanner.nextLine());
 
         CpuAbstract updatedCpu;
 

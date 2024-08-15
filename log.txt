@@ -1,0 +1,55 @@
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Purchase finalized with the cpf: Total Value: R$0.0
+Info: Model r97600removed from the cart
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui37600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpui33710 registered succesfully!
+Info: Cpui53600 registered succesfully!
+Info: Cpur55600 registered succesfully!
+Info: Cpur97600 registered succesfully!
+Info: Cpu4gj45 registered succesfully!
+Info: Purchase finalized with the cpf: Total Value: R$9236.25
+Info: Model 4gj45removed from the cart
+Error: Model4545not found in cart
