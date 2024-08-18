@@ -1,6 +1,11 @@
 package br.com.ifpe.controller;
 import java.util.List;
 import java.util.function.Predicate;
+
+import br.com.ifpe.entities.AmdCpu;
+import br.com.ifpe.entities.AmdCpuBuilder;
+import br.com.ifpe.entities.IntelCpu;
+import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
@@ -86,5 +91,27 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             Logger.error("Error updating the CPU: " + model + ". Exception" + e.getMessage());
             throw new RuntimeException("Error");
         }
+
+    }
+        public AmdCpu createAMD(String model, String socket, int core, int threads, double hrz, double price) {
+            return new AmdCpuBuilder()
+                    .model(model)
+                    .socket(socket)
+                    .core(core)
+                    .threads(threads)
+                    .hrz(hrz)
+                    .price(price)
+                    .build();
+        }
+
+    public IntelCpu createIntel(String model, String socket, int core, int threads, double hrz, double price) {
+        return new IntelCpuBuilder()
+                .model(model)
+                .socket(socket)
+                .core(core)
+                .threads(threads)
+                .hrz(hrz)
+                .price(price)
+                .build();
     }
 }

@@ -46,13 +46,6 @@ public class EmployeeGUI {
     }
 
     private void register() {
-        String model;
-        String socket;
-        int core;
-        int threads;
-        double hrz;
-        double price;
-
         System.out.print("Which CPU model do you want to add?: ");
         System.out.println("\nIntel [1]\nRyzen [2]");
         int modelChoice = scanner.nextInt();
@@ -60,28 +53,29 @@ public class EmployeeGUI {
         if (modelChoice == 1 || modelChoice == 2) {
 
             System.out.println("Enter the model:");
-            model = scanner.nextLine().toLowerCase().replace(" ", "");
+            String model = scanner.nextLine().toLowerCase().replace(" ", "");
             System.out.println("Enter the socket:");
-            socket = scanner.nextLine();
+            String socket = scanner.nextLine();
 
             System.out.println("Enter the number of cores:");
-            core = scanner.nextInt();
+            int core = scanner.nextInt();
             scanner.nextLine();
 
             System.out.println("Enter the number of threads:");
-            threads = scanner.nextInt();
+            int threads = scanner.nextInt();
             scanner.nextLine();
 
             System.out.println("Enter the frequency:");
-            hrz = Double.parseDouble(scanner.nextLine());
+            double hrz = Double.parseDouble(scanner.nextLine());
 
             System.out.println("Enter the price:");
-            price = Double.parseDouble(scanner.nextLine());
+            double price = Double.parseDouble(scanner.nextLine());
+
             if (modelChoice == 1) {
-                facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
+                facade.createIntel(model, socket, core, threads, hrz, price);
                 System.out.println("Model successfully registered.");
             } else {
-                facade.employeeRegister(createAMD(model, socket, core, threads, hrz, price));
+                facade.createAMD(model, socket, core, threads, hrz, price);
                 System.out.println("Model successfully registered.");
             }
         } else {
@@ -133,9 +127,9 @@ public class EmployeeGUI {
         String cpuType = existingCpu.getClass().getSimpleName();
 
         if (cpuType.equals("IntelCpu")) {
-            updatedCpu = createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+            updatedCpu = facade.createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
         } else if (cpuType.equals("AmdCpu")) {
-            updatedCpu = createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+            updatedCpu = facade.createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
         } else {
             System.out.println("Error: Unknown CPU type.");
             System.out.println(cpuType);
@@ -150,25 +144,5 @@ public class EmployeeGUI {
         System.out.println(facade.employeeViewAll().toString());
     }
 
-    private CpuAbstract createIntel(String model, String socket, int core, int threads, double hrz, double price) {
-        return new IntelCpuBuilder()
-                .model(model)
-                .socket(socket)
-                .core(core)
-                .threads(threads)
-                .hrz(hrz)
-                .price(price)
-                .build();
-    }
 
-    private CpuAbstract createAMD(String model, String socket, int core, int threads, double hrz, double price) {
-        return new AmdCpuBuilder()
-                .model(model)
-                .socket(socket)
-                .core(core)
-                .threads(threads)
-                .hrz(hrz)
-                .price(price)
-                .build();
-    }
 }

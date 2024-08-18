@@ -10,6 +10,15 @@ public class Facade {
     private final EmployeeController employeeController = EmployeeController.getInstance();
     private final ClientController clientController = ClientController.getInstance();
 
+    public void createAMD(String model, String socket, int core, int threads, double hrz, double price){
+       employeeController.createAMD(model,  socket,  core,  threads, hrz, price);
+    }
+
+    public void createIntel(String model, String socket, int core, int threads, double hrz, double price){
+        employeeController.createIntel(model,  socket,  core,  threads, hrz, price);
+    }
+
+
     public void employeeRegister(CpuAbstract cpu) {
         employeeController.register(cpu);
     }
