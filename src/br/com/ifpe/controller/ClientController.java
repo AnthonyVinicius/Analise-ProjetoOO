@@ -14,7 +14,7 @@ public class ClientController {
     private final EmployeeController employeeController = EmployeeController.getInstance();
     CpfValidatorAdapter adapter = new CpfValidatorAdapter();
     private static ClientController instance;
-    private ICart cart = new Cart();
+    private final ICart cart = new Cart();
 
     public ClientController() {
     }

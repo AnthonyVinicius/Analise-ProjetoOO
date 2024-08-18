@@ -30,10 +30,6 @@ public class Cart implements ICart {
         }
     }
 
-    //  public double getTotalValue() {
-    //    return totalValue;
-    //}
-
     public List<CpuAbstract> getItems() {
         return items;
     }

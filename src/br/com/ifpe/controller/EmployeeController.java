@@ -44,12 +44,12 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         try {
             if(alreadyRegister(cpu.getModel())){
                 genericRegister(cpu);
-                Logger.info("Cpu" + cpu.getModel() +" registered succesfully!");
+                Logger.info("Cpu" + cpu.getModel() +" registered successfully!");
             }else{
                 throw new RuntimeException("Model already registered in the system");
             }
         } catch (Exception e) {
-            Logger.error("Error registering" + cpu.getModel() + ". Excetpion: " + e.getMessage());
+            Logger.error("Error registering" + cpu.getModel() + ". Exception: " + e.getMessage());
             throw new RuntimeException("Error");
         }
     }
@@ -59,7 +59,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract cpu = search(model);
             if (cpu != null) {
                 genericDelete(cpu);
-                Logger.info("Deleted the Cpu " + model +  "Succesfully");
+                Logger.info("Deleted the Cpu " + model +  "Successfully");
             } else {
                 throw new RuntimeException("CPU not found.");
             }
@@ -78,7 +78,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract oldCpu = search(model);
             if (oldCpu != null) {
                 genericUpdate(oldCpu, newCpu);
-                Logger.info("Updated the CPU" + model + "succesfully");
+                Logger.info("Updated the CPU" + model + "successfully");
             } else {
                 throw new RuntimeException("CPU to update not found.");
             }
