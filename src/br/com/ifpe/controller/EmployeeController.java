@@ -36,8 +36,9 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract temp = search(model);
             return temp == null || !model.equalsIgnoreCase(temp.getModel());
         } catch (Exception e) {
-            Logger.error("Error checking the cpu" + model + ". Exception: " + e.getMessage());
-            throw new RuntimeException("Error");
+            String text = "Error checking the cpu" + model + ". Exception: " + e.getMessage();
+            Logger.error(text);
+            throw new RuntimeException(text);
         }
     }
 
@@ -45,13 +46,14 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         try {
             if(alreadyRegister(cpu.getModel())){
                 genericRegister(cpu);
-                Logger.info("Cpu" + cpu.getModel() +" registered successfully!");
+                Logger.info("Cpu " + cpu.getModel() +" registered successfully!");
             }else{
                 throw new RuntimeException("Model already registered in the system");
             }
         } catch (Exception e) {
-            Logger.error("Error registering" + cpu.getModel() + ". Exception: " + e.getMessage());
-            throw new RuntimeException("Error");
+            String text = "Error registering" + cpu.getModel() + ". Exception: " + e.getMessage();
+            Logger.error(text);
+            throw new RuntimeException(text);
         }
     }
 
@@ -60,13 +62,14 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract cpu = search(model);
             if (cpu != null) {
                 genericDelete(cpu);
-                Logger.info("Deleted the Cpu " + model +  "Successfully");
+                Logger.info("Deleted the Cpu " + model +  " Successfully");
             } else {
                 throw new RuntimeException("CPU not found.");
             }
         } catch (Exception e) {
-            Logger.error("Error deleting the cpu: " + model + ". Exception: " + e.getMessage());
-            throw new RuntimeException("Error");
+            String text = "Error deleting the cpu: " + model + ". Exception: " + e.getMessage();
+            Logger.error(text);
+            throw new RuntimeException(text);
         }
     }
 
@@ -79,13 +82,14 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract oldCpu = search(model);
             if (oldCpu != null) {
                 genericUpdate(oldCpu, newCpu);
-                Logger.info("Updated the CPU" + model + "successfully");
+                Logger.info("Updated the CPU " + model + " successfully");
             } else {
                 throw new RuntimeException("CPU to update not found.");
             }
         } catch (Exception e) {
-            Logger.error("Error updating the CPU: " + model + ". Exception" + e.getMessage());
-            throw new RuntimeException("Error");
+            String text = "Error updating the CPU: " + model + ". Exception" + e.getMessage();
+            Logger.error(text);
+            throw new RuntimeException(text);
         }
 
     }

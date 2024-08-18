@@ -14,8 +14,8 @@ public class EmployeeGUI {
 
     public void gui() {
         boolean running = true;
+        try {
         while (running) {
-            try {
                 System.out.println("===========================================");
                 System.out.println("[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-Update CPU\n[5]-View all CPUs\n[6]-Back");
                 System.out.println("===========================================");
@@ -40,12 +40,12 @@ public class EmployeeGUI {
                     case "6":
                         running = false;
                 }
-            } catch (Exception e) {
-                System.out.println("Invalid Code: " + e.getMessage());
-                scanner.nextLine();
+
             }
+            }catch (Exception e) {
+            System.out.println("Invalid Code: " + e.getMessage());
         }
-    }
+}
 
     private void register() {
 
@@ -69,6 +69,7 @@ public class EmployeeGUI {
              double hrz = Double.parseDouble(scanner.nextLine());
 
             System.out.println("Enter the price:");
+
             double price = Double.parseDouble(scanner.nextLine());
 
             if (modelChoice.equals("1")) {
@@ -92,10 +93,11 @@ public class EmployeeGUI {
 
     private void delete() {
         System.out.println("Enter the model:");
-        String model = scanner.next().toLowerCase().replace(" ", "");
+        String model = scanner.nextLine().toLowerCase().replace(" ", "");
         facade.employeeDelete(model);
         System.out.println("CPU successfully deleted.");
     }
+
 
     private void update() {
         System.out.println("Enter the model of the CPU to update:");
