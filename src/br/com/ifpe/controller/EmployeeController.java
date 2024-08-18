@@ -2,10 +2,6 @@ package br.com.ifpe.controller;
 import java.util.List;
 import java.util.function.Predicate;
 
-import br.com.ifpe.entities.AmdCpu;
-import br.com.ifpe.entities.AmdCpuBuilder;
-import br.com.ifpe.entities.IntelCpu;
-import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
