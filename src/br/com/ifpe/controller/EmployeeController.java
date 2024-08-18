@@ -93,25 +93,4 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         }
 
     }
-        public AmdCpu createAMD(String model, String socket, int core, int threads, double hrz, double price) {
-            return new AmdCpuBuilder()
-                    .model(model)
-                    .socket(socket)
-                    .core(core)
-                    .threads(threads)
-                    .hrz(hrz)
-                    .price(price)
-                    .build();
-        }
-
-    public IntelCpu createIntel(String model, String socket, int core, int threads, double hrz, double price) {
-        return new IntelCpuBuilder()
-                .model(model)
-                .socket(socket)
-                .core(core)
-                .threads(threads)
-                .hrz(hrz)
-                .price(price)
-                .build();
-    }
 }
