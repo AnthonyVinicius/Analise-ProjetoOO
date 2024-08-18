@@ -37,16 +37,17 @@ public class ClientController {
     }
 
     public void validateCPF(String cpf) {
-        if(!adapter.validateCPF(cpf)){
+        if (!adapter.validateCPF(cpf)) {
             throw new RuntimeException("Invalid CPF");
         }
     }
 
     public double finalizePurchase(String cpf, int cupom) {
-            validateCPF(cpf);
+        validateCPF(cpf);
+
         try {
             double totalValue = applyDiscount(cupom);
-            Logger.info("Purchase finalized with the cpf: Total Value: R$" + totalValue);
+            Logger.info("Purchase finalized with the CPF: " + cpf + ". Total Value: R$" + totalValue);
             return totalValue;
         } catch (Exception e) {
             Logger.error("Error finalizing the purchase. Exception: " + e.getMessage());

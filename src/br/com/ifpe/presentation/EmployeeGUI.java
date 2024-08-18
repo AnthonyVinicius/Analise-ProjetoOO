@@ -98,14 +98,14 @@ public class EmployeeGUI {
 
     private void delete() {
         System.out.println("Enter the model:");
-        String model = scanner.nextLine().toLowerCase().replace(" ", "");
+        String model = scanner.next().toLowerCase().replace(" ", "");
         facade.employeeDelete(model);
         System.out.println("CPU successfully deleted.");
     }
 
     private void update() {
         System.out.println("Enter the model of the CPU to update:");
-        String oldModel = scanner.nextLine().toLowerCase().replace(" ", "");
+        String oldModel = scanner.next().toLowerCase().replace(" ", "");
 
         CpuAbstract existingCpu = facade.employeeRead(oldModel);
 

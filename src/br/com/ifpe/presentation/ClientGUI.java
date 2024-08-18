@@ -71,5 +71,6 @@ public class ClientGUI {
         int cupom = scanner.nextInt();
         scanner.nextLine();
         System.out.println("R$" + facade.clientFinalizePurchase(cpf,cupom));
+        scanner.nextLine();
     }
 }
