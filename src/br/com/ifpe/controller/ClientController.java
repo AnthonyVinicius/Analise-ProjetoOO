@@ -16,7 +16,7 @@ public class ClientController {
     private static ClientController instance;
     private final ICart cart = new Cart();
 
-    public ClientController() {
+    private ClientController() {
     }
 
     public static ClientController getInstance() {

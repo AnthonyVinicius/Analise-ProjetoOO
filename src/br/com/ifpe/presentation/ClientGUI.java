@@ -1,7 +1,5 @@
 package br.com.ifpe.presentation;
 
-import br.com.ifpe.entities.IntelCpu;
-
 import java.util.Scanner;
 
 public class ClientGUI {
