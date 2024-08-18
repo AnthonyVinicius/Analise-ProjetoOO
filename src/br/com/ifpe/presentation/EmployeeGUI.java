@@ -51,9 +51,8 @@ public class EmployeeGUI {
 
         System.out.print("Which CPU model do you want to add?: ");
         System.out.println("\nIntel [1]\nRyzen [2]");
-        int modelChoice = scanner.nextInt();
-        scanner.nextLine();
-        if (modelChoice == 1 || modelChoice == 2) {
+        String modelChoice = scanner.nextLine();
+        if (modelChoice.equals("1")|| modelChoice.equals("2")) {
 
             System.out.println("Enter the model:");
             String model = scanner.nextLine().toLowerCase().replace(" ", "");
@@ -61,12 +60,10 @@ public class EmployeeGUI {
             String socket = scanner.nextLine();
 
             System.out.println("Enter the number of cores:");
-            int core = scanner.nextInt();
-            scanner.nextLine();
+            int core = Integer.parseInt(scanner.nextLine());
 
             System.out.println("Enter the number of threads:");
-            int threads = scanner.nextInt();
-            scanner.nextLine();
+            int threads = Integer.parseInt(scanner.nextLine());
 
             System.out.println("Enter the frequency:");
              double hrz = Double.parseDouble(scanner.nextLine());
@@ -74,7 +71,7 @@ public class EmployeeGUI {
             System.out.println("Enter the price:");
             double price = Double.parseDouble(scanner.nextLine());
 
-            if (modelChoice == 1) {
+            if (modelChoice.equals("1")) {
                 facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
                 System.out.println("Model successfully registered.");
             } else {
@@ -112,11 +109,11 @@ public class EmployeeGUI {
         String newSocket = scanner.nextLine();
 
         System.out.println("Enter the new number of cores:");
-        int newCore = scanner.nextInt();
+        int newCore = Integer.parseInt(scanner.nextLine());
         scanner.nextLine();
 
         System.out.println("Enter the new number of threads:");
-        int newThreads = scanner.nextInt();
+        int newThreads = Integer.parseInt(scanner.nextLine());
         scanner.nextLine();
 
         System.out.println("Enter the new frequency:");

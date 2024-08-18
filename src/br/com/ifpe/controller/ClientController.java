@@ -86,9 +86,9 @@ public class ClientController {
         }
         if (toRemove != null) {
             cart.remove(toRemove);
-            Logger.info("Model " + model + "removed from the cart");
+            Logger.info("Model " + model + " removed from the cart");
         } else {
-            Logger.error("Model" + model + "not found in cart");
+            Logger.error("Model" + model + " not found in cart");
             throw new RuntimeException("Model not found in cart.");
         }
     }

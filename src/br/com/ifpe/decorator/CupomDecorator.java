@@ -6,7 +6,7 @@ public abstract class CupomDecorator implements ICart {
     private final ICart cartDecorator;
 
     public CupomDecorator(ICart cart) {
-       cartDecorator = cart;
+       this.cartDecorator = cart;
     }
 
     @Override

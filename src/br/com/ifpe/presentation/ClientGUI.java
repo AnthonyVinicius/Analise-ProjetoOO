@@ -1,5 +1,7 @@
 package br.com.ifpe.presentation;
 
+import br.com.ifpe.entities.IntelCpu;
+
 import java.util.Scanner;
 
 public class ClientGUI {
@@ -68,9 +70,7 @@ public class ClientGUI {
         System.out.println("Enter your CPF");
         String cpf = scanner.nextLine();
         System.out.println("Choice Discount Cupom:\n[1]-10%\n[2]-25%");
-        int cupom = scanner.nextInt();
-        scanner.nextLine();
+        int cupom = Integer.parseInt(scanner.nextLine());
         System.out.println("R$" + facade.clientFinalizePurchase(cpf,cupom));
-        scanner.nextLine();
     }
 }
