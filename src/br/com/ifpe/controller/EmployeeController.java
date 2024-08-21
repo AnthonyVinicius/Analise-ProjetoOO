@@ -5,7 +5,6 @@ import java.util.function.Predicate;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.services.DAOFactory;
-import br.com.ifpe.utils.Logger;
 
 public class EmployeeController extends GenericController<CpuAbstract> {
 
@@ -15,45 +14,48 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         super(dao);
     }
 
+    @Override
+    protected void validateCPU(CpuAbstract object) {
+
+    }
+
     public static EmployeeController getInstance() {
         if (instance == null) {
             instance = new EmployeeController((DAOFactory.createDAO(CpuAbstract.class)));
         }
         return instance;
     }
-
     public CpuAbstract read(String model) {
         return genericRead(search(model));
     }
 
     public CpuAbstract search(String model) {
         Predicate<CpuAbstract> foundCpu = cpu -> cpu.getModel().equalsIgnoreCase(model);
+        if(foundCpu == null || !model.equalsIgnoreCase(temp.getModel()))){
         return dao.read(foundCpu);
+        }else{
+            throw new RuntimeException("Error checking the cpu" + model + ". Exception: " + e.getMessage())
+        }
     }
 
-    private boolean alreadyRegister(String model) {
+    private boolean validateCPU(String model) {
         try{
             CpuAbstract temp = search(model);
-            return temp == null || !model.equalsIgnoreCase(temp.getModel());
+            return temp ;
         } catch (Exception e) {
-            String text = "Error checking the cpu" + model + ". Exception: " + e.getMessage();
-            Logger.error(text);
-            throw new RuntimeException(text);
+            ;
         }
     }
 
     public void register(CpuAbstract cpu) {
         try {
-            if(alreadyRegister(cpu.getModel())){
+            if(validateCPU(cpu.getModel())){
                 genericRegister(cpu);
-                Logger.info("Cpu " + cpu.getModel() +" registered successfully!");
             }else{
                 throw new RuntimeException("Model already registered in the system");
             }
         } catch (Exception e) {
-            String text = "Error registering" + cpu.getModel() + ". Exception: " + e.getMessage();
-            Logger.error(text);
-            throw new RuntimeException(text);
+            throw new RuntimeException("Error registering" + cpu.getModel() + ". Exception: " + e.getMessage());
         }
     }
 
@@ -62,14 +64,11 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract cpu = search(model);
             if (cpu != null) {
                 genericDelete(cpu);
-                Logger.info("Deleted the Cpu " + model +  " Successfully");
             } else {
                 throw new RuntimeException("CPU not found.");
             }
         } catch (Exception e) {
-            String text = "Error deleting the cpu: " + model + ". Exception: " + e.getMessage();
-            Logger.error(text);
-            throw new RuntimeException(text);
+            throw new RuntimeException("Error deleting the cpu: " + model + ". Exception: " + e.getMessage());
         }
     }
 
@@ -82,14 +81,11 @@ public class EmployeeController extends GenericController<CpuAbstract> {
             CpuAbstract oldCpu = search(model);
             if (oldCpu != null) {
                 genericUpdate(oldCpu, newCpu);
-                Logger.info("Updated the CPU " + model + " successfully");
             } else {
                 throw new RuntimeException("CPU to update not found.");
             }
         } catch (Exception e) {
-            String text = "Error updating the CPU: " + model + ". Exception" + e.getMessage();
-            Logger.error(text);
-            throw new RuntimeException(text);
+            throw new RuntimeException("Error updating the CPU: " + model + ". Exception" + e.getMessage());
         }
 
     }

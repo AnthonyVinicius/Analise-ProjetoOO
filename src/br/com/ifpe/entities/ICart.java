@@ -5,6 +5,8 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import java.util.List;
 
 public interface ICart {
+    //ICart getInnerCart();
+
     double getPrice();
 
     void remove(CpuAbstract toRemove);

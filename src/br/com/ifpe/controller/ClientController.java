@@ -17,7 +17,7 @@ public class ClientController {
     private final EmployeeController employeeController = EmployeeController.getInstance();
     CpfValidatorAdapter adapter = new CpfValidatorAdapter();
     private static ClientController instance;
-    private final ICart cart = new Cart();
+    private ICart cart = new Cart();
 
     private ClientController() {
     }
@@ -39,6 +39,7 @@ public class ClientController {
     public double finalizePurchase(String cpf, double totalValue) {
         try {
             Logger.info("Purchase finalized with the CPF: " + cpf + ". Total Value: R$" + totalValue);
+            cart = new Cart();
             return totalValue;
         } catch (Exception e) {
             Logger.error("Error finalizing the purchase. Exception: " + e.getMessage());
@@ -46,13 +47,13 @@ public class ClientController {
         }
     }
     private double addVoucher10() {
-        ICart cartVoucher10 = new Voucher10(cart);
-        return cartVoucher10.getPrice();
+        cart = new Voucher10(cart);
+        return cart.getPrice();
     }
 
     private double addVoucher25() {
-        ICart cartVoucher25 = new Voucher25(cart);
-        return cartVoucher25.getPrice();
+        cart = new Voucher25(cart);
+        return cart.getPrice();
     }
 
     public double applyDiscount(int voucher) {
@@ -88,7 +89,7 @@ public class ClientController {
             cart.remove(toRemove);
             Logger.info("Model " + model + " removed from the cart");
         } else {
-            String text = "Model" + model + " not found in cart";
+            String text = "Model " + model + " not found in cart";
             Logger.error(text);
             throw new RuntimeException(text);
         }

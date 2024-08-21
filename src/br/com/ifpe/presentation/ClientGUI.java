@@ -1,5 +1,7 @@
 package br.com.ifpe.presentation;
 
+import br.com.ifpe.utils.Logger;
+
 import java.util.Scanner;
 
 public class ClientGUI {
@@ -35,6 +37,7 @@ public class ClientGUI {
                 }
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());
+                Logger.error(e.getMessage());
             }
         }
     }
@@ -63,25 +66,38 @@ public class ClientGUI {
         System.out.println(facade.clientViewAllItemsCart().toString());
         System.out.println("R$" + facade.clientTotalPrice());
     }
-    private double discount(){
+
+    private double discount() {
         System.out.println("Choice Discount Voucher:\n[1]-10%\n[2]-25%");
         int voucher = Integer.parseInt(scanner.nextLine());
         return facade.clientApplyDiscount(voucher);
     }
+
     public void finalizePurchase() {
         double totalValue;
-        System.out.println("Enter your CPF");
+        boolean on_off = true;
+        System.out.println("Enter your CPF: ");
         String cpf = scanner.nextLine();
         facade.clientValidateCPF(cpf);
-        System.out.println("Cpf Valido");
         totalValue = discount();
-        System.out.println("Would you like to add any more voucher?:\nYes\nNo");
-        String option = scanner.nextLine().toLowerCase();
-        if (option.equals("yes")){
-            totalValue = discount();
+        while (on_off) {
+            System.out.println("Would you like to add any more voucher?:\n[1]-Yes\n[2]-No");
+            String option = scanner.nextLine().toLowerCase();
+            switch (option) {
+                case ("1"):
+                    totalValue = discount();
+                    break;
+                case ("2"):
+                    System.out.println("================================================");
+                    System.out.println("|CPF: "+ cpf);
+                    System.out.println("|Total: R$" + facade.clientFinalizePurchase(cpf, totalValue));
+                    System.out.println("================================================");
+                    on_off = false;
+                    break;
+                default:
+                    System.out.println("Invalid Code");
+            }
         }
-        System.out.println("R$" + facade.clientFinalizePurchase(cpf,totalValue));
-
     }
-
 }
+

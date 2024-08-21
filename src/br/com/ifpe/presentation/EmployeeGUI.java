@@ -7,6 +7,7 @@ import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.AmdCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
+import br.com.ifpe.utils.Logger;
 
 public class EmployeeGUI {
     Facade facade = new Facade();
@@ -43,6 +44,7 @@ public class EmployeeGUI {
             }
             }catch (Exception e) {
             System.out.println("Invalid Code: " + e.getMessage());
+            Logger.error(e.getMessage());
         }
 }
 
