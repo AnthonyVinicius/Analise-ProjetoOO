@@ -40,7 +40,6 @@ public class EmployeeGUI {
                     case "6":
                         running = false;
                 }
-
             }
             }catch (Exception e) {
             System.out.println("Invalid Code: " + e.getMessage());

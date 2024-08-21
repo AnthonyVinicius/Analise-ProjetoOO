@@ -38,8 +38,8 @@ public class Facade {
         clientController.delete(model);
     }
 
-    public double clientFinalizePurchase(String cpf, int cupom) {
-        return clientController.finalizePurchase(cpf, cupom);
+    public double clientFinalizePurchase(String cpf, double totalValue) {
+        return clientController.finalizePurchase(cpf, totalValue);
     }
 
     public double clientTotalPrice() {
@@ -54,5 +54,12 @@ public class Facade {
         return clientController.viewAllItemsCart();
     }
 
+    public double clientApplyDiscount(int option){
+        return clientController.applyDiscount(option);
+    }
+
+    public void clientValidateCPF(String cpf){
+        clientController.validateCPF(cpf);
+    }
 
 }

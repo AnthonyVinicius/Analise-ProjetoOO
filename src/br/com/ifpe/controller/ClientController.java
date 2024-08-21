@@ -1,14 +1,17 @@
 package br.com.ifpe.controller;
-
 import java.util.List;
-
 import br.com.ifpe.adapter.CpfValidatorAdapter;
-import br.com.ifpe.decorator.Cupom10;
-import br.com.ifpe.decorator.Cupom25;
+import br.com.ifpe.decorator.Voucher10;
+import br.com.ifpe.decorator.Voucher25;
 import br.com.ifpe.entities.Cart;
 import br.com.ifpe.entities.ICart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.utils.Logger;
+
+//Adicionar Logger nos metodos
+//Adicionar validação nos cupom
+//template metodo
+//separar metodos do finalizar compras
 
 public class ClientController {
     private final EmployeeController employeeController = EmployeeController.getInstance();
@@ -26,15 +29,6 @@ public class ClientController {
         return instance;
     }
 
-    private double addCupom10() {
-        ICart cartCupom10 = new Cupom10(cart);
-        return cartCupom10.getPrice();
-    }
-
-    private double addCupom25() {
-        ICart cartCupom25 = new Cupom25(cart);
-        return cartCupom25.getPrice();
-    }
 
     public void validateCPF(String cpf) {
         if (!adapter.validateCPF(cpf)) {
@@ -42,11 +36,8 @@ public class ClientController {
         }
     }
 
-    public double finalizePurchase(String cpf, int cupom) {
-        validateCPF(cpf);
-
+    public double finalizePurchase(String cpf, double totalValue) {
         try {
-            double totalValue = applyDiscount(cupom);
             Logger.info("Purchase finalized with the CPF: " + cpf + ". Total Value: R$" + totalValue);
             return totalValue;
         } catch (Exception e) {
@@ -54,14 +45,23 @@ public class ClientController {
             throw new RuntimeException(e.getMessage());
         }
     }
+    private double addVoucher10() {
+        ICart cartVoucher10 = new Voucher10(cart);
+        return cartVoucher10.getPrice();
+    }
 
-    public double applyDiscount(int cupom) {
-        if (cupom == 1) {
-            return addCupom10();
-        } else if (cupom == 2) {
-            return addCupom25();
+    private double addVoucher25() {
+        ICart cartVoucher25 = new Voucher25(cart);
+        return cartVoucher25.getPrice();
+    }
+
+    public double applyDiscount(int voucher) {
+        if (voucher == 1) {
+            return addVoucher10();
+        } else if (voucher == 2) {
+            return addVoucher25();
         } else {
-            throw new RuntimeException("Invalid cupom");
+            throw new RuntimeException("Invalid Voucher");
         }
     }
 

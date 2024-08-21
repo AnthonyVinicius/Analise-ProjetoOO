@@ -5,8 +5,8 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 import java.util.List;
 
-public class Cupom25 extends CupomDecorator {
-    public Cupom25(ICart cart) {
+public class Voucher25 extends VoucherDecorator {
+    public Voucher25(ICart cart) {
         super(cart);
     }
 

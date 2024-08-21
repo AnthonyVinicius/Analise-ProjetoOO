@@ -5,14 +5,15 @@ import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 import java.util.List;
 
-public class Cupom10 extends CupomDecorator {
-    public Cupom10(ICart cart) {
+public class Voucher10 extends VoucherDecorator {
+    public Voucher10(ICart cart) {
         super(cart);
     }
 
     @Override
     public double getPrice() {
-        return super.getPrice()-(super.getPrice() * 0.10) ;
+        //return super.getPrice()-(super.getPrice() * 0.10) ;
+        return super.getPrice() - 10;
     }
 
     @Override

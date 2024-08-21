@@ -2,10 +2,10 @@ package br.com.ifpe.decorator;
 
 import br.com.ifpe.entities.ICart;
 
-public abstract class CupomDecorator implements ICart {
+public abstract class VoucherDecorator implements ICart {
     private final ICart cartDecorator;
 
-    public CupomDecorator(ICart cart) {
+    public VoucherDecorator(ICart cart) {
        this.cartDecorator = cart;
     }
 

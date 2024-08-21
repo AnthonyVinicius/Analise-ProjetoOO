@@ -63,12 +63,25 @@ public class ClientGUI {
         System.out.println(facade.clientViewAllItemsCart().toString());
         System.out.println("R$" + facade.clientTotalPrice());
     }
-
+    private double discount(){
+        System.out.println("Choice Discount Voucher:\n[1]-10%\n[2]-25%");
+        int voucher = Integer.parseInt(scanner.nextLine());
+        return facade.clientApplyDiscount(voucher);
+    }
     public void finalizePurchase() {
+        double totalValue;
         System.out.println("Enter your CPF");
         String cpf = scanner.nextLine();
-        System.out.println("Choice Discount Cupom:\n[1]-10%\n[2]-25%");
-        int cupom = Integer.parseInt(scanner.nextLine());
-        System.out.println("R$" + facade.clientFinalizePurchase(cpf,cupom));
+        facade.clientValidateCPF(cpf);
+        System.out.println("Cpf Valido");
+        totalValue = discount();
+        System.out.println("Would you like to add any more voucher?:\nYes\nNo");
+        String option = scanner.nextLine().toLowerCase();
+        if (option.equals("yes")){
+            totalValue = discount();
+        }
+        System.out.println("R$" + facade.clientFinalizePurchase(cpf,totalValue));
+
     }
+
 }

@@ -30,6 +30,7 @@ public class MenuGUI {
                         break;
                     case "3":
                         system = false;
+                        break;
                     default:
                         System.out.println("Invalid Option");
                 }
