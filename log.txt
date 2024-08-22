@@ -1,0 +1,179 @@
+Info: 
+Registered successfully!
+IntelCpu: 
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
+_______________
+Info: 
+Registered successfully!
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: 
+Registered successfully!
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: 
+Registered successfully!
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Error: For input string: "2,3"
+Info: List All Objects
+Info: 
+Registered successfully!
+IntelCpu: 
+Model: i3
+Socket: lga455,
+Core: 13,
+Threads: 12,
+Hrz: 2.3,
+Price: 13200.0
+_______________
+Info: List All Objects
+Info: 
+Registered successfully!
+IntelCpu: 
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
+_______________
+Info: 
+Registered successfully!
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: 
+Registered successfully!
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: 
+Registered successfully!
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: Read 
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________Successfully
+Info: Deleted the Cpu
+
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: 
+Registered successfully! 
+IntelCpu: 
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
+_______________
+Info: 
+Registered successfully! 
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: 
+Registered successfully! 
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: 
+Registered successfully! 
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Error: Model not found
+Error: Model not found
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: List All Objects
+Info: 
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________ cpu added to cart
+Info: 
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________ cpu added to cart
+Error: Value is not properly formatted.
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: Purchase finalized with the CPF: 11930272413. Total Value: R$291.6

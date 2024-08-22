@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
+import br.com.ifpe.utils.Logger;
 
 public class Cart implements ICart {
     private final List<CpuAbstract> items;
@@ -31,6 +32,7 @@ public class Cart implements ICart {
     }
 
     public List<CpuAbstract> getItems() {
+        Logger.info("Get Items in cart");
         return items;
     }
 

@@ -1,4 +1,5 @@
 package br.com.ifpe.controller;
+
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -15,7 +16,7 @@ public class EmployeeController extends GenericController<CpuAbstract> {
     }
 
     @Override
-    protected void validateCPU(CpuAbstract object) {
+    protected void validateCPU(CpuAbstract entity) {
 
     }
 
@@ -25,68 +26,40 @@ public class EmployeeController extends GenericController<CpuAbstract> {
         }
         return instance;
     }
+
     public CpuAbstract read(String model) {
         return genericRead(search(model));
     }
 
     public CpuAbstract search(String model) {
         Predicate<CpuAbstract> foundCpu = cpu -> cpu.getModel().equalsIgnoreCase(model);
-        if(foundCpu == null || !model.equalsIgnoreCase(temp.getModel()))){
         return dao.read(foundCpu);
-        }else{
-            throw new RuntimeException("Error checking the cpu" + model + ". Exception: " + e.getMessage())
-        }
-    }
-
-    private boolean validateCPU(String model) {
-        try{
-            CpuAbstract temp = search(model);
-            return temp ;
-        } catch (Exception e) {
-            ;
-        }
     }
 
     public void register(CpuAbstract cpu) {
         try {
-            if(validateCPU(cpu.getModel())){
+            if (search(cpu.getModel()) == null) {
                 genericRegister(cpu);
-            }else{
-                throw new RuntimeException("Model already registered in the system");
             }
         } catch (Exception e) {
-            throw new RuntimeException("Error registering" + cpu.getModel() + ". Exception: " + e.getMessage());
+            throw new RuntimeException("Error registering " + cpu.getModel() + e.getMessage());
         }
     }
 
     public void delete(String model) {
-        try{
-            CpuAbstract cpu = search(model);
-            if (cpu != null) {
-                genericDelete(cpu);
-            } else {
-                throw new RuntimeException("CPU not found.");
-            }
-        } catch (Exception e) {
-            throw new RuntimeException("Error deleting the cpu: " + model + ". Exception: " + e.getMessage());
-        }
+        genericDelete(search(model));
     }
 
     public List<CpuAbstract> viewAll() {
-       return genericListAll();
+        return genericListAll();
     }
 
     public void update(String model, CpuAbstract newCpu) {
-        try{
+        try {
             CpuAbstract oldCpu = search(model);
-            if (oldCpu != null) {
-                genericUpdate(oldCpu, newCpu);
-            } else {
-                throw new RuntimeException("CPU to update not found.");
-            }
+            genericUpdate(oldCpu, newCpu);
         } catch (Exception e) {
-            throw new RuntimeException("Error updating the CPU: " + model + ". Exception" + e.getMessage());
+            throw new RuntimeException("Error when updating  " + e.getMessage());
         }
-
     }
 }

@@ -8,12 +8,12 @@ import br.com.ifpe.entities.ICart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 import br.com.ifpe.utils.Logger;
 
-//Adicionar Logger nos metodos
+//Adicionar Logger nos metodo
 //Adicionar validação nos cupom
 //template metodo
-//separar metodos do finalizar compras
+//separar metodo do finalizar compras
 
-public class ClientController {
+public class ClientController extends GenericController {
     private final EmployeeController employeeController = EmployeeController.getInstance();
     CpfValidatorAdapter adapter = new CpfValidatorAdapter();
     private static ClientController instance;
@@ -65,14 +65,15 @@ public class ClientController {
             throw new RuntimeException("Invalid Voucher");
         }
     }
-
-
     public void add(String model) {
         CpuAbstract cpu = employeeController.search(model);
         if (cpu != null) {
+            Logger.info(cpu + " cpu added to cart");
             cart.add(cpu);
         } else {
-           throw new RuntimeException("Model not found");
+            String text = "Model not found";
+            Logger.error(text);
+            throw new RuntimeException(text);
         }
     }
 
@@ -104,6 +105,12 @@ public class ClientController {
     }
 
     public double getTotalValue() {
+        Logger.info("Get Total Cart Price");
         return cart.getPrice();
+    }
+
+    @Override
+    protected void validateCPU(Object entity) {
+
     }
 }

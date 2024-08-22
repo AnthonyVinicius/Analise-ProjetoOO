@@ -1,5 +1,7 @@
 package br.com.ifpe.controller;
+
 import java.util.List;
+
 import br.com.ifpe.persistence.GenericDAO;
 import br.com.ifpe.utils.Logger;
 
@@ -10,25 +12,28 @@ public abstract class GenericController<T> {
     public GenericController(GenericDAO<T> dao) {
         this.dao = dao;
     }
-    protected abstract void validateCPU(T object);
+
+    protected abstract void validateCPU(T entity);
 
     public T genericRead(T object) {
-        if (object != null) {
-            Logger.info("Read " + object + "Successfully");
-            return object;
-        } else {
+        if (object == null) {
             throw new RuntimeException("Object not found in the system");
         }
+        Logger.info("Read " + object + " Successfully");
+        return object;
     }
 
     public void genericRegister(T entity) {
+        Logger.info("\nRegistered successfully! " + entity);
         dao.register(entity);
-        Logger.info("\nRegistered successfully!" + entity.toString());
     }
 
     public void genericDelete(T entity) {
-        dao.delete(entity);
+        if (entity == null) {
+            throw new RuntimeException("Object not found in the system");
+        }
         Logger.info("Deleted the Cpu\n" + entity.toString());
+        dao.delete(entity);
     }
 
     public List<T> genericListAll() {
