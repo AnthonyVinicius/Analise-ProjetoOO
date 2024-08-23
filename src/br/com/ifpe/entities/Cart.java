@@ -36,4 +36,8 @@ public class Cart implements ICart {
         return items;
     }
 
+    @Override
+    public String toString() {
+        return "Purchase History" + "\nCpus: " + items;
+    }
 }

@@ -6,25 +6,29 @@ import br.com.ifpe.decorator.Voucher25;
 import br.com.ifpe.entities.Cart;
 import br.com.ifpe.entities.ICart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
+import br.com.ifpe.persistence.GenericDAO;
+import br.com.ifpe.services.DAOFactory;
 import br.com.ifpe.utils.Logger;
 
-//Adicionar Logger nos metodo
-//Adicionar validação nos cupom
-//template metodo
-//separar metodo do finalizar compras
 
-public class ClientController extends GenericController {
+public class ClientController extends GenericController<ICart> {
     private final EmployeeController employeeController = EmployeeController.getInstance();
     CpfValidatorAdapter adapter = new CpfValidatorAdapter();
     private static ClientController instance;
     private ICart cart = new Cart();
 
-    private ClientController() {
+    private ClientController(GenericDAO<ICart> dao) {
+        super(dao);
+    }
+
+    @Override
+    protected void validateCPU(ICart entity) {
+
     }
 
     public static ClientController getInstance() {
         if (instance == null) {
-            instance = new ClientController();
+            instance = new ClientController(DAOFactory.createDAO(ICart.class));
         }
         return instance;
     }
@@ -39,6 +43,7 @@ public class ClientController extends GenericController {
     public double finalizePurchase(String cpf, double totalValue) {
         try {
             Logger.info("Purchase finalized with the CPF: " + cpf + ". Total Value: R$" + totalValue);
+            addCartHistory(cart);
             cart = new Cart();
             return totalValue;
         } catch (Exception e) {
@@ -108,9 +113,14 @@ public class ClientController extends GenericController {
         Logger.info("Get Total Cart Price");
         return cart.getPrice();
     }
-
-    @Override
-    protected void validateCPU(Object entity) {
-
+    private void addCartHistory(ICart cart){
+        genericRegister(cart);
     }
+    public List<ICart> viewHistory(){
+        return genericListAll();
+    }
+
+   public void clearHistory(){
+      genericDelete();
+   }
 }

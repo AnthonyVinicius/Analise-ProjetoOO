@@ -4,6 +4,7 @@ import java.util.List;
 
 import br.com.ifpe.controller.EmployeeController;
 import br.com.ifpe.controller.ClientController;
+import br.com.ifpe.entities.ICart;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class Facade {
@@ -60,6 +61,12 @@ public class Facade {
 
     public void clientValidateCPF(String cpf){
         clientController.validateCPF(cpf);
+    }
+    public void clientDeleteHistory(){
+//        clientController.deleteHistory();
+    }
+    public List<ICart> clientViewHistory() {
+        return clientController.viewHistory();
     }
 
 }

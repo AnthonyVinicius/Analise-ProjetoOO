@@ -29,4 +29,5 @@ public class Voucher10 extends VoucherDecorator {
     public List<CpuAbstract> getItems() {
         return List.of();
     }
+
 }

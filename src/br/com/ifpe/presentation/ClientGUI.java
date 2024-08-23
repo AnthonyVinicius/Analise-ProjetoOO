@@ -12,7 +12,7 @@ public class ClientGUI {
         while (running) {
             try {
                 System.out.println("===========================================");
-                System.out.println("[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-Back");
+                System.out.println("[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-View History\n[7]-Delete History\n[8]-Back");
                 System.out.println("===========================================");
                 String option = scanner.nextLine();
 
@@ -33,7 +33,14 @@ public class ClientGUI {
                         finalizePurchase();
                         break;
                     case "6":
+                        viewHistory();
+                        break;
+                    case "7":
+                        deleteHistory();
+                        break;
+                    case "8":
                         running = false;
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());
@@ -89,7 +96,7 @@ public class ClientGUI {
                     break;
                 case ("2"):
                     System.out.println("================================================");
-                    System.out.println("|CPF: "+ cpf);
+                    System.out.println("|CPF: " + cpf);
                     System.out.println("|Total: R$" + facade.clientFinalizePurchase(cpf, totalValue));
                     System.out.println("================================================");
                     on_off = false;
@@ -98,6 +105,12 @@ public class ClientGUI {
                     System.out.println("Invalid Code");
             }
         }
+    }
+    public void deleteHistory(){
+//        facade.clientDeleteHistory();
+    }
+    public void viewHistory() {
+        facade.clientViewHistory().forEach(System.out::println);
     }
 }
 
