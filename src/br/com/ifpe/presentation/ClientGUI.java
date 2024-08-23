@@ -1,7 +1,6 @@
 package br.com.ifpe.presentation;
 
-import br.com.ifpe.utils.Logger;
-
+import br.com.ifpe.persistence.Logger;
 import java.util.Scanner;
 
 public class ClientGUI {
@@ -12,7 +11,7 @@ public class ClientGUI {
         while (running) {
             try {
                 System.out.println("===========================================");
-                System.out.println("[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-View History\n[7]-Delete History\n[8]-Back");
+                System.out.println("[1]-Add\n[2]-Delete\n[3]-View all CPUS\n[4]-View all Items Cart\n[5]-Finalize Purchase\n[6]-Back");
                 System.out.println("===========================================");
                 String option = scanner.nextLine();
 
@@ -33,12 +32,6 @@ public class ClientGUI {
                         finalizePurchase();
                         break;
                     case "6":
-                        viewHistory();
-                        break;
-                    case "7":
-                        deleteHistory();
-                        break;
-                    case "8":
                         running = false;
                         break;
                 }
@@ -71,11 +64,11 @@ public class ClientGUI {
 
     public void viewAllItemsCart() {
         System.out.println(facade.clientViewAllItemsCart().toString());
-        System.out.println("R$" + facade.clientTotalPrice());
+        System.out.println("Total R$" + facade.clientTotalPrice());
     }
 
     private double discount() {
-        System.out.println("Choice Discount Voucher:\n[1]-10%\n[2]-25%");
+        System.out.println("Choice Discount Voucher:\n[1]-R$10\n[2]-R$25");
         int voucher = Integer.parseInt(scanner.nextLine());
         return facade.clientApplyDiscount(voucher);
     }
@@ -105,12 +98,6 @@ public class ClientGUI {
                     System.out.println("Invalid Code");
             }
         }
-    }
-    public void deleteHistory(){
-//        facade.clientDeleteHistory();
-    }
-    public void viewHistory() {
-        facade.clientViewHistory().forEach(System.out::println);
     }
 }
 

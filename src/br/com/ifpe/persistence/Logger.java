@@ -1,4 +1,4 @@
-package br.com.ifpe.utils;
+package br.com.ifpe.persistence;
 
 import java.io.File;
 import java.io.FileWriter;

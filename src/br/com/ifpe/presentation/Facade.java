@@ -3,70 +3,37 @@ package br.com.ifpe.presentation;
 import java.util.List;
 
 import br.com.ifpe.controller.EmployeeController;
-import br.com.ifpe.controller.ClientController;
-import br.com.ifpe.entities.ICart;
+import br.com.ifpe.services.ClientSystem;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
 
 public class Facade {
     private final EmployeeController employeeController = EmployeeController.getInstance();
-    private final ClientController clientController = ClientController.getInstance();
+    private final ClientSystem clientController = ClientSystem.getInstance();
 
-    public void employeeRegister(CpuAbstract cpu) {
-        employeeController.register(cpu);
-    }
+    public void employeeRegister(CpuAbstract cpu) {employeeController.genericRegister(cpu);}
 
-    public CpuAbstract employeeRead(String model) {
-        return employeeController.read(model);
-    }
+    public void employeeDelete(String model) {employeeController.genericDelete(model);}
 
-    public void employeeDelete(String model) {
-        employeeController.delete(model);
-    }
+    public List<CpuAbstract> employeeViewAll() {return employeeController.genericListAll();}
 
-    public void employeeUpdate(String oldModel, CpuAbstract updatedCpu) {
-        employeeController.update(oldModel, updatedCpu);
-    }
+    public void employeeUpdate(CpuAbstract updatedCpu) {employeeController.genericUpdate(updatedCpu);}
 
-    public List<CpuAbstract> employeeViewAll() {
-        return employeeController.viewAll();
-    }
+    public CpuAbstract employeeRead(String model) {return employeeController.genericRead(model);}
 
-    public void clientAdd(String model) {
-        clientController.add(model);
-    }
+    public void clientAdd(String model) {clientController.addItemToCart(model);}
 
-    public void clientDelete(String model) {
-        clientController.delete(model);
-    }
+    public void clientDelete(String model) {clientController.deleteItemFromCart(model);}
 
-    public double clientFinalizePurchase(String cpf, double totalValue) {
-        return clientController.finalizePurchase(cpf, totalValue);
-    }
+    public double clientFinalizePurchase(String cpf, double totalValue) {return clientController.finalizePurchase(cpf, totalValue);}
 
-    public double clientTotalPrice() {
-        return clientController.getTotalValue();
-    }
+    public double clientTotalPrice() {return clientController.getTotalValue();}
 
-    public List<CpuAbstract> clientViewAllCpus() {
-        return clientController.viewAllCpus();
-    }
+    public List<CpuAbstract> clientViewAllCpus() {return employeeController.genericListAll();}
 
-    public List<CpuAbstract> clientViewAllItemsCart() {
-        return clientController.viewAllItemsCart();
-    }
+    public List<CpuAbstract> clientViewAllItemsCart() {return clientController.viewAllItemsCart();}
 
-    public double clientApplyDiscount(int option){
-        return clientController.applyDiscount(option);
-    }
+    public double clientApplyDiscount(int option){return clientController.applyDiscount(option);}
 
-    public void clientValidateCPF(String cpf){
-        clientController.validateCPF(cpf);
-    }
-    public void clientDeleteHistory(){
-//        clientController.deleteHistory();
-    }
-    public List<ICart> clientViewHistory() {
-        return clientController.viewHistory();
-    }
+    public void clientValidateCPF(String cpf){clientController.validateCPF(cpf);}
 
 }

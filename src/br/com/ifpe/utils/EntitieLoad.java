@@ -46,9 +46,9 @@ public class EntitieLoad {
                 .price(180)
                 .build();
 
-        employeeController.register(i33710);
-        employeeController.register(i53600);
-        employeeController.register(r55600);
-        employeeController.register(r97600);
+        employeeController.genericRegister(i33710);
+        employeeController.genericRegister(i53600);
+        employeeController.genericRegister(r55600);
+        employeeController.genericRegister(r97600);
     }
 }

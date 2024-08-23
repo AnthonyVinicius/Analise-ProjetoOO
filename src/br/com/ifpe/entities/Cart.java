@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
-import br.com.ifpe.utils.Logger;
+import br.com.ifpe.persistence.Logger;
 
 public class Cart implements ICart {
     private final List<CpuAbstract> items;
@@ -17,6 +17,7 @@ public class Cart implements ICart {
 
     @Override
     public double getPrice() {
+
         return totalValue;
     }
 
@@ -38,6 +39,6 @@ public class Cart implements ICart {
 
     @Override
     public String toString() {
-        return "Purchase History" + "\nCpus: " + items;
+        return "Purchase History\n" + items;
     }
 }

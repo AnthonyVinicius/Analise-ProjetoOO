@@ -3,7 +3,7 @@ package br.com.ifpe.controller;
 import java.util.List;
 
 import br.com.ifpe.persistence.GenericDAO;
-import br.com.ifpe.utils.Logger;
+import br.com.ifpe.persistence.Logger;
 
 public abstract class GenericController<T> {
 
@@ -13,27 +13,31 @@ public abstract class GenericController<T> {
         this.dao = dao;
     }
 
-    protected abstract void validateCPU(T entity);
+    protected abstract void validateObjectIsNotNULL(T object);
 
-    public T genericRead(T object) {
-        if (object == null) {
-            throw new RuntimeException("Object not found in the system");
-        }
-        Logger.info("Read " + object + " Successfully");
-        return object;
+    protected abstract void validateRegister(T object);
+
+    protected abstract void validateUpdate(T object);
+    protected abstract T searchObject(String object);
+
+    public T genericRead(String object) {
+        T foundObject = this.searchObject(object);
+        this.validateObjectIsNotNULL(foundObject);
+        Logger.info("Read " + foundObject.toString() + " Successfully");
+        return foundObject;
     }
 
-    public void genericRegister(T entity) {
-        Logger.info("\nRegistered successfully! " + entity);
-        dao.register(entity);
+    public void genericRegister(T object) {
+        this.validateRegister(object);
+        Logger.info("Registered successfully!" + object.toString());
+        dao.register(object);
     }
 
-    public void genericDelete(T entity) {
-        if (entity == null) {
-            throw new RuntimeException("Object not found in the system");
-        }
-        Logger.info("Deleted the Cpu\n" + entity.toString());
-        dao.delete(entity);
+    public void genericDelete(String object) {
+        T foundObject = this.searchObject(object);
+        validateObjectIsNotNULL(foundObject);
+        Logger.info("Deleted from the system\n" + foundObject.toString());
+        dao.delete(foundObject);
     }
 
     public List<T> genericListAll() {
@@ -41,10 +45,14 @@ public abstract class GenericController<T> {
         return dao.listAll();
     }
 
-    public void genericUpdate(T oldObject, T newObject) {
-        if (!dao.update(oldObject, newObject)) {
-            throw new RuntimeException("Object to be updated not found.");
+    public void genericUpdate(T object) {
+        this.validateUpdate(object);
+        int index = genericListAll().indexOf(object);
+        try {
+            Logger.info("Updating entity: " + dao.listAll().get(index).toString() + " -> " + object.toString());
+            dao.update(index, object);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
         }
-        Logger.info("Updated the CPU " + oldObject + " successfully");
     }
 }

@@ -12,7 +12,7 @@ public class Voucher10 extends VoucherDecorator {
 
     @Override
     public double getPrice() {
-        return super.getPrice()-(super.getPrice() * 0.10) ;
+        return super.getPrice() - 10 ;
     }
 
     @Override

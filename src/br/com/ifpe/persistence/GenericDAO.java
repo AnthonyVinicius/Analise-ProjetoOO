@@ -32,13 +32,8 @@ public class GenericDAO<T> implements IGenericDAO<T> {
 	}
 
 	@Override
-	public boolean update(T oldObject, T newObject) {
-		int index = dataBase.indexOf(oldObject);
-		if (index >= 0) {
-			dataBase.set(index, newObject);
-			return true;
-		}
-		return false;
+	public void update(int index, T object) {
+		dataBase.set(index, object);
 	}
 		
 }

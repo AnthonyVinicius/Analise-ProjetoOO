@@ -1,5 +1,5 @@
-Info: 
-Registered successfully! 
+Info: Registered successfully!
+
 IntelCpu: 
 Model: i33710
 Socket: LGA 775,
@@ -8,8 +8,8 @@ Threads: 12,
 Hrz: 3.4,
 Price: 100.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
+
 IntelCpu: 
 Model: i53600
 Socket: LGA 775,
@@ -18,8 +18,8 @@ Threads: 12,
 Hrz: 3.4,
 Price: 150.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
+
 AmdCpu: 
 Model: r55600
 Socket: AM4,
@@ -28,8 +28,8 @@ Threads: 12,
 Hrz: 4.6,
 Price:130.0
 ________________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
+
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -38,51 +38,9 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$162.0
-Info: 
-Registered successfully! br.com.ifpe.decorator.Voucher10@3b764bce
 Info: List All Objects
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: 
-Registered successfully! 
+Info: Cpu added to cart
+
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -91,7 +49,10 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________
-Info: 
+Error: Model not found
+Error: Model not found
+Info: Cpu added to cart
+
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -99,270 +60,12 @@ Core: 6,
 Threads: 12,
 Hrz: 4.6,
 Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$162.0
-Info: 
-Registered successfully! VoucherDecorator{cartDecorator=Cart
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]
-Total R$180.0}
+________________
+Info: Get Items in cart
+Info: Get Total Cart Price
 Info: List All Objects
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$162.0
-Info: 
-Registered successfully! Cart
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]
-Total R$180.0, Total Price: 162.0
-Info: List All Objects
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$162.0
-Info: 
-Registered successfully! Cart
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]
-Total R$180.0 Total Price: 162.0
-Info: List All Objects
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$162.0
-Info: 
-Registered successfully! Cart
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________] Total Price: 162.0
-Info: List All Objects
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$218.70000000000002
-Info: 
-Registered successfully! Cart
+Info: Deleted the
+Purchase History
 Cpus: [
 AmdCpu: 
 Model: r97600
@@ -380,71 +83,10 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________]
-Cart Total Price: 324.0
-Cart Total Price: 291.6
-Cart Total Price: 218.70000000000002
-Info: List All Objects
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: 
-Registered successfully! 
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: 
-Registered successfully! 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$218.70000000000002
-Info: 
-Registered successfully! Cart
+Info: Purchase finalized with the CPF: 11930272413
+Total Value: R$324.0
+Info: Registered successfully!
+Purchase History
 Cpus: [
 AmdCpu: 
 Model: r97600
@@ -461,10 +103,12 @@ Core: 6,
 Threads: 12,
 Hrz: 4.6,
 Price:180.0
-________________], Total Price R$: 324.0, Total Price R$: 291.6, Total Price R$: 218.70000000000002
+________________]Total price: 324.0
 Info: List All Objects
-Info: 
-Registered successfully! 
+Info: Deleted the
+Purchase History
+Cpus: []
+Info: Registered successfully!
 IntelCpu: 
 Model: i33710
 Socket: LGA 775,
@@ -473,8 +117,7 @@ Threads: 12,
 Hrz: 3.4,
 Price: 100.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 IntelCpu: 
 Model: i53600
 Socket: LGA 775,
@@ -483,8 +126,7 @@ Threads: 12,
 Hrz: 3.4,
 Price: 150.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 AmdCpu: 
 Model: r55600
 Socket: AM4,
@@ -493,8 +135,7 @@ Threads: 12,
 Hrz: 4.6,
 Price:130.0
 ________________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -503,30 +144,55 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________
-Info: 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$121.5
-Info: 
-Registered successfully! Cart
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]Total Price R$: 162.0Total Price R$: 121.5
 Info: List All Objects
-Info: 
-Registered successfully! 
+Info: Cpu added to cart
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: Cpu added to cart
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: List All Objects
+Error: For input string: "asd"
+Info: Purchase finalized
+CPF: 11930272413
+Total Value: R$291.6
+Info: Registered successfully!Purchase History
+[
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________, 
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________]Total price: 291.6
+Info: List All Objects
+Error: Object not found in the system
+Error: Object not found in the system
+Info: List All Objects
+Info: Registered successfully!
 IntelCpu: 
 Model: i33710
 Socket: LGA 775,
@@ -535,8 +201,7 @@ Threads: 12,
 Hrz: 3.4,
 Price: 100.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 IntelCpu: 
 Model: i53600
 Socket: LGA 775,
@@ -545,8 +210,7 @@ Threads: 12,
 Hrz: 3.4,
 Price: 150.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 AmdCpu: 
 Model: r55600
 Socket: AM4,
@@ -555,8 +219,7 @@ Threads: 12,
 Hrz: 4.6,
 Price:130.0
 ________________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -566,7 +229,7 @@ Hrz: 4.6,
 Price:180.0
 ________________
 Info: List All Objects
-Info: 
+Info: Cpu added to cart
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -574,11 +237,8 @@ Core: 6,
 Threads: 12,
 Hrz: 4.6,
 Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$101.25
-Info: 
-Registered successfully! Cart
-Cpus: [
+________________
+Info: Cpu added to cart
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -586,10 +246,24 @@ Core: 6,
 Threads: 12,
 Hrz: 4.6,
 Price:180.0
-________________], Total price: 101.25
+________________
 Info: List All Objects
-Info: 
-Registered successfully! 
+Info: Get Items in cart
+Info: Get Total Cart Price
+Error: Value is not properly formatted.
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: Get Items in cart
+Info: Model removed from the cart
+r97600
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: Get Items in cart
+Info: Model removed from the cart
+r97600
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: Registered successfully!
 IntelCpu: 
 Model: i33710
 Socket: LGA 775,
@@ -598,8 +272,7 @@ Threads: 12,
 Hrz: 3.4,
 Price: 100.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 IntelCpu: 
 Model: i53600
 Socket: LGA 775,
@@ -608,8 +281,7 @@ Threads: 12,
 Hrz: 3.4,
 Price: 150.0
 _______________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 AmdCpu: 
 Model: r55600
 Socket: AM4,
@@ -618,8 +290,7 @@ Threads: 12,
 Hrz: 4.6,
 Price:130.0
 ________________
-Info: 
-Registered successfully! 
+Info: Registered successfully!
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -628,7 +299,27 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________
-Info: 
+Info: Registered successfully!
+IntelCpu: 
+Model: as0oijasdiodas
+Socket: asdoiioasddas,
+Core: 432324234,
+Threads: 24323423,
+Hrz: 2.34234234E8,
+Price: 2.3423423E7
+_______________
+Info: Deleted from the system
+
+IntelCpu: 
+Model: as0oijasdiodas
+Socket: asdoiioasddas,
+Core: 432324234,
+Threads: 24323423,
+Hrz: 2.34234234E8,
+Price: 2.3423423E7
+_______________
+Info: List All Objects
+Info: Read 
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -636,11 +327,9 @@ Core: 6,
 Threads: 12,
 Hrz: 4.6,
 Price:180.0
-________________ cpu added to cart
-Info: Purchase finalized with the CPF: 11930272413. Total Value: R$121.5
-Info: 
-Registered successfully! Cart
-Cpus: [
+________________ Successfully
+Info: Deleted from the system
+
 AmdCpu: 
 Model: r97600
 Socket: AM4,
@@ -648,5 +337,96 @@ Core: 6,
 Threads: 12,
 Hrz: 4.6,
 Price:180.0
-________________]Total price: 121.5
+________________
+Info: List All Objects
+Info: Cpu added to cart
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: Cpu added to cart
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: Get Items in cart
+Info: Model removed from the cart
+i53600
+Info: Get Items in cart
+Info: Get Total Cart Price
+Info: List All Objects
+Info: Registered successfully!
+IntelCpu: 
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
+_______________
+Info: Registered successfully!
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: Registered successfully!
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: Registered successfully!
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: Registered successfully!
+IntelCpu: 
+Model: ouiawshduihofbasdahsfubdioa
+Socket: asdfoknasdfnioujsadfnsad,
+Core: 123123,
+Threads: 132123,
+Hrz: 123.0,
+Price: 123123.0
+_______________
+Info: Read 
+IntelCpu: 
+Model: ouiawshduihofbasdahsfubdioa
+Socket: asdfoknasdfnioujsadfnsad,
+Core: 123123,
+Threads: 132123,
+Hrz: 123.0,
+Price: 123123.0
+_______________ Successfully
+Info: Deleted from the system
+
+IntelCpu: 
+Model: ouiawshduihofbasdahsfubdioa
+Socket: asdfoknasdfnioujsadfnsad,
+Core: 123123,
+Threads: 132123,
+Hrz: 123.0,
+Price: 123123.0
+_______________
 Info: List All Objects

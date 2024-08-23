@@ -7,7 +7,7 @@ import br.com.ifpe.entities.IntelCpu;
 import br.com.ifpe.entities.IntelCpuBuilder;
 import br.com.ifpe.entities.AmdCpuBuilder;
 import br.com.ifpe.entities.abstractclass.CpuAbstract;
-import br.com.ifpe.utils.Logger;
+import br.com.ifpe.persistence.Logger;
 
 public class EmployeeGUI {
     Facade facade = new Facade();
@@ -74,6 +74,7 @@ public class EmployeeGUI {
             double price = Double.parseDouble(scanner.nextLine());
 
             if (modelChoice.equals("1")) {
+
                 facade.employeeRegister(createIntel(model, socket, core, threads, hrz, price));
                 System.out.println("Model successfully registered.");
             } else {
@@ -106,8 +107,6 @@ public class EmployeeGUI {
 
         CpuAbstract existingCpu = facade.employeeRead(oldModel);
 
-        System.out.println("Enter the new model name:");
-        String newModel = scanner.nextLine().toLowerCase().replace(" ", "");
         System.out.println("Enter the new socket:");
         String newSocket = scanner.nextLine();
 
@@ -130,16 +129,28 @@ public class EmployeeGUI {
         String cpuType = existingCpu.getClass().getSimpleName();
 
         if (cpuType.equals("IntelCpu")) {
-            updatedCpu = createIntel(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+            updatedCpu = new IntelCpuBuilder()
+                    .socket(newSocket)
+                    .core(newCore)
+                    .threads(newThreads)
+                    .hrz(newHrz)
+                    .price(newPrice)
+                    .build();
         } else if (cpuType.equals("AmdCpu")) {
-            updatedCpu = createAMD(newModel, newSocket, newCore, newThreads, newHrz, newPrice);
+            updatedCpu = new AmdCpuBuilder()
+                    .socket(newSocket)
+                    .core(newCore)
+                    .threads(newThreads)
+                    .hrz(newHrz)
+                    .price(newPrice)
+                    .build();
         } else {
             System.out.println("Error: Unknown CPU type.");
             System.out.println(cpuType);
             return;
         }
 
-        facade.employeeUpdate(oldModel, updatedCpu);
+        facade.employeeUpdate(updatedCpu);
         System.out.println("CPU successfully updated.");
     }
 
