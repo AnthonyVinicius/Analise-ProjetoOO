@@ -17,7 +17,7 @@ public abstract class GenericController<T> {
 
     protected abstract void validateRegister(T object);
 
-    protected abstract void validateUpdate(T object);
+    protected abstract T validateUpdate(T object);
 
     protected abstract T searchObject(String object);
 
@@ -41,13 +41,12 @@ public abstract class GenericController<T> {
     }
 
     public void genericDelete(String object) {
-        try{
-
-        T foundObject = this.searchObject(object);
-        this.validateObjectIsNotNULL(foundObject);
-        Logger.info("Deleted from the system\n" + foundObject.toString());
-        dao.delete(foundObject);
-        }catch (Exception e){
+        try {
+            T foundObject = this.searchObject(object);
+            this.validateObjectIsNotNULL(foundObject);
+            Logger.info("Deleted from the system\n" + foundObject.toString());
+            dao.delete(foundObject);
+        } catch (Exception e) {
             String text = "Object Not Found";
             Logger.error(text);
             throw new RuntimeException(text);
@@ -60,13 +59,12 @@ public abstract class GenericController<T> {
     }
 
     public void genericUpdate(T object) {
-        this.validateUpdate(object);
-        int index = genericListAll().indexOf(object);
+        int index = genericListAll().indexOf(this.validateUpdate(object));
         try {
             Logger.info("Updating entity: " + dao.listAll().get(index).toString() + " -> " + object.toString());
             dao.update(index, object);
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new RuntimeException("Object Not Found");
         }
     }
 }

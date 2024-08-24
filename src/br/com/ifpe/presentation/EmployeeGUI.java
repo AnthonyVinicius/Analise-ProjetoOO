@@ -16,7 +16,7 @@ public class EmployeeGUI {
     public void gui() {
         boolean running = true;
         try {
-        while (running) {
+            while (running) {
                 System.out.println("===========================================");
                 System.out.println("[1]-Register CPU\n[2]-Read CPU\n[3]-Delete CPU\n[4]-Update CPU\n[5]-View all CPUs\n[6]-Back");
                 System.out.println("===========================================");
@@ -46,18 +46,18 @@ public class EmployeeGUI {
                         break;
                 }
             }
-            }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Invalid Code: " + e.getMessage());
             Logger.error(e.getMessage());
         }
-}
+    }
 
     private void register() {
 
         System.out.print("Which CPU model do you want to add?: ");
         System.out.println("\nIntel [1]\nRyzen [2]");
         String modelChoice = scanner.nextLine();
-        if (modelChoice.equals("1")|| modelChoice.equals("2")) {
+        if (modelChoice.equals("1") || modelChoice.equals("2")) {
 
             System.out.println("Enter the model:");
             String model = scanner.nextLine().toLowerCase().replace(" ", "");
@@ -71,7 +71,7 @@ public class EmployeeGUI {
             int threads = Integer.parseInt(scanner.nextLine());
 
             System.out.println("Enter the frequency:");
-             double hrz = Double.parseDouble(scanner.nextLine());
+            double hrz = Double.parseDouble(scanner.nextLine());
 
             System.out.println("Enter the price:");
 
@@ -107,62 +107,45 @@ public class EmployeeGUI {
 
     private void update() {
         System.out.println("Enter the model of the CPU to update:");
-        String oldModel = scanner.next().toLowerCase().replace(" ", "");
-
-        CpuAbstract existingCpu = facade.employeeRead(oldModel);
+        String model = scanner.nextLine().toLowerCase().replace(" ", "");
+        CpuAbstract existingCpu = facade.employeeRead(model);
 
         System.out.println("Enter the new socket:");
         String newSocket = scanner.nextLine();
 
         System.out.println("Enter the new number of cores:");
         int newCore = Integer.parseInt(scanner.nextLine());
-        scanner.nextLine();
 
         System.out.println("Enter the new number of threads:");
         int newThreads = Integer.parseInt(scanner.nextLine());
-        scanner.nextLine();
 
-        System.out.println("Enter the new frequency:");
+        System.out.println("Enter the new frequency (GHz):");
         double newHrz = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Enter the new price:");
         double newPrice = Double.parseDouble(scanner.nextLine());
 
         CpuAbstract updatedCpu;
-
         String cpuType = existingCpu.getClass().getSimpleName();
 
         if (cpuType.equals("IntelCpu")) {
-            updatedCpu = new IntelCpuBuilder()
-                    .socket(newSocket)
-                    .core(newCore)
-                    .threads(newThreads)
-                    .hrz(newHrz)
-                    .price(newPrice)
-                    .build();
+            updatedCpu = createIntel(model ,newSocket, newCore, newThreads, newHrz, newPrice);
         } else if (cpuType.equals("AmdCpu")) {
-            updatedCpu = new AmdCpuBuilder()
-                    .socket(newSocket)
-                    .core(newCore)
-                    .threads(newThreads)
-                    .hrz(newHrz)
-                    .price(newPrice)
-                    .build();
+            updatedCpu = createAMD(model ,newSocket, newCore, newThreads, newHrz, newPrice);
         } else {
             System.out.println("Error: Unknown CPU type.");
-            System.out.println(cpuType);
             return;
         }
-
         facade.employeeUpdate(updatedCpu);
         System.out.println("CPU successfully updated.");
     }
+
 
     private void viewAll() {
         System.out.println(facade.employeeViewAll().toString());
     }
 
-    private IntelCpu createIntel(String model, String socket, int core, int threads, double hrz, double price){
+    private IntelCpu createIntel(String model, String socket, int core, int threads, double hrz, double price) {
         return new IntelCpuBuilder()
                 .model(model)
                 .socket(socket)
@@ -173,7 +156,7 @@ public class EmployeeGUI {
                 .build();
     }
 
-    private AmdCpu createAMD(String model, String socket, int core, int threads, double hrz, double price){
+    private AmdCpu createAMD(String model, String socket, int core, int threads, double hrz, double price) {
         return new AmdCpuBuilder()
                 .model(model)
                 .socket(socket)

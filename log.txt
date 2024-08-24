@@ -34,55 +34,20 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________
-Error: For input string: "asd"
-Error: For input string: "dad"
-Error: For input string: "adsdas"
-Info: Registered successfully!
-IntelCpu: 
-Model: ajoasijsdaasd
-Socket: iasnhddionshnasdi,
-Core: 13123123,
-Threads: 132311331,
-Hrz: 1.3123123E7,
-Price: 1.23132321123E11
-_______________
-Error: Cannot invoke "br.com.ifpe.entities.abstractclass.CpuAbstract.getModel()" because "cpu" is null
-Info: Registered successfully!
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: Registered successfully!
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Registered successfully!
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: Registered successfully!
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
+Error: Object Not Found
+Error: Object Not Found
+Error: Object Not Found
+Error: Object Not Found
+Info: Get Items in cart
+Error: Model not found in cart
+sdddsads
+Error: Model not found in cart
+sdddsads
+Info: Get Items in cart
+Error: Model not found in cart
+dsddasf
+Error: Model not found in cart
+dsddasf
 Info: Registered successfully!
 IntelCpu: 
 Model: i33710
@@ -121,69 +86,20 @@ Price:180.0
 ________________
 Error: Object Not Found
 Error: Object Not Found
-Error: Object Not Found
-Error: Object Not Found
-Error: For input string: "idioad"
-Info: Registered successfully!
-IntelCpu: 
-Model: asidas
-Socket: adpojasdpioasd,
-Core: 1124124,
-Threads: 4124114,
-Hrz: 14142.0,
-Price: 1.2412412E7
-_______________
-Error: Object Not Found
-Error: Object Not Found
-Info: Read 
-IntelCpu: 
-Model: asidas
-Socket: adpojasdpioasd,
-Core: 1124124,
-Threads: 4124114,
-Hrz: 14142.0,
-Price: 1.2412412E7
-_______________ Successfully
-Error: Object Not Found
-Error: Object Not Found
-Info: Registered successfully!
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: Registered successfully!
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Registered successfully!
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: Registered successfully!
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Error: Object Not Found
-Error: Object Not Found
+Info: Get Items in cart
+Error: Model dsdsffds not found in cart
+Error: Model dsdsffds not found in cart
+Info: List All Objects
+Info: Get Items in cart
+Info: Get Total Cart Price
+Error: Value is not properly formatted.
+Error: Value is not properly formatted.
+Error: For input string: "adads"
+Info: Purchase finalized
+CPF: 11930272413
+Total Value: R$-30.0
+Info: Get Items in cart
+Info: Get Total Cart Price
 Error: Object Not Found
 Error: Object Not Found
 Info: List All Objects
@@ -196,8 +112,15 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________ Successfully
-Error: For input string: "dad"
-Info: List All Objects
+Info: Cpu added to cart
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
 Info: Read 
 AmdCpu: 
 Model: r97600
@@ -207,4 +130,17 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________ Successfully
-Error: Update error: Car not found
+Info: Cpu added to cart
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: Purchase finalized
+CPF: 11930272413
+Total Value: R$330.0
+Info: Get Items in cart
+Info: Get Total Cart Price

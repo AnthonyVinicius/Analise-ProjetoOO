@@ -37,11 +37,11 @@ public class EmployeeController extends GenericController<CpuAbstract> {
     }
 
     @Override
-    protected void validateUpdate(CpuAbstract newCPU) {
+    protected CpuAbstract validateUpdate(CpuAbstract newCPU) {
         CpuAbstract oldCPU = searchObject(newCPU.getModel());
         if (oldCPU == null) {
-            throw new RuntimeException("Update error: Car not found");
-        }
+            throw new RuntimeException("Object Not Found");
+        }return oldCPU;
     }
 
     @Override

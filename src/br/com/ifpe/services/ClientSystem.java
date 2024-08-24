@@ -84,12 +84,12 @@ public class ClientSystem {
                 .filter(cpu -> cpu.getModel().equalsIgnoreCase(model))
                 .findFirst()
                 .orElseThrow(() -> {
-                    String text = "Model not found in cart\n" + model;
+                    String text = "Model " + model + " not found in cart" ;
                     Logger.error(text);
                     return new RuntimeException(text);
                 });
         cart.remove(toRemove);
-        Logger.info("Model removed from the cart\n" + model);
+        Logger.info("Model " + model + " removed from the cart");
     }
 
     public List<CpuAbstract> viewAllItemsCart() {
