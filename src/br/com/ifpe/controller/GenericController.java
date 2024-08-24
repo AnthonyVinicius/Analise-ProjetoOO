@@ -18,13 +18,20 @@ public abstract class GenericController<T> {
     protected abstract void validateRegister(T object);
 
     protected abstract void validateUpdate(T object);
+
     protected abstract T searchObject(String object);
 
     public T genericRead(String object) {
-        T foundObject = this.searchObject(object);
-        this.validateObjectIsNotNULL(foundObject);
-        Logger.info("Read " + foundObject.toString() + " Successfully");
-        return foundObject;
+        try {
+            T foundObject = this.searchObject(object);
+            this.validateObjectIsNotNULL(foundObject);
+            Logger.info("Read " + foundObject.toString() + " Successfully");
+            return foundObject;
+        } catch (Exception e) {
+            String text = "Object Not Found";
+            Logger.error(text);
+            throw new RuntimeException(text);
+        }
     }
 
     public void genericRegister(T object) {
@@ -34,10 +41,17 @@ public abstract class GenericController<T> {
     }
 
     public void genericDelete(String object) {
+        try{
+
         T foundObject = this.searchObject(object);
-        validateObjectIsNotNULL(foundObject);
+        this.validateObjectIsNotNULL(foundObject);
         Logger.info("Deleted from the system\n" + foundObject.toString());
         dao.delete(foundObject);
+        }catch (Exception e){
+            String text = "Object Not Found";
+            Logger.error(text);
+            throw new RuntimeException(text);
+        }
     }
 
     public List<T> genericListAll() {

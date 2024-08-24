@@ -34,6 +34,9 @@ public class ClientGUI {
                     case "6":
                         running = false;
                         break;
+                    default:
+                        System.out.println("Invalid Option");
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println("Invalid Code: " + e.getMessage());

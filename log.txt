@@ -1,114 +1,4 @@
 Info: Registered successfully!
-
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: Registered successfully!
-
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Registered successfully!
-
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: Registered successfully!
-
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: List All Objects
-Info: Cpu added to cart
-
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Error: Model not found
-Error: Model not found
-Info: Cpu added to cart
-
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: Get Items in cart
-Info: Get Total Cart Price
-Info: List All Objects
-Info: Deleted the
-Purchase History
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________, 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]
-Info: Purchase finalized with the CPF: 11930272413
-Total Value: R$324.0
-Info: Registered successfully!
-Purchase History
-Cpus: [
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________, 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]Total price: 324.0
-Info: List All Objects
-Info: Deleted the
-Purchase History
-Cpus: []
-Info: Registered successfully!
 IntelCpu: 
 Model: i33710
 Socket: LGA 775,
@@ -144,125 +34,19 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________
-Info: List All Objects
-Info: Cpu added to cart
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: Cpu added to cart
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: Get Items in cart
-Info: Get Total Cart Price
-Info: List All Objects
 Error: For input string: "asd"
-Info: Purchase finalized
-CPF: 11930272413
-Total Value: R$291.6
-Info: Registered successfully!Purchase History
-[
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________, 
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________]Total price: 291.6
-Info: List All Objects
-Error: Object not found in the system
-Error: Object not found in the system
-Info: List All Objects
+Error: For input string: "dad"
+Error: For input string: "adsdas"
 Info: Registered successfully!
 IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
+Model: ajoasijsdaasd
+Socket: iasnhddionshnasdi,
+Core: 13123123,
+Threads: 132311331,
+Hrz: 1.3123123E7,
+Price: 1.23132321123E11
 _______________
-Info: Registered successfully!
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Registered successfully!
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: Registered successfully!
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: List All Objects
-Info: Cpu added to cart
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: Cpu added to cart
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: List All Objects
-Info: Get Items in cart
-Info: Get Total Cart Price
-Error: Value is not properly formatted.
-Info: Get Items in cart
-Info: Get Total Cart Price
-Info: Get Items in cart
-Info: Model removed from the cart
-r97600
-Info: Get Items in cart
-Info: Get Total Cart Price
-Info: Get Items in cart
-Info: Model removed from the cart
-r97600
-Info: Get Items in cart
-Info: Get Total Cart Price
+Error: Cannot invoke "br.com.ifpe.entities.abstractclass.CpuAbstract.getModel()" because "cpu" is null
 Info: Registered successfully!
 IntelCpu: 
 Model: i33710
@@ -301,23 +85,107 @@ Price:180.0
 ________________
 Info: Registered successfully!
 IntelCpu: 
-Model: as0oijasdiodas
-Socket: asdoiioasddas,
-Core: 432324234,
-Threads: 24323423,
-Hrz: 2.34234234E8,
-Price: 2.3423423E7
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
 _______________
-Info: Deleted from the system
-
+Info: Registered successfully!
 IntelCpu: 
-Model: as0oijasdiodas
-Socket: asdoiioasddas,
-Core: 432324234,
-Threads: 24323423,
-Hrz: 2.34234234E8,
-Price: 2.3423423E7
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
 _______________
+Info: Registered successfully!
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: Registered successfully!
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Error: Object Not Found
+Error: Object Not Found
+Error: Object Not Found
+Error: Object Not Found
+Error: For input string: "idioad"
+Info: Registered successfully!
+IntelCpu: 
+Model: asidas
+Socket: adpojasdpioasd,
+Core: 1124124,
+Threads: 4124114,
+Hrz: 14142.0,
+Price: 1.2412412E7
+_______________
+Error: Object Not Found
+Error: Object Not Found
+Info: Read 
+IntelCpu: 
+Model: asidas
+Socket: adpojasdpioasd,
+Core: 1124124,
+Threads: 4124114,
+Hrz: 14142.0,
+Price: 1.2412412E7
+_______________ Successfully
+Error: Object Not Found
+Error: Object Not Found
+Info: Registered successfully!
+IntelCpu: 
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
+_______________
+Info: Registered successfully!
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: Registered successfully!
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: Registered successfully!
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Error: Object Not Found
+Error: Object Not Found
+Error: Object Not Found
+Error: Object Not Found
 Info: List All Objects
 Info: Read 
 AmdCpu: 
@@ -328,105 +196,15 @@ Threads: 12,
 Hrz: 4.6,
 Price:180.0
 ________________ Successfully
-Info: Deleted from the system
-
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
+Error: For input string: "dad"
 Info: List All Objects
-Info: Cpu added to cart
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Cpu added to cart
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Get Items in cart
-Info: Get Total Cart Price
-Info: Get Items in cart
-Info: Model removed from the cart
-i53600
-Info: Get Items in cart
-Info: Get Total Cart Price
-Info: List All Objects
-Info: Registered successfully!
-IntelCpu: 
-Model: i33710
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 100.0
-_______________
-Info: Registered successfully!
-IntelCpu: 
-Model: i53600
-Socket: LGA 775,
-Core: 6,
-Threads: 12,
-Hrz: 3.4,
-Price: 150.0
-_______________
-Info: Registered successfully!
-AmdCpu: 
-Model: r55600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:130.0
-________________
-Info: Registered successfully!
-AmdCpu: 
-Model: r97600
-Socket: AM4,
-Core: 6,
-Threads: 12,
-Hrz: 4.6,
-Price:180.0
-________________
-Info: Registered successfully!
-IntelCpu: 
-Model: ouiawshduihofbasdahsfubdioa
-Socket: asdfoknasdfnioujsadfnsad,
-Core: 123123,
-Threads: 132123,
-Hrz: 123.0,
-Price: 123123.0
-_______________
 Info: Read 
-IntelCpu: 
-Model: ouiawshduihofbasdahsfubdioa
-Socket: asdfoknasdfnioujsadfnsad,
-Core: 123123,
-Threads: 132123,
-Hrz: 123.0,
-Price: 123123.0
-_______________ Successfully
-Info: Deleted from the system
-
-IntelCpu: 
-Model: ouiawshduihofbasdahsfubdioa
-Socket: asdfoknasdfnioujsadfnsad,
-Core: 123123,
-Threads: 132123,
-Hrz: 123.0,
-Price: 123123.0
-_______________
-Info: List All Objects
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________ Successfully
+Error: Update error: Car not found
