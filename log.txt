@@ -144,3 +144,50 @@ CPF: 11930272413
 Total Value: R$330.0
 Info: Get Items in cart
 Info: Get Total Cart Price
+Info: Registered successfully!
+IntelCpu: 
+Model: i33710
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 100.0
+_______________
+Info: Registered successfully!
+IntelCpu: 
+Model: i53600
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 3.4,
+Price: 150.0
+_______________
+Info: Registered successfully!
+AmdCpu: 
+Model: r55600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:130.0
+________________
+Info: Registered successfully!
+AmdCpu: 
+Model: r97600
+Socket: AM4,
+Core: 6,
+Threads: 12,
+Hrz: 4.6,
+Price:180.0
+________________
+Info: List All Objects
+Info: Registered successfully!
+IntelCpu: 
+Model: i3
+Socket: LGA 775,
+Core: 6,
+Threads: 12,
+Hrz: 2.4,
+Price: 1300.0
+_______________
+Info: List All Objects
